@@ -23,6 +23,13 @@ static NavView *install = nil;
     return self;
 }
 
+- (void) awakeFromNib
+{
+    self.dynamic = YES;
+    self.blurEnabled = YES;
+    self.blurRadius = 50.0f;
+}
+
 - (id) init
 {
     self = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([NavView class]) owner:self options:nil] objectAtIndex:0];
@@ -72,6 +79,13 @@ static NavView *install = nil;
         default:
             break;
     }
-    self.hidden = YES;
+    if (CGRectEqualToRect(self.frame,FRAME_MIDDLE)) {
+        self.blurEnabled = NO;
+        [UIView animateWithDuration:DURATION_NAVVIEW animations:^{
+            self.frame = FRAME_RIGHT;
+        } completion:^(BOOL finish) {
+                self.hidden = YES;
+        }];
+    }
 }
 @end

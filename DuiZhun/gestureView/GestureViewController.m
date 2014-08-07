@@ -42,9 +42,17 @@
     else if (rec.state == UIGestureRecognizerStateEnded) {
         CGPoint coordinate_end = [rec translationInView:self.view];
         if (coordinate_end.x < -50) {
-        AppDelegate *del = [UIApplication sharedApplication].delegate;
-        del.navView.hidden = NO;
-        [del.window bringSubviewToFront:del.navView];
+            AppDelegate *del = [UIApplication sharedApplication].delegate;
+            del.navView.hidden = NO;
+            [del.window bringSubviewToFront:del.navView];
+            
+            if (CGRectEqualToRect(del.navView.frame, FRAME_RIGHT)) {
+                del.navView.blurEnabled = YES;
+                [UIView animateWithDuration:DURATION_NAVVIEW animations:^{
+                    del.navView.frame = FRAME_MIDDLE;
+                }];
+            }
+            
         }
     }
 }

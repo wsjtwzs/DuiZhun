@@ -82,6 +82,7 @@
 		107C1D7D198BD9D300E1198E /* NavView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107C1D7C198BD9D300E1198E /* NavView.xib */; };
 		6656A91819939C9900E0C930 /* GestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6656A91719939C9900E0C930 /* GestureViewController.m */; };
 		6656A91C1993A01800E0C930 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6656A91B1993A01800E0C930 /* FXBlurView.m */; };
+		6656A9211993A51E00E0C930 /* 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6656A9201993A51E00E0C930 /* 1@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -265,6 +266,7 @@
 		6656A91719939C9900E0C930 /* GestureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureViewController.m; sourceTree = "<group>"; };
 		6656A91A1993A01800E0C930 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
 		6656A91B1993A01800E0C930 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
+		6656A9201993A51E00E0C930 /* 1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,6 +296,7 @@
 		107C1C3D198BCFDD00E1198E = {
 			isa = PBXGroup;
 			children = (
+				6656A91D1993A36500E0C930 /* Image */,
 				107C1D27198BD0D000E1198E /* Global */,
 				107C1D0A198BD0C400E1198E /* URLConnect */,
 				107C1D12198BD0C500E1198E /* WSKit */,
@@ -787,6 +790,14 @@
 			path = FXBlurView;
 			sourceTree = "<group>";
 		};
+		6656A91D1993A36500E0C930 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				6656A9201993A51E00E0C930 /* 1@2x.png */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -868,6 +879,7 @@
 				107C1D5A198BD41100E1198E /* UserViewController.xib in Resources */,
 				107C1D44198BD0D000E1198E /* Provinces.plist in Resources */,
 				107C1D55198BD3F900E1198E /* MainViewController.xib in Resources */,
+				6656A9211993A51E00E0C930 /* 1@2x.png in Resources */,
 				107C1D77198BD64F00E1198E /* WSTabBarController.xib in Resources */,
 				107C1D50198BD3DB00E1198E /* ConfigViewController.xib in Resources */,
 				107C1D7D198BD9D300E1198E /* NavView.xib in Resources */,

@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FXBlurView.h"
 
-@interface NavView : UIView
+@interface NavView : FXBlurView
 
 //单例
 + (NavView *) shareNavView;
+//@property (weak, nonatomic) IBOutlet FXBlurView *blureView;
 
 - (IBAction)buttonPressed:(id)sender;
 
