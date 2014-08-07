@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>23B115AE-F54C-455A-AE6E-882D6C597CC9</string>
+	<key>IDESourceControlProjectName</key>
+	<string>DuiZhun</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B5A3630A-2BC5-46A4-8B92-8E315DE5357A</key>
+		<string>https://github.com/wsjtwzs/DuiZhun.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>DuiZhun.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B5A3630A-2BC5-46A4-8B92-8E315DE5357A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/wsjtwzs/DuiZhun.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B5A3630A-2BC5-46A4-8B92-8E315DE5357A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B5A3630A-2BC5-46A4-8B92-8E315DE5357A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DuiZhun</string>
+		</dict>
+	</array>
+</dict>
+</plist>

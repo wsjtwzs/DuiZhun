@@ -6,8 +6,8 @@
 //  Copyright (c) 2014年 mosh. All rights reserved.
 //
 
-#import "BaseTableViewController.h"
+#import "GestureViewController.h"
 
-@interface TargetListViewController : BaseTableViewController
+@interface TargetListViewController : GestureViewController
 
 @end

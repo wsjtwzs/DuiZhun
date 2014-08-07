@@ -39,12 +39,6 @@
     [self createLoadingView];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(invalidToken:) name:NOTI_INVIALIDTOKEN object:nil];
-    
-    UIPanGestureRecognizer *ges = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
-    [self.view addGestureRecognizer:ges];
-    
-//    UITapGestureRecognizer *tap = [UITapGestureRecognizer alloc]
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -264,15 +258,6 @@
 {
     [textField resignFirstResponder];
     return YES;
-}
-
-- (void) pan:(UIGestureRecognizer *)rec
-{
-    if (rec.state == UIGestureRecognizerStateEnded) {
-        AppDelegate *del = [UIApplication sharedApplication].delegate;
-        del.navView.hidden = NO;
-        [del.window bringSubviewToFront:del.navView];
-    }
 }
 
 - (void) dealloc

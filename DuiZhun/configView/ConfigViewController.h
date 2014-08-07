@@ -6,8 +6,8 @@
 //  Copyright (c) 2014年 mosh. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "GestureViewController.h"
 
-@interface ConfigViewController : BaseViewController
+@interface ConfigViewController : GestureViewController
 
 @end

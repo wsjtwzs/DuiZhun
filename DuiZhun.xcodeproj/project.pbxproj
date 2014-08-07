@@ -80,6 +80,8 @@
 		107C1D77198BD64F00E1198E /* WSTabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107C1D75198BD64F00E1198E /* WSTabBarController.xib */; };
 		107C1D7B198BD9B700E1198E /* NavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 107C1D7A198BD9B700E1198E /* NavView.m */; };
 		107C1D7D198BD9D300E1198E /* NavView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107C1D7C198BD9D300E1198E /* NavView.xib */; };
+		6656A91819939C9900E0C930 /* GestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6656A91719939C9900E0C930 /* GestureViewController.m */; };
+		6656A91C1993A01800E0C930 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6656A91B1993A01800E0C930 /* FXBlurView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -259,6 +261,10 @@
 		107C1D79198BD9B700E1198E /* NavView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavView.h; sourceTree = "<group>"; };
 		107C1D7A198BD9B700E1198E /* NavView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavView.m; sourceTree = "<group>"; };
 		107C1D7C198BD9D300E1198E /* NavView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavView.xib; sourceTree = "<group>"; };
+		6656A91619939C9900E0C930 /* GestureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureViewController.h; sourceTree = "<group>"; };
+		6656A91719939C9900E0C930 /* GestureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureViewController.m; sourceTree = "<group>"; };
+		6656A91A1993A01800E0C930 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
+		6656A91B1993A01800E0C930 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,6 +328,7 @@
 		107C1C4F198BCFDD00E1198E /* DuiZhun */ = {
 			isa = PBXGroup;
 			children = (
+				6656A91519939C8000E0C930 /* gestureView */,
 				107C1D78198BD98B00E1198E /* navView */,
 				107C1D60198BD47900E1198E /* LoginView */,
 				107C1D4B198BD38B00E1198E /* configView */,
@@ -368,6 +375,7 @@
 		107C1C78198BD0A800E1198E /* resouce */ = {
 			isa = PBXGroup;
 			children = (
+				6656A9191993A01800E0C930 /* FXBlurView */,
 				107C1C79198BD0A800E1198E /* AFNetworking */,
 				107C1C9B198BD0A800E1198E /* Database */,
 				107C1C9D198BD0A800E1198E /* DES */,
@@ -761,6 +769,24 @@
 			path = navView;
 			sourceTree = "<group>";
 		};
+		6656A91519939C8000E0C930 /* gestureView */ = {
+			isa = PBXGroup;
+			children = (
+				6656A91619939C9900E0C930 /* GestureViewController.h */,
+				6656A91719939C9900E0C930 /* GestureViewController.m */,
+			);
+			path = gestureView;
+			sourceTree = "<group>";
+		};
+		6656A9191993A01800E0C930 /* FXBlurView */ = {
+			isa = PBXGroup;
+			children = (
+				6656A91A1993A01800E0C930 /* FXBlurView.h */,
+				6656A91B1993A01800E0C930 /* FXBlurView.m */,
+			);
+			path = FXBlurView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -893,6 +919,7 @@
 				107C1D21198BD0C500E1198E /* ServerRequest.m in Sources */,
 				107C1CFB198BD0A800E1198E /* EGORefreshTableHeaderView.m in Sources */,
 				107C1C5A198BCFDD00E1198E /* AppDelegate.m in Sources */,
+				6656A91C1993A01800E0C930 /* FXBlurView.m in Sources */,
 				107C1CF4198BD0A800E1198E /* AFXMLRequestOperation.m in Sources */,
 				107C1D25198BD0C500E1198E /* WebViewController.m in Sources */,
 				107C1D05198BD0A800E1198E /* SBJsonStreamWriterAccumulator.m in Sources */,
@@ -914,6 +941,7 @@
 				107C1D09198BD0A800E1198E /* SBJsonWriter.m in Sources */,
 				107C1D24198BD0C500E1198E /* BaseViewController.m in Sources */,
 				107C1D00198BD0A800E1198E /* SBJsonStreamParser.m in Sources */,
+				6656A91819939C9900E0C930 /* GestureViewController.m in Sources */,
 				107C1D20198BD0C500E1198E /* CacheHanding.m in Sources */,
 				107C1D3F198BD0D000E1198E /* CityPickerView.m in Sources */,
 				107C1D03198BD0A800E1198E /* SBJsonStreamParserState.m in Sources */,
@@ -1117,6 +1145,7 @@
 				107C1C74198BCFDD00E1198E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		107C1C75198BCFDD00E1198E /* Build configuration list for PBXNativeTarget "DuiZhunTests" */ = {
 			isa = XCConfigurationList;
@@ -1125,6 +1154,7 @@
 				107C1C77198BCFDD00E1198E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
