@@ -27,7 +27,7 @@ static NavView *install = nil;
 {
     self.dynamic = YES;
     self.blurEnabled = YES;
-    self.blurRadius = 50.0f;
+    self.blurRadius = 10.0f;
 }
 
 - (id) init

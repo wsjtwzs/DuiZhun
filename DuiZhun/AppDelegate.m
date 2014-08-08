@@ -38,6 +38,8 @@ static NSString *firstLaunch = @"firstLaunch";
 - (void) createNavView
 {
     self.navView = [NavView shareNavView];
+    self.navView.hidden = YES;
+    self.navView.frame = FRAME_RIGHT;
     [self.window addSubview:self.navView];
     
 }
