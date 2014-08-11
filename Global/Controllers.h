@@ -12,4 +12,11 @@
 
 + (UIViewController *) firstViewController;
 
++ (UIViewController *) guideViewController;
+
++ (UIViewController *) windowRootViewController;
+
++ (UITabBarController *)mainTabbarController;
+
++ (UIViewController *) viewControllerWithName:(NSString *)name;
 @end

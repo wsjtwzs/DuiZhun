@@ -6,8 +6,13 @@
 //  Copyright (c) 2014年 mosh. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "KeyBoardViewController.h"
 
-@interface RegViewController : BaseViewController
+@interface RegViewController : KeyBoardViewController
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
+- (IBAction)login:(id)sender;
+- (IBAction)letsgo:(id)sender;
+- (IBAction)navBack:(id)sender;
 
 @end

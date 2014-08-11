@@ -35,4 +35,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)buttonpressed:(id)sender {
+    [self.navigationController pushViewController:[Controllers viewControllerWithName:@"GuideViewController"] animated:YES];
+}
+
+- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+
+}
 @end

@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NavView.h"
+//#import "NavView.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) NavView *navView;
-
+//@property (strong, nonatomic) NavView *navView;
 @end

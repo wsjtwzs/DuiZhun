@@ -16,6 +16,8 @@
 #import "TargetListViewController.h"
 #import "ConfigViewController.h"
 #import "WSTabBarController.h"
+#import "GuideViewController.h"
+#import "WindowRootViewController.h"
 
 @implementation Controllers
 
@@ -23,11 +25,13 @@
 {
        NSNumber *autoLogin = [[NSUserDefaults standardUserDefaults] objectForKey:USERDEFAULT_AUTOLOGIN];
     
-    if ( [autoLogin isKindOfClass:[NSNumber class]] && [autoLogin boolValue]) {
-        return [Controllers mainTabbarController];
+    if ( [autoLogin isKindOfClass:[NSNumber class]] && [autoLogin boolValue] &&[USERDEFAULT objectForKey:USER_USERID]) {
+        return [Controllers windowRootViewController];
     }
     else {
-        return [[BaseNavigationController alloc] initWithRootViewController:[ThirdLoginViewController new]];
+        BaseNavigationController *navCtl = [[BaseNavigationController alloc] initWithRootViewController:[ThirdLoginViewController new]];
+        [navCtl setNavigationBarHidden:YES];
+        return navCtl;
     }
 }
 
@@ -42,18 +46,31 @@
     
     for (UIViewController *ctl in array) {
         BaseNavigationController *navCtl = [[BaseNavigationController alloc] initWithRootViewController:ctl];
-       
+        [navCtl setNavigationBarHidden:YES];
         [controllerArr addObject:navCtl];
     }
 
     
     WSTabBarController *tabbarCtl = [WSTabBarController new];
     [tabbarCtl.tabBar setHidden:YES];
-    [tabbarCtl.navigationController setNavigationBarHidden:YES];
     [tabbarCtl setViewControllers:controllerArr];
     return tabbarCtl;
 }
 
++ (UIViewController *) guideViewController
+{
+    return [[GuideViewController alloc] init];
+}
+
++ (UIViewController *) windowRootViewController
+{
+    return [WindowRootViewController new];
+}
+
++ (UIViewController *) viewControllerWithName:(NSString *)name
+{
+    return [NSClassFromString(name) new];
+}
 //
 //+ (UIViewController *) userViewController
 //{

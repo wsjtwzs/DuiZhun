@@ -10,4 +10,6 @@
 
 @interface ThirdLoginViewController : BaseViewController
 
+- (IBAction)buttonPressed:(id)sender;
+
 @end

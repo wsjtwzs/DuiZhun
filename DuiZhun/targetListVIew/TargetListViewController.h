@@ -9,5 +9,6 @@
 #import "GestureViewController.h"
 
 @interface TargetListViewController : GestureViewController
+- (IBAction)buttonpressed:(id)sender;
 
 @end

@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import "GlobalConfig.h"
 #import "Controllers.h"
-#import "NavView.h"
 
 static NSString *firstLaunch = @"firstLaunch";
 
@@ -22,27 +21,29 @@ static NSString *firstLaunch = @"firstLaunch";
     
     //第一次登陆设置初始值
     if (![USERDEFAULT objectForKey:firstLaunch]) {
-        [GlobalConfig saveUserDefaultWithDictionary:@{USERDEFAULT_AUTOLOGIN:@YES,USERDEFAULT_RECEIVENOTI:@YES,firstLaunch:@YES}];
+//        [GlobalConfig saveUserDefaultWithDictionary:@{USERDEFAULT_AUTOLOGIN:@YES,USERDEFAULT_RECEIVENOTI:@YES,firstLaunch:@YES}];
     }
     
     self.window.rootViewController = [Controllers firstViewController];
     
     //创建导航页
-    [self createNavView];
+//    [self createNavView];
+//    [self createBlurViewController];
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
 }
 
-- (void) createNavView
-{
-    self.navView = [NavView shareNavView];
-    self.navView.hidden = YES;
-    self.navView.frame = FRAME_RIGHT;
-    [self.window addSubview:self.navView];
-    
-}
+//- (void) createNavView
+//{
+//    self.navView = [NavView shareNavView];
+//    self.navView.hidden = YES;
+//    self.navView.frame = FRAME_RIGHT;
+//    [self.window addSubview:self.navView];
+//    
+//}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

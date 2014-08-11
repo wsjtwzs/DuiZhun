@@ -8,6 +8,7 @@
 
 #import "GestureViewController.h"
 #import "AppDelegate.h"
+#import "BlureViewController.h"
 
 @interface GestureViewController ()
 
@@ -30,6 +31,9 @@
 
     UIPanGestureRecognizer *ges = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
     [self.view addGestureRecognizer:ges];
+    
+    //继承于Basetableview 会默认增加一个tableView，如果不移除，所有xib上内容无法点击
+    [self.baseTableView removeFromSuperview];
 
 }
 
@@ -42,17 +46,7 @@
     else if (rec.state == UIGestureRecognizerStateEnded) {
         CGPoint coordinate_end = [rec translationInView:self.view];
         if (coordinate_end.x < -50) {
-            AppDelegate *del = [UIApplication sharedApplication].delegate;
-            del.navView.hidden = NO;
-            [del.window bringSubviewToFront:del.navView];
-            
-            if (CGRectEqualToRect(del.navView.frame, FRAME_RIGHT)) {
-                del.navView.blurEnabled = YES;
-                [UIView animateWithDuration:DURATION_NAVVIEW animations:^{
-                    del.navView.frame = FRAME_MIDDLE;
-                }];
-            }
-            
+            [NOTIFICATIONCENTER  postNotificationName:NOTI_GESTURE_RIGHT object:nil];
         }
     }
 }
@@ -62,6 +56,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{}
 
 /*
 #pragma mark - Navigation

@@ -26,7 +26,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    self.scrollView.frame = CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT);
+    self.scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.scrollView.frame), CGRectGetHeight(self.scrollView.frame)+1000);
+    
+        _keyboardScrollView = self.scrollView;
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,4 +39,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)reg:(id)sender {
+    [GlobalConfig push:YES viewController:[Controllers viewControllerWithName:@"RegViewController"] withNavigationCotroller:self.navigationController animationType:4 subType:1 Duration:DURATION_LOGINVIEW];
+}
+
+- (IBAction)letsgo:(id)sender {
+    [GlobalConfig saveUserDefaultWithDictionary:@{USER_USERID:@YES}];
+    [self.navigationController presentViewController:[Controllers viewControllerWithName:@"WindowRootViewController"] animated:YES completion:^{}];
+}
+
+- (IBAction)navBack:(id)sender {
+        [self.navigationController popToRootViewControllerAnimated:YES];
+}
 @end

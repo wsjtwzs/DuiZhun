@@ -27,6 +27,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+        _keyboardScrollView = self.scrollView;
+        _keyboardScrollView.contentSize = CGSizeMake(CGRectGetWidth(_keyboardScrollView.frame), CGRectGetHeight(_keyboardScrollView.frame)+1);
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,5 +37,22 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
+- (IBAction)login:(id)sender {
+    [GlobalConfig push:NO viewController:nil withNavigationCotroller:self.navigationController animationType:4 subType:2 Duration:DURATION_LOGINVIEW];
+}
+
+- (IBAction)letsgo:(id)sender {
+    [GlobalConfig saveUserDefaultWithDictionary:@{USER_USERID:@YES}];
+    [self.navigationController presentViewController:[Controllers viewControllerWithName:@"WindowRootViewController"] animated:YES completion:^{}];
+}
+
+- (IBAction)navBack:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+
 
 @end

@@ -8,6 +8,13 @@
 
 #import "ThirdLoginViewController.h"
 
+typedef enum {
+    buttonPressed_sina      =201,
+    buttonPressed_tengxun   =202,
+    buttonPressed_login     =203,
+
+}buttonPressed;
+
 @interface ThirdLoginViewController ()
 
 @end
@@ -35,4 +42,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)buttonPressed:(id)sender {
+    UIButton *button = (UIButton *)sender;
+    switch (button.tag) {
+        case buttonPressed_sina:
+            
+            break;
+        case buttonPressed_tengxun:
+            
+            break;
+        case buttonPressed_login:
+            [self.navigationController pushViewController:[Controllers viewControllerWithName:@"LoginViewController"] animated:YES];
+            break;
+            
+        default:
+            break;
+    }
+}
 @end

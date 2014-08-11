@@ -82,6 +82,7 @@ _Pragma("clang diagnostic pop") \
 #define USERDEFAULT                 [NSUserDefaults standardUserDefaults]
 #define OBJECTOFUSERDEFAULT(object) [NSUserDefaults standardUserDefaults] objectForKey:object]
 #define NOTIFICATIONCENTER           [NSNotificationCenter defaultCenter]
+#define USERDEFAULT                  [NSUserDefaults standardUserDefaults]
 
 //动画时间
 #define DURATION                    0.7
@@ -180,10 +181,12 @@ _Pragma("clang diagnostic pop") \
 #define USER_TOKEN                  @"userToken"        //token
 
 //消息
-#define NOTI_MAIN      @"NOTI_MAIN"
-#define NOTI_USER      @"NOTI_USER"
-#define NOTI_CONFIG      @"NOTI_CONFIG"
-#define NOTI_TARGER      @"NOTI_TARGET"
+#define NOTI_GESTURE_RIGHT      @"NOTI_GES_RIGHT"
+#define NOTI_NAVBUTTON_PRESS    @"NOTI_NAVBUTTON_PRESS"
+#define NOTI_MAIN               @"NOTI_MAIN"
+#define NOTI_USER               @"NOTI_USER"
+#define NOTI_CONFIG             @"NOTI_CONFIG"
+#define NOTI_TARGER             @"NOTI_TARGET"
 
 #define FRAME_MIDDLE    CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT)
 #define FRAME_RIGHT     CGRectMake(SCREENWIDTH, 0, SCREENWIDTH, SCREENHEIGHT)
@@ -191,7 +194,8 @@ _Pragma("clang diagnostic pop") \
 #define FRAME_UP        CGRectMake(0, -SCREENHEIGHT, SCREENWIDTH, SCREENHEIGHT)
 #define FRAME_DOWN      CGRectMake(0, SCREENHEIGHT, SCREENWIDTH, SCREENHEIGHT)
 
-#define DURATION_NAVVIEW    0.5f
+#define DURATION_NAVVIEW    0.3f
+#define DURATION_LOGINVIEW    0.8f
 
 
 

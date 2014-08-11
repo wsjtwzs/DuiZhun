@@ -119,7 +119,7 @@
     NSDictionary *allType = @{@1:kCATransitionPush,
                               @2:kCATransitionMoveIn,
                               @3:kCATransitionFade,
-                              @4:kCATransitionReveal};
+                              @4:@"oglFlip"};
     NSDictionary *allSubType = @{@1:kCATransitionFromLeft,
                                  @2:kCATransitionFromRight,
                                  @3:kCATransitionFromTop,
@@ -689,14 +689,21 @@
     CGSize size = [[dic objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
     
     UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, size.height + 40, 0.0);
-    scrollView.contentInset = contentInsets;
-    scrollView.scrollIndicatorInsets = contentInsets;
+    
+    [UIView animateWithDuration:0.3 animations:^{
+    
+        scrollView.contentInset = contentInsets;
+        scrollView.scrollIndicatorInsets = contentInsets;
+    }];
 }
 
 + (void) keyBoardDidDisapper:(NSNotification *)noti scrollView:(UIScrollView *)scrollView
 {
-    scrollView.contentInset = UIEdgeInsetsZero;
-    scrollView.scrollIndicatorInsets = UIEdgeInsetsZero;
+    [UIView animateWithDuration:0.3 animations:^{
+        
+        scrollView.contentInset = UIEdgeInsetsZero;
+        scrollView.scrollIndicatorInsets = UIEdgeInsetsZero;
+    }];
 }
 
 

@@ -31,7 +31,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = BACKGROUND;
+//    self.view.backgroundColor = BACKGROUND;
     if (!self.dataArray) {
         self.dataArray = [NSMutableArray array];
     }

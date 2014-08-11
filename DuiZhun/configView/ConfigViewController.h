@@ -6,8 +6,10 @@
 //  Copyright (c) 2014年 mosh. All rights reserved.
 //
 
-#import "GestureViewController.h"
+#import "TransitionViewController.h"
 
-@interface ConfigViewController : GestureViewController
+@interface ConfigViewController :TransitionViewController
+
+- (IBAction)close:(id)sender;
 
 @end
