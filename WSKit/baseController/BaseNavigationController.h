@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "GlobalConfig.h"
 
-@interface BaseNavigationController : UINavigationController
+@interface BaseNavigationController : UINavigationController<UIGestureRecognizerDelegate,UINavigationControllerDelegate>
+
+@property(nonatomic,weak) UIViewController* currentShowVC;
 
 @end

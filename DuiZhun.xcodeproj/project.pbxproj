@@ -499,6 +499,16 @@
 		102086B319993BFF00E151B3 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 102086AD19993BFF00E151B3 /* 2.jpg */; };
 		102086B419993BFF00E151B3 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 102086AE19993BFF00E151B3 /* 3.jpg */; };
 		102086B519993BFF00E151B3 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 102086AF19993BFF00E151B3 /* 4.jpg */; };
+		102086B9199A352A00E151B3 /* BIndingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 102086B7199A352A00E151B3 /* BIndingViewController.m */; };
+		102086BA199A352A00E151B3 /* BIndingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 102086B8199A352A00E151B3 /* BIndingViewController.xib */; };
+		102086BE199A38B400E151B3 /* APPInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 102086BC199A38B400E151B3 /* APPInfoViewController.m */; };
+		102086BF199A38B400E151B3 /* APPInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 102086BD199A38B400E151B3 /* APPInfoViewController.xib */; };
+		102086C3199A39CF00E151B3 /* SuggessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 102086C1199A39CF00E151B3 /* SuggessViewController.m */; };
+		102086C4199A39CF00E151B3 /* SuggessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 102086C2199A39CF00E151B3 /* SuggessViewController.xib */; };
+		102086C8199A741A00E151B3 /* MainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 102086C6199A741A00E151B3 /* MainCell.m */; };
+		102086C9199A741A00E151B3 /* MainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 102086C7199A741A00E151B3 /* MainCell.xib */; };
+		102086CD199A79EB00E151B3 /* MainDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 102086CB199A79EB00E151B3 /* MainDetailViewController.m */; };
+		102086CE199A79EB00E151B3 /* MainDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 102086CC199A79EB00E151B3 /* MainDetailViewController.xib */; };
 		107C1C4A198BCFDD00E1198E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 107C1C49198BCFDD00E1198E /* Foundation.framework */; };
 		107C1C4C198BCFDD00E1198E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 107C1C4B198BCFDD00E1198E /* CoreGraphics.framework */; };
 		107C1C4E198BCFDD00E1198E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 107C1C4D198BCFDD00E1198E /* UIKit.framework */; };
@@ -1086,6 +1096,21 @@
 		102086AD19993BFF00E151B3 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
 		102086AE19993BFF00E151B3 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
 		102086AF19993BFF00E151B3 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		102086B6199A352A00E151B3 /* BIndingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIndingViewController.h; sourceTree = "<group>"; };
+		102086B7199A352A00E151B3 /* BIndingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIndingViewController.m; sourceTree = "<group>"; };
+		102086B8199A352A00E151B3 /* BIndingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BIndingViewController.xib; sourceTree = "<group>"; };
+		102086BB199A38B400E151B3 /* APPInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPInfoViewController.h; sourceTree = "<group>"; };
+		102086BC199A38B400E151B3 /* APPInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPInfoViewController.m; sourceTree = "<group>"; };
+		102086BD199A38B400E151B3 /* APPInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = APPInfoViewController.xib; sourceTree = "<group>"; };
+		102086C0199A39CF00E151B3 /* SuggessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuggessViewController.h; sourceTree = "<group>"; };
+		102086C1199A39CF00E151B3 /* SuggessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuggessViewController.m; sourceTree = "<group>"; };
+		102086C2199A39CF00E151B3 /* SuggessViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuggessViewController.xib; sourceTree = "<group>"; };
+		102086C5199A741A00E151B3 /* MainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCell.h; sourceTree = "<group>"; };
+		102086C6199A741A00E151B3 /* MainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCell.m; sourceTree = "<group>"; };
+		102086C7199A741A00E151B3 /* MainCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCell.xib; sourceTree = "<group>"; };
+		102086CA199A79EB00E151B3 /* MainDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainDetailViewController.h; sourceTree = "<group>"; };
+		102086CB199A79EB00E151B3 /* MainDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainDetailViewController.m; sourceTree = "<group>"; };
+		102086CC199A79EB00E151B3 /* MainDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainDetailViewController.xib; sourceTree = "<group>"; };
 		107C1C46198BCFDD00E1198E /* DuiZhun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DuiZhun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		107C1C49198BCFDD00E1198E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		107C1C4B198BCFDD00E1198E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -2164,6 +2189,12 @@
 				107C1D51198BD3F900E1198E /* MainViewController.h */,
 				107C1D52198BD3F900E1198E /* MainViewController.m */,
 				107C1D53198BD3F900E1198E /* MainViewController.xib */,
+				102086C5199A741A00E151B3 /* MainCell.h */,
+				102086C6199A741A00E151B3 /* MainCell.m */,
+				102086C7199A741A00E151B3 /* MainCell.xib */,
+				102086CA199A79EB00E151B3 /* MainDetailViewController.h */,
+				102086CB199A79EB00E151B3 /* MainDetailViewController.m */,
+				102086CC199A79EB00E151B3 /* MainDetailViewController.xib */,
 			);
 			path = mainView;
 			sourceTree = "<group>";
@@ -2194,6 +2225,15 @@
 				107C1D4C198BD3DB00E1198E /* ConfigViewController.h */,
 				107C1D4D198BD3DB00E1198E /* ConfigViewController.m */,
 				107C1D4E198BD3DB00E1198E /* ConfigViewController.xib */,
+				102086B6199A352A00E151B3 /* BIndingViewController.h */,
+				102086B7199A352A00E151B3 /* BIndingViewController.m */,
+				102086B8199A352A00E151B3 /* BIndingViewController.xib */,
+				102086BB199A38B400E151B3 /* APPInfoViewController.h */,
+				102086BC199A38B400E151B3 /* APPInfoViewController.m */,
+				102086BD199A38B400E151B3 /* APPInfoViewController.xib */,
+				102086C0199A39CF00E151B3 /* SuggessViewController.h */,
+				102086C1199A39CF00E151B3 /* SuggessViewController.m */,
+				102086C2199A39CF00E151B3 /* SuggessViewController.xib */,
 			);
 			path = configView;
 			sourceTree = "<group>";
@@ -2388,6 +2428,7 @@
 				102084E519991DA700E151B3 /* arrow-left-b.png in Resources */,
 				1020861519991DA700E151B3 /* ipod.png in Resources */,
 				1020850D19991DA700E151B3 /* chevron-down.png in Resources */,
+				102086BA199A352A00E151B3 /* BIndingViewController.xib in Resources */,
 				102084FF19991DA700E151B3 /* bug.png in Resources */,
 				1020850F19991DA700E151B3 /* chevron-right.png in Resources */,
 				102086B519993BFF00E151B3 /* 4.jpg in Resources */,
@@ -2451,6 +2492,7 @@
 				102085A719991DA700E151B3 /* ios7-infinite-outline.png in Resources */,
 				1020858119991DA700E151B3 /* ios7-cloudy-night-outline.png in Resources */,
 				1020851819991DA700E151B3 /* code-working.png in Resources */,
+				102086CE199A79EB00E151B3 /* MainDetailViewController.xib in Resources */,
 				102084F119991DA700E151B3 /* arrow-up-b.png in Resources */,
 				108786C9199785F900530202 /* GuideViewController.xib in Resources */,
 				1020855819991DA700E151B3 /* ios7-at.png in Resources */,
@@ -2514,6 +2556,7 @@
 				1020858F19991DA700E151B3 /* ios7-drag.png in Resources */,
 				102085AB19991DA700E151B3 /* ios7-information.png in Resources */,
 				1020855C19991DA700E151B3 /* ios7-bolt.png in Resources */,
+				102086C9199A741A00E151B3 /* MainCell.xib in Resources */,
 				1020857119991DA700E151B3 /* ios7-checkmark-empty.png in Resources */,
 				1020869019991DA700E151B3 /* steam.png in Resources */,
 				1020858419991DA700E151B3 /* ios7-cloudy.png in Resources */,
@@ -2711,6 +2754,7 @@
 				102085C719991DA700E151B3 /* ios7-paperplane-outline.png in Resources */,
 				102085DF19991DA700E151B3 /* ios7-printer.png in Resources */,
 				102085A419991DA700E151B3 /* ios7-help-empty.png in Resources */,
+				102086BF199A38B400E151B3 /* APPInfoViewController.xib in Resources */,
 				1020830A19991D1700E151B3 /* delete@2x.png in Resources */,
 				102085B119991DA700E151B3 /* ios7-location-outline.png in Resources */,
 				1020850519991DA700E151B3 /* chatbox.png in Resources */,
@@ -2884,6 +2928,7 @@
 				107C1D6B198BD4C500E1198E /* LoginViewController.xib in Resources */,
 				669F6CFB19963FC800E41461 /* BlureViewController.xib in Resources */,
 				1020855E19991DA700E151B3 /* ios7-bookmarks.png in Resources */,
+				102086C4199A39CF00E151B3 /* SuggessViewController.xib in Resources */,
 				1020860B19991DA700E151B3 /* ios7-videocam-outline.png in Resources */,
 				1020855B19991DA700E151B3 /* ios7-bolt-outline.png in Resources */,
 				1020850719991DA700E151B3 /* chatbubble-working.png in Resources */,
@@ -2906,6 +2951,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				107C1D41198BD0D000E1198E /* GlobalConfig.m in Sources */,
+				102086CD199A79EB00E151B3 /* MainDetailViewController.m in Sources */,
 				107C1CFF198BD0A800E1198E /* SBJsonParser.m in Sources */,
 				107C1D01198BD0A800E1198E /* SBJsonStreamParserAccumulator.m in Sources */,
 				107C1D07198BD0A800E1198E /* SBJsonTokeniser.m in Sources */,
@@ -2928,6 +2974,7 @@
 				107C1D45198BD0D000E1198E /* URLDefine.m in Sources */,
 				107C1D47198BD0D000E1198E /* WSPickerView.m in Sources */,
 				107C1CFC198BD0A800E1198E /* NSString+Hashing.m in Sources */,
+				102086B9199A352A00E151B3 /* BIndingViewController.m in Sources */,
 				107C1CFD198BD0A800E1198E /* MBProgressHUD.m in Sources */,
 				107C1CF3198BD0A800E1198E /* AFURLConnectionOperation.m in Sources */,
 				107C1D40198BD0D000E1198E /* Controllers.m in Sources */,
@@ -2942,9 +2989,11 @@
 				107C1C56198BCFDD00E1198E /* main.m in Sources */,
 				107C1CF1198BD0A800E1198E /* AFNetworkActivityIndicatorManager.m in Sources */,
 				107C1CF5198BD0A800E1198E /* UIImageView+AFNetworking.m in Sources */,
+				102086C3199A39CF00E151B3 /* SuggessViewController.m in Sources */,
 				107C1D06198BD0A800E1198E /* SBJsonStreamWriterState.m in Sources */,
 				107C1D08198BD0A800E1198E /* SBJsonUTF8Stream.m in Sources */,
 				107C1D59198BD41100E1198E /* UserViewController.m in Sources */,
+				102086C8199A741A00E151B3 /* MainCell.m in Sources */,
 				107C1D3E198BD0D000E1198E /* BaseModel.m in Sources */,
 				107C1CFE198BD0A800E1198E /* NSObject+SBJson.m in Sources */,
 				107C1D70198BD4E200E1198E /* RegViewController.m in Sources */,
@@ -2952,6 +3001,7 @@
 				669F6CF5199635B600E41461 /* BlureViewController.m in Sources */,
 				107C1D3D198BD0D000E1198E /* BaseCell.m in Sources */,
 				107C1D43198BD0D000E1198E /* MoshDefine.m in Sources */,
+				102086BE199A38B400E151B3 /* APPInfoViewController.m in Sources */,
 				107C1D22198BD0C500E1198E /* BaseNavigationController.m in Sources */,
 				107C1D76198BD64F00E1198E /* WSTabBarController.m in Sources */,
 				107C1D09198BD0A800E1198E /* SBJsonWriter.m in Sources */,

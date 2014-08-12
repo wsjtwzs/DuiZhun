@@ -29,7 +29,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self.navigationBar setBackgroundImage:[UIImage imageNamed:NAVIMAGE] forBarMetrics:UIBarMetricsDefault];
-    
+//    self.interactivePopGestureRecognizer.enabled = YES;
     //标题字体变成白色
     if ([GlobalConfig versionIsIOS7]) {
         [self.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor],NSForegroundColorAttributeName,nil]];
@@ -42,10 +42,32 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+-(id)initWithRootViewController:(UIViewController *)rootViewController
 {
-
+    BaseNavigationController* nvc = [super initWithRootViewController:rootViewController];
+    self.interactivePopGestureRecognizer.delegate = self;
+    nvc.delegate = self;
+    return nvc;
 }
+
+-(void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+}
+-(void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    if (navigationController.viewControllers.count == 1)
+        self.currentShowVC = Nil;
+    else
+        self.currentShowVC = viewController;
+}
+
+-(BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
+    if (gestureRecognizer == self.interactivePopGestureRecognizer) {
+        return (self.currentShowVC == self.topViewController); //the most important
+    }
+    return YES;
+}
+
 
 @end

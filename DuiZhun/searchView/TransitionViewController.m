@@ -23,6 +23,11 @@
     return self;
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    self.view.alpha = 1;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -43,20 +48,20 @@
     switch (type) {
         case TransitionType_push:
         {
-            [UIView animateWithDuration:0.3 animations:^{
+            [UIView animateWithDuration:0.1 animations:^{
                 //                self.view.hidden = YES;
                 self.view.alpha = 0;
             } completion:^(BOOL finish) {
-                [self.navigationController pushViewController:toCtl animated:NO];
+                [self.navigationController pushViewController:toCtl animated:YES];
             }];
         }
             break;
          case TransitionType_pop:
         {
-            [UIView animateWithDuration:0.3 animations:^{
+            [UIView animateWithDuration:0.1 animations:^{
                 self.view.alpha = 0;
             } completion:^(BOOL finish) {
-                [self.navigationController popViewControllerAnimated:NO];
+                [self.navigationController popViewControllerAnimated:YES];
             }];
 
         }

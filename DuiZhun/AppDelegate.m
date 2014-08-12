@@ -25,12 +25,11 @@ static NSString *firstLaunch = @"firstLaunch";
     }
     
     self.window.rootViewController = [Controllers firstViewController];
-    
     //创建导航页
 //    [self createNavView];
 //    [self createBlurViewController];
     
-    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.backgroundColor = [UIColor blackColor];
     [self.window makeKeyAndVisible];
     return YES;
 }

@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "MainCell.h"
 
 @interface MainViewController ()
 
@@ -26,7 +27,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.dataArray = [NSMutableArray arrayWithArray:@[@"6.jpg",@"3.jpg",@"2.jpg",@"4.jpg"]];
+    self.cellHeight = 200;
+    [self.view addSubview:self.baseTableView];
+    self.baseTableView.frame = CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT);
+    [self.baseTableView registerNib:[UINib nibWithNibName:NSStringFromClass([MainCell class]) bundle:nil] forCellReuseIdentifier:@"mainCell"];
+    
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    MainCell *cell = [tableView dequeueReusableCellWithIdentifier:@"mainCell"];
+    cell.backImageView.image = [UIImage imageNamed:self.dataArray[indexPath.row]];
+    return cell;
+}
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.navigationController pushViewController:[Controllers viewControllerWithName:@"MainDetailViewController"] animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

@@ -12,4 +12,5 @@
 
 - (IBAction)close:(id)sender;
 
+- (IBAction)buttonPressed:(id)sender;
 @end
