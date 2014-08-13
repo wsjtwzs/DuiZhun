@@ -623,59 +623,6 @@
     
 }
 
-
-//加密用(DES方式)
-
-//+ (NSString *) encryptUseDES:(NSString *)clearText key:(NSString *)key
-//{
-//    NSData *data = [clearText dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
-//    unsigned char buffer[1024];
-//    memset(buffer, 0, sizeof(char));
-//    size_t numBytesEncrypted = 0;
-//    
-//    CCCryptorStatus cryptStatus = CCCrypt(kCCEncrypt,
-//                                          kCCAlgorithmDES,
-//                                          kCCOptionPKCS7Padding | kCCOptionECBMode,
-//                                          [key UTF8String],
-//                                          kCCKeySizeDES,
-//                                          nil,
-//                                          [data bytes],
-//                                          [data length],
-//                                          buffer,
-//                                          1024,
-//                                          &numBytesEncrypted);
-//    
-//    NSString* plainText = nil;
-//    if (cryptStatus == kCCSuccess) {
-//        NSData *dataTemp = [NSData dataWithBytes:buffer length:(NSUInteger)numBytesEncrypted];
-//        plainText = [GTMBase64 stringByEncodingData:dataTemp];
-//        ASIFormDataRequest *form = [ASIFormDataRequest requestWithURL:nil];
-//        plainText = [form encodeURL:plainText];
-//    }else{
-//        NSLog(@"DES加密失败");
-//    }
-//    return plainText;
-//}
-
-//+ (SinaWeibo *)sinaweibo
-//{
-//    
-//    if (!instance) {
-//            instance = [[SinaWeibo alloc] initWithAppKey:SINA_APPKEY appSecret:SINA_APPSECRET appRedirectURI:URI andDelegate:nil];
-//            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//            if ([defaults objectForKey:SINA_USERINFO_ACCESSTOKEN] && [defaults objectForKey:SINA_USERINFO_EXPITATIONDATE] && [defaults objectForKey:SINA_USERINFO_USERID])
-//            {
-//                instance.accessToken = [defaults objectForKey:SINA_USERINFO_ACCESSTOKEN];
-//                instance.expirationDate = [defaults objectForKey:SINA_USERINFO_EXPITATIONDATE];
-//                instance.userID = [defaults objectForKey:SINA_USERINFO_USERID];
-//            }
-//            return instance;
-//    }
-//    return instance;
-//    
-//}
-
-
 +(NSString *) getObjectWithKey:(NSString *)key
 {
     return [GlobalConfig convertToString:[[NSUserDefaults standardUserDefaults] objectForKey:key]];
@@ -705,6 +652,35 @@
         scrollView.scrollIndicatorInsets = UIEdgeInsetsZero;
     }];
 }
+
++ (void) tabbarViewController:(UITabBarController *)tabbarCtl hideTabBar:(BOOL) hidden{
+    
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0];
+    
+    for(UIView *view in tabbarCtl.view.subviews)
+    {
+        if([view isKindOfClass:[UITabBar class]])
+        {
+            if (hidden) {
+                [view setFrame:CGRectMake(view.frame.origin.x, SCREENHEIGHT, view.frame.size.width, view.frame.size.height)];
+            } else {
+                [view setFrame:CGRectMake(view.frame.origin.x, SCREENHEIGHT-49, view.frame.size.width, view.frame.size.height)];
+            }
+        }
+        else
+        {
+            if (hidden) {
+                [view setFrame:CGRectMake(view.frame.origin.x, view.frame.origin.y, view.frame.size.width, SCREENHEIGHT)];
+            } else {
+                [view setFrame:CGRectMake(view.frame.origin.x, view.frame.origin.y, view.frame.size.width, SCREENHEIGHT-49)];
+            }
+        }
+    }
+    
+    [UIView commitAnimations];
+}
+
 
 
 @end

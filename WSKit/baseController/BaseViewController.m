@@ -20,10 +20,10 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        if ([GlobalConfig versionIsIOS7]) {
-            self.extendedLayoutIncludesOpaqueBars = NO;
-            self.edgesForExtendedLayout = UIRectEdgeNone;
-        }
+//        if ([GlobalConfig versionIsIOS7]) {
+//            self.extendedLayoutIncludesOpaqueBars = NO;
+//            self.edgesForExtendedLayout = UIRectEdgeNone;
+//        }
     }
     return self;
 }

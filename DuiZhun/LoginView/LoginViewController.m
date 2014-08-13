@@ -28,7 +28,7 @@
     [super viewDidLoad];
     
     self.scrollView.frame = CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT);
-    self.scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.scrollView.frame), CGRectGetHeight(self.scrollView.frame)+1000);
+    self.scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.scrollView.frame), CGRectGetHeight(self.scrollView.frame)+1);
     
         _keyboardScrollView = self.scrollView;
 }

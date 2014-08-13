@@ -20,8 +20,14 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+          self.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
     }
     return self;
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+        self.view.frame = CGRectMake(0, 0, SCREENWIDTH,SCREENHEIGHT);
 }
 
 - (void)viewDidLoad

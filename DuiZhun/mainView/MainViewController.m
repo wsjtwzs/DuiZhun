@@ -20,6 +20,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+//        self.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
     }
     return self;
 }
@@ -27,6 +28,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    button.backgroundColor = [UIColor blueColor];
+    button.frame = CGRectMake(0, SCREENHEIGHT  - 100, SCREENWIDTH, 100);
+    [button setTitle:@"点击" forState:UIControlStateNormal];
+    [button setTitle:@"1414234" forState:UIControlStateHighlighted];
+    [self.view addSubview:button];
     self.dataArray = [NSMutableArray arrayWithArray:@[@"6.jpg",@"3.jpg",@"2.jpg",@"4.jpg"]];
     self.cellHeight = 200;
     [self.view addSubview:self.baseTableView];
@@ -45,6 +53,7 @@
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.navigationController pushViewController:[Controllers viewControllerWithName:@"MainDetailViewController"] animated:YES];
+    [self.tabBarController hidesBottomBarWhenPushed];
 }
 
 - (void)didReceiveMemoryWarning

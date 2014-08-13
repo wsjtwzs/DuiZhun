@@ -47,7 +47,7 @@
     self.tabCtl = (WSTabBarController *)[Controllers mainTabbarController];
     [self addChildViewController:self.tabCtl];
     [self.view addSubview:self.tabCtl.view];
-    
+    self.tabCtl.tabBar.hidden = YES;
     
     self.blurView = [[FXBlurView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT)];
     self.blurView.frame = FRAME_RIGHT;
@@ -73,10 +73,25 @@
     
     if (CGRectEqualToRect(self.navCtl.view.frame, FRAME_RIGHT)) {
         self.blurView.blurEnabled = YES;
+        self.blurView.frame = FRAME_MIDDLE;
+        self.blurView.alpha = 0;
         [UIView animateWithDuration:DURATION_NAVVIEW animations:^{
             self.navCtl.view.frame = FRAME_MIDDLE;
-            self.blurView.frame = FRAME_MIDDLE;
+            self.blurView.alpha = 1;
+        } completion:^(BOOL finish) {
+            [UIView animateWithDuration:0.2 animations:^{
+
+                
+            }];
+            
+            
         }];
+//        [UIView animateWithDuration:0.8 delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:0.5 options:0 animations:^{
+//            self.navCtl.view.frame = FRAME_MIDDLE;
+//            self.blurView.frame = FRAME_MIDDLE;
+//        } completion:^(BOOL finish){
+//        
+//        }];
     }
 
 }
@@ -94,12 +109,6 @@
         }];
     }
 }
-
-- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-
-}
-
 
 /*
 #pragma mark - Navigation

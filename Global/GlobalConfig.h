@@ -478,4 +478,6 @@ typedef enum {
  */
 + (void) keyBoardDidDisapper:(NSNotification *)noti scrollView:(UIScrollView *)scrollView;
 
++ (void) tabbarViewController:(UITabBarController *)tabbarCtl hideTabBar:(BOOL) hidden;
+
 @end

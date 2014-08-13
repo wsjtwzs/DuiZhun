@@ -29,13 +29,20 @@
     // Do any additional setup after loading the view from its nib.
     
         _keyboardScrollView = self.scrollView;
-        _keyboardScrollView.contentSize = CGSizeMake(CGRectGetWidth(_keyboardScrollView.frame), CGRectGetHeight(_keyboardScrollView.frame)+1);
+        _keyboardScrollView.contentSize = CGSizeMake(CGRectGetWidth(_keyboardScrollView.frame), CGRectGetHeight(_keyboardScrollView.frame)+100);
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) keyBoardWillHidden:(NSNotification *)noti
+{
+    //    [GlobalConfig keyBoardDidDisapper:noti scrollView:_keyboardScrollView];
+    self.scrollView.contentInset = UIEdgeInsetsZero;
+    self.scrollView.scrollIndicatorInsets = UIEdgeInsetsZero;
 }
 
 

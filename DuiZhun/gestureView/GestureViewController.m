@@ -31,6 +31,7 @@
 
     UIPanGestureRecognizer *ges = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
     [self.view addGestureRecognizer:ges];
+
     
     //继承于Basetableview 会默认增加一个tableView，如果不移除，所有xib上内容无法点击
     [self.baseTableView removeFromSuperview];

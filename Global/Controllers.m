@@ -48,11 +48,11 @@
         BaseNavigationController *navCtl = [[BaseNavigationController alloc] initWithRootViewController:ctl];
         [navCtl setNavigationBarHidden:YES];
         [controllerArr addObject:navCtl];
+        
     }
 
     
     WSTabBarController *tabbarCtl = [WSTabBarController new];
-    [tabbarCtl.tabBar setHidden:YES];
     [tabbarCtl setViewControllers:controllerArr];
     return tabbarCtl;
 }

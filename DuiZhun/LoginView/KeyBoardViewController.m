@@ -28,7 +28,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [NOTIFICATIONCENTER addObserver:self selector:@selector(keyBoardWillShow:) name:UIKeyboardDidShowNotification object:nil];
-    [NOTIFICATIONCENTER addObserver:self selector:@selector(keyBoardWillHidden:) name:UIKeyboardDidHideNotification object:nil];
+    [NOTIFICATIONCENTER addObserver:self selector:@selector(keyBoardWillHidden:) name:UIKeyboardWillHideNotification object:nil];
 }
 
 - (void)didReceiveMemoryWarning
