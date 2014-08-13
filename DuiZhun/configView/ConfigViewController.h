@@ -9,6 +9,7 @@
 #import "TransitionViewController.h"
 
 @interface ConfigViewController :TransitionViewController
+- (IBAction)exit:(id)sender;
 
 - (IBAction)close:(id)sender;
 

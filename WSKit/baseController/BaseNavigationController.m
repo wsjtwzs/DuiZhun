@@ -19,16 +19,10 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
-          self.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
     }
     return self;
 }
 
-- (void) viewWillAppear:(BOOL)animated
-{
-        self.view.frame = CGRectMake(0, 0, SCREENWIDTH,SCREENHEIGHT);
-}
 
 - (void)viewDidLoad
 {
@@ -36,6 +30,8 @@
 	// Do any additional setup after loading the view.
     [self.navigationBar setBackgroundImage:[UIImage imageNamed:NAVIMAGE] forBarMetrics:UIBarMetricsDefault];
 //    self.interactivePopGestureRecognizer.enabled = YES;
+    
+    self.view.backgroundColor = CLEARCOLOR;
     //标题字体变成白色
     if ([GlobalConfig versionIsIOS7]) {
         [self.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor],NSForegroundColorAttributeName,nil]];

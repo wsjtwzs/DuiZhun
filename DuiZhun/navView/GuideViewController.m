@@ -35,21 +35,29 @@ typedef enum {
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-}
-
-- (void) viewWillAppear:(BOOL)animated
-{
-    [UIView animateWithDuration:0.3 animations:^{
-        //                self.view.hidden = YES;
-        self.view.alpha = 1;
-    }];
-
+    
+    UIPanGestureRecognizer *ges = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
+    [self.view addGestureRecognizer:ges];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) pan:(UIPanGestureRecognizer *)rec
+{
+    CGPoint coordinate_start;
+    if (rec.state == UIGestureRecognizerStateBegan) {
+        coordinate_start = [rec translationInView:self.view];
+    }
+    else if (rec.state == UIGestureRecognizerStateEnded) {
+        CGPoint coordinate_end = [rec translationInView:self.view];
+        if (coordinate_end.x > 50) {
+            [NOTIFICATIONCENTER  postNotificationName:NOTI_NAVBUTTON_PRESS object:nil];
+        }
+    }
 }
 
 - (IBAction)buttonPressed:(id)sender {
@@ -62,8 +70,10 @@ typedef enum {
             break;
         case buttonPressed_target:
             //列表
-            [NOTIFICATIONCENTER postNotificationName:NOTI_TARGER object:nil];
-             [NOTIFICATIONCENTER postNotificationName:NOTI_NAVBUTTON_PRESS object:nil];
+//            [NOTIFICATIONCENTER postNotificationName:NOTI_TARGER object:nil];
+//             [NOTIFICATIONCENTER postNotificationName:NOTI_NAVBUTTON_PRESS object:nil];
+            [NOTIFICATIONCENTER postNotificationName:NOTI_MAIN object:nil];
+            [NOTIFICATIONCENTER postNotificationName:NOTI_NAVBUTTON_PRESS object:nil];
             break;
         case buttonPressed_userRecord:
             //我的记录
@@ -85,7 +95,7 @@ typedef enum {
 
 - (IBAction)search:(id)sender
 {
-    [self transitionWithType:TransitionType_push fromViewController:self toView:[Controllers viewControllerWithName:@"SearchViewController"]];
+//    [self transitionWithType:TransitionType_push fromViewController:self toView:[Controllers viewControllerWithName:@"SearchViewController"]];
 
 }
 

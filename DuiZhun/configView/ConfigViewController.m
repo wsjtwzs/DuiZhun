@@ -7,6 +7,7 @@
 //
 
 #import "ConfigViewController.h"
+#import "AppDelegate.h"
 
 typedef enum{
     buttonPressed_binding   = 301,
@@ -41,6 +42,20 @@ typedef enum{
     // Dispose of any resources that can be recreated.
 }
 
+
+- (IBAction)exit:(id)sender {
+    AppDelegate *del = [UIApplication sharedApplication].delegate;
+    
+    [UIView animateWithDuration:0.2 animations:^{
+        del.window.alpha = 0;
+    } completion:^(BOOL finish) {
+        del.window.rootViewController = [Controllers firstViewController];
+        [UIView animateWithDuration:0.2 animations:^{
+            del.window.alpha = 1;
+        }];
+    }];
+
+}
 
 - (IBAction)close:(id)sender {
     [super close:sender];

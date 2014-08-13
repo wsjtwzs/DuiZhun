@@ -195,7 +195,7 @@ _Pragma("clang diagnostic pop") \
 #define FRAME_DOWN      CGRectMake(0, SCREENHEIGHT, SCREENWIDTH, SCREENHEIGHT)
 
 #define DURATION_NAVVIEW    0.3f
-#define DURATION_LOGINVIEW    0.8f
+#define DURATION_LOGINVIEW    0.5f
 
 
 
