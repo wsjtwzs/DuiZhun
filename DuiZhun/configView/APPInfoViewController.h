@@ -9,6 +9,12 @@
 #import "TransitionViewController.h"
 
 @interface APPInfoViewController : TransitionViewController
+{
+    
+    __weak IBOutlet UIImageView *infoImage;
+    __weak IBOutlet UIButton *leftImage;
+}
+
 - (IBAction)close:(id)sender;
 
 @end

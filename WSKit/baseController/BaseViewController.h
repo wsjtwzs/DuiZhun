@@ -13,6 +13,7 @@
 #import "GlobalConfig.h"
 #import "HTTPClient.h"
 #import "Controllers.h"
+#import "IonIcons.h"
 
 static NSString *NAVBUTTON_back = @"nav_back";
 static NSString *NAVBUTTON_share = @"nav_share";

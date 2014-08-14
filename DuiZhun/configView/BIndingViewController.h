@@ -9,6 +9,12 @@
 #import "TransitionViewController.h"
 
 @interface BIndingViewController : TransitionViewController
+{
+
+    __weak IBOutlet UIImageView *emailImage;
+    __weak IBOutlet UIButton *leftImage;
+    __weak IBOutlet UIImageView *bindingImage;
+}
 
 - (IBAction)close:(id)sender;
 @end

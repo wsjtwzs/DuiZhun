@@ -150,16 +150,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WSKit/baseController/BaseNavigationController.m"
-            timestampString = "429555940.409717"
+            filePath = "Global/Controllers.m"
+            timestampString = "429727730.409405"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "-initWithRootViewController:"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "+firstViewController"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -169,29 +169,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WSKit/baseController/BaseNavigationController.m"
-            timestampString = "429555944.027547"
+            filePath = "DuiZhun/configView/ConfigViewController.m"
+            timestampString = "429727961.5717"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "-navigationController:didShowViewController:animated:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WSKit/baseController/BaseNavigationController.m"
-            timestampString = "429555945.802446"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "-gestureRecognizerShouldBegin:"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "-exit:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

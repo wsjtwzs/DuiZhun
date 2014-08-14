@@ -24,8 +24,7 @@
 + (UIViewController *) firstViewController
 {
        NSNumber *autoLogin = [[NSUserDefaults standardUserDefaults] objectForKey:USERDEFAULT_AUTOLOGIN];
-    
-    if ( [autoLogin isKindOfClass:[NSNumber class]] && [autoLogin boolValue] &&[USERDEFAULT objectForKey:USER_USERID]) {
+    if ( [autoLogin isKindOfClass:[NSNumber class]] && [autoLogin boolValue] &&[[USERDEFAULT objectForKey:USER_USERID] boolValue]) {
         return [Controllers windowRootViewController];
     }
     else {

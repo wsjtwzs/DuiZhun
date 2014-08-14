@@ -9,7 +9,11 @@
 #import "TransitionViewController.h"
 
 @interface SuggessViewController : TransitionViewController<UITextViewDelegate>
+{
 
+    __weak IBOutlet UIImageView *suggessImage;
+    __weak IBOutlet UIButton *leftImage;
+}
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UILabel *lenthLabel;
 

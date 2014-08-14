@@ -46,11 +46,13 @@ typedef enum{
 
 - (void) changeImageColor
 {
-    NSArray *iconArray = @[configImage,bindingImage,wifiImage,notiImage,infoImage,suggessImage,cleanImage];
-    NSArray *iconName = @[icon_settings,icon_log_in, icon_wifi,icon_ios7_bell, icon_android_information,icon_chatbox_working,icon_trash_a];
+    NSArray *iconArray = @[bindingImage,wifiImage,notiImage,infoImage,suggessImage,cleanImage];
+    NSArray *iconName = @[icon_log_in, icon_wifi,icon_ios7_bell, icon_android_information,icon_chatbox_working,icon_trash_a];
     for (UIImageView *imageView in iconArray) {
         imageView.image = [IonIcons imageWithIcon:iconName[[iconArray indexOfObject:imageView]] size:20 color:WHITECOLOR];
     }
+    configImage.image = [IonIcons imageWithIcon:icon_settings size:25 color:WHITECOLOR];
+    
     [leftImage setBackgroundImage:[IonIcons imageWithIcon:icon_ios7_arrow_left size:27 color:WHITECOLOR] forState:UIControlStateNormal];
         [leftImage setBackgroundImage:[IonIcons imageWithIcon:icon_ios7_arrow_left size:27 color:YELLOWCOLOR] forState:UIControlStateHighlighted];
 }
@@ -88,7 +90,7 @@ typedef enum{
             [self transitionWithType:TransitionType_push fromViewController:self toView:[Controllers viewControllerWithName:@"SuggessViewController"]];
             break;
         case buttonPressed_clean:
-            [GlobalConfig alert:@"缓存清楚成功"];
+            [GlobalConfig alert:@"缓存清除成功"];
             break;
 
         default:

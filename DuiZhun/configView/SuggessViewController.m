@@ -27,6 +27,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self changeImageColor];
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,6 +35,16 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void) changeImageColor
+{
+    
+    suggessImage.image = [IonIcons imageWithIcon:icon_chatbox_working size:25 color:WHITECOLOR];
+    
+    [leftImage setBackgroundImage:[IonIcons imageWithIcon:icon_ios7_arrow_left size:27 color:WHITECOLOR] forState:UIControlStateNormal];
+    [leftImage setBackgroundImage:[IonIcons imageWithIcon:icon_ios7_arrow_left size:27 color:YELLOWCOLOR] forState:UIControlStateHighlighted];
+}
+
 
 - (void) textViewDidChange:(UITextView *)textView
 {
