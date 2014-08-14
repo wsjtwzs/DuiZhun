@@ -45,6 +45,8 @@ Stuff; \
 _Pragma("clang diagnostic pop") \
 } while (0)
 
+//全局字体
+#define GLOBAL_FONT                 [UIFont fontWithName:@"HiraKakuProN-W3" size:15]
 
 //宏定义颜色
 #define NORMAL_COLOR				[UIColor colorWithRed:151/255.0f green:151/255.0f blue:151/255.0f alpha:1]

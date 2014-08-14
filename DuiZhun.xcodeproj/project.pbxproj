@@ -582,6 +582,9 @@
 		107C1D77198BD64F00E1198E /* WSTabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107C1D75198BD64F00E1198E /* WSTabBarController.xib */; };
 		108786C8199785F900530202 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 108786C6199785F900530202 /* GuideViewController.m */; };
 		108786C9199785F900530202 /* GuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108786C7199785F900530202 /* GuideViewController.xib */; };
+		50A5EC4D199CA92D005EF757 /* dark_bg@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 50A5EC4C199CA92D005EF757 /* dark_bg@2X.png */; };
+		50A5EC55199CB563005EF757 /* IonIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A5EC51199CB563005EF757 /* IonIcons.m */; };
+		50A5EC56199CB563005EF757 /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50A5EC52199CB563005EF757 /* ionicons.ttf */; };
 		6656A91819939C9900E0C930 /* GestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6656A91719939C9900E0C930 /* GestureViewController.m */; };
 		6656A91C1993A01800E0C930 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6656A91B1993A01800E0C930 /* FXBlurView.m */; };
 		6656A9211993A51E00E0C930 /* 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6656A9201993A51E00E0C930 /* 1@2x.png */; };
@@ -1277,6 +1280,11 @@
 		108786C5199785F900530202 /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
 		108786C6199785F900530202 /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
 		108786C7199785F900530202 /* GuideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GuideViewController.xib; sourceTree = "<group>"; };
+		50A5EC4C199CA92D005EF757 /* dark_bg@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dark_bg@2X.png"; sourceTree = "<group>"; };
+		50A5EC4F199CB563005EF757 /* ionicons-codes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ionicons-codes.h"; sourceTree = "<group>"; };
+		50A5EC50199CB563005EF757 /* IonIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IonIcons.h; sourceTree = "<group>"; };
+		50A5EC51199CB563005EF757 /* IonIcons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IonIcons.m; sourceTree = "<group>"; };
+		50A5EC52199CB563005EF757 /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
 		6656A91619939C9900E0C930 /* GestureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureViewController.h; sourceTree = "<group>"; };
 		6656A91719939C9900E0C930 /* GestureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureViewController.m; sourceTree = "<group>"; };
 		6656A91A1993A01800E0C930 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
@@ -1881,6 +1889,7 @@
 		107C1C78198BD0A800E1198E /* resouce */ = {
 			isa = PBXGroup;
 			children = (
+				50A5EC4E199CB563005EF757 /* ionicons */,
 				6656A9191993A01800E0C930 /* FXBlurView */,
 				107C1C79198BD0A800E1198E /* AFNetworking */,
 				107C1C9B198BD0A800E1198E /* Database */,
@@ -2295,6 +2304,17 @@
 			path = navView;
 			sourceTree = "<group>";
 		};
+		50A5EC4E199CB563005EF757 /* ionicons */ = {
+			isa = PBXGroup;
+			children = (
+				50A5EC4F199CB563005EF757 /* ionicons-codes.h */,
+				50A5EC50199CB563005EF757 /* IonIcons.h */,
+				50A5EC51199CB563005EF757 /* IonIcons.m */,
+				50A5EC52199CB563005EF757 /* ionicons.ttf */,
+			);
+			path = ionicons;
+			sourceTree = "<group>";
+		};
 		6656A91519939C8000E0C930 /* gestureView */ = {
 			isa = PBXGroup;
 			children = (
@@ -2345,6 +2365,7 @@
 				6656A9201993A51E00E0C930 /* 1@2x.png */,
 				102082E519991B8000E151B3 /* login_tengxun@2x.png */,
 				102082E619991B8000E151B3 /* login_weibo@2x.png */,
+				50A5EC4C199CA92D005EF757 /* dark_bg@2X.png */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -2460,6 +2481,7 @@
 				1020857C19991DA700E151B3 /* ios7-cloud-download.png in Resources */,
 				1020869C19991DA700E151B3 /* volume-high.png in Resources */,
 				1020861019991DA700E151B3 /* ios7-wineglass.png in Resources */,
+				50A5EC56199CB563005EF757 /* ionicons.ttf in Resources */,
 				1020859419991DA700E151B3 /* ios7-fastforward-outline.png in Resources */,
 				1020854E19991DA700E151B3 /* ios7-arrow-down.png in Resources */,
 				1020863919991DA700E151B3 /* no-smoking.png in Resources */,
@@ -2911,6 +2933,7 @@
 				1020864F19991DA700E151B3 /* printer.png in Resources */,
 				102085A819991DA700E151B3 /* ios7-infinite.png in Resources */,
 				1020865319991DA700E151B3 /* reply-all.png in Resources */,
+				50A5EC4D199CA92D005EF757 /* dark_bg@2X.png in Resources */,
 				102085D219991DA700E151B3 /* ios7-personadd.png in Resources */,
 				1020864919991DA700E151B3 /* plus-round.png in Resources */,
 				1020859719991DA700E151B3 /* ios7-filing.png in Resources */,
@@ -3015,6 +3038,7 @@
 				107C1D03198BD0A800E1198E /* SBJsonStreamParserState.m in Sources */,
 				107C1D02198BD0A800E1198E /* SBJsonStreamParserAdapter.m in Sources */,
 				107C1D5E198BD43500E1198E /* TargetListViewController.m in Sources */,
+				50A5EC55199CB563005EF757 /* IonIcons.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

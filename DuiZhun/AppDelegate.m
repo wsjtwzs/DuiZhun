@@ -29,7 +29,7 @@ static NSString *firstLaunch = @"firstLaunch";
 //    [self createNavView];
 //    [self createBlurViewController];
     
-    self.window.backgroundColor = [UIColor blackColor];
+    self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"dark_bg"]];
     [self.window makeKeyAndVisible];
     return YES;
 }
