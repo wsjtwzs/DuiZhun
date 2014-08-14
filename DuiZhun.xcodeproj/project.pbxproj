@@ -588,6 +588,8 @@
 		50A5EC63199CD025005EF757 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A5EC62199CD025005EF757 /* HMSegmentedControl.m */; };
 		50A5EC67199CDFC4005EF757 /* UserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A5EC65199CDFC4005EF757 /* UserCell.m */; };
 		50A5EC68199CDFC4005EF757 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50A5EC66199CDFC4005EF757 /* UserCell.xib */; };
+		6608E994199CE9A50039B132 /* GuideCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6608E992199CE9A50039B132 /* GuideCell.m */; };
+		6608E995199CE9A50039B132 /* GuideCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6608E993199CE9A50039B132 /* GuideCell.xib */; };
 		6656A91819939C9900E0C930 /* GestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6656A91719939C9900E0C930 /* GestureViewController.m */; };
 		6656A91C1993A01800E0C930 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6656A91B1993A01800E0C930 /* FXBlurView.m */; };
 		6656A9211993A51E00E0C930 /* 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6656A9201993A51E00E0C930 /* 1@2x.png */; };
@@ -1293,6 +1295,9 @@
 		50A5EC64199CDFC4005EF757 /* UserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCell.h; sourceTree = "<group>"; };
 		50A5EC65199CDFC4005EF757 /* UserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCell.m; sourceTree = "<group>"; };
 		50A5EC66199CDFC4005EF757 /* UserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		6608E991199CE9A50039B132 /* GuideCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideCell.h; sourceTree = "<group>"; };
+		6608E992199CE9A50039B132 /* GuideCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideCell.m; sourceTree = "<group>"; };
+		6608E993199CE9A50039B132 /* GuideCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GuideCell.xib; sourceTree = "<group>"; };
 		6656A91619939C9900E0C930 /* GestureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureViewController.h; sourceTree = "<group>"; };
 		6656A91719939C9900E0C930 /* GestureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureViewController.m; sourceTree = "<group>"; };
 		6656A91A1993A01800E0C930 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
@@ -2312,6 +2317,9 @@
 				108786C5199785F900530202 /* GuideViewController.h */,
 				108786C6199785F900530202 /* GuideViewController.m */,
 				108786C7199785F900530202 /* GuideViewController.xib */,
+				6608E991199CE9A50039B132 /* GuideCell.h */,
+				6608E992199CE9A50039B132 /* GuideCell.m */,
+				6608E993199CE9A50039B132 /* GuideCell.xib */,
 			);
 			path = navView;
 			sourceTree = "<group>";
@@ -2702,6 +2710,7 @@
 				1020858719991DA700E151B3 /* ios7-compose-outline.png in Resources */,
 				1020855719991DA700E151B3 /* ios7-at-outline.png in Resources */,
 				1020850319991DA700E151B3 /* card.png in Resources */,
+				6608E995199CE9A50039B132 /* GuideCell.xib in Resources */,
 				1020856319991DA700E151B3 /* ios7-browsers-outline.png in Resources */,
 				1020861E19991DA700E151B3 /* load-a.png in Resources */,
 				102082EF19991BEC00E151B3 /* icon_sina_h@2x.png in Resources */,
@@ -3052,6 +3061,7 @@
 				107C1D22198BD0C500E1198E /* BaseNavigationController.m in Sources */,
 				107C1D76198BD64F00E1198E /* WSTabBarController.m in Sources */,
 				107C1D09198BD0A800E1198E /* SBJsonWriter.m in Sources */,
+				6608E994199CE9A50039B132 /* GuideCell.m in Sources */,
 				107C1D24198BD0C500E1198E /* BaseViewController.m in Sources */,
 				107C1D00198BD0A800E1198E /* SBJsonStreamParser.m in Sources */,
 				6656A91819939C9900E0C930 /* GestureViewController.m in Sources */,

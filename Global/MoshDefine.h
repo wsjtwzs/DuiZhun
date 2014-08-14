@@ -55,6 +55,8 @@ _Pragma("clang diagnostic pop") \
 #define WHITECOLOR              [UIColor whiteColor]
 #define BLACKCOLOR              [UIColor blackColor]
 
+#define YELLOWCOLOR             [UIColor yellowColor]
+
 #define NAVBAR_TINT_COLOR			[UIColor colorWithRed:44/255.0f green:44/255.0f blue:44/255.0f alpha:1]
 
 #define TEXTGRAYCOLOR               [UIColor colorWithRed:183/255.0f green:183/255.0f blue:183/255.0f alpha:1]

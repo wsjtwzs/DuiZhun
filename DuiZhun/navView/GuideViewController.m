@@ -7,7 +7,8 @@
 //
 
 #import "GuideViewController.h"
-//#import "GUideCell.h"
+#import "GuideCell.h"
+#import "IonIcons.h"
 
 typedef enum {
     buttonPressed_main      = 101,
@@ -42,11 +43,12 @@ typedef enum {
     
     UIPanGestureRecognizer *ges = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
     [self.view addGestureRecognizer:ges];
-    
+    self.cellHeight = 65;
     [self.view addSubview:self.baseTableView];
-    [self.baseTableView registerNib:[UINib nibWithNibName:@"" bundle:nil] forCellReuseIdentifier:@"GuideCell"];
-    
-//    _iconArray = [@""]
+    [self.baseTableView registerNib:[UINib nibWithNibName:NSStringFromClass([GuideCell class]) bundle:nil] forCellReuseIdentifier:@"GuideCell"];
+    self.baseTableView.frame = CGRectOffset(self.baseTableView.frame, 0, 100);
+    _iconArray = @[icon_home,icon_pricetag,icon_person,icon_settings];
+    _titleArray = @[@"首页",@"目标列表",@"我的记录",@"设置"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,11 +63,26 @@ typedef enum {
     [NOTIFICATIONCENTER  postNotificationName:NOTI_GESTURE_RIGHT object:rec];
 }
 
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 4;
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GuideCell"];
+    GuideCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GuideCell"];
 //    cell.imageView.image = [UIImage imageNamed:]
+    cell.iconImage.image = [IonIcons imageWithIcon:_iconArray[indexPath.row] size:30 color:WHITECOLOR];
+    
+    cell.titleLabel.text = _titleArray[indexPath.row];
     return cell;
+}
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    GuideCell *cell = (GuideCell *)[tableView cellForRowAtIndexPath:indexPath];
+    cell.iconImage.image = [IonIcons imageWithIcon:_iconArray[indexPath.row] size:30 color:YELLOWCOLOR];
+    
+    cell.titleLabel.textColor = YELLOWCOLOR;
 }
 
 - (IBAction)buttonPressed:(id)sender {
