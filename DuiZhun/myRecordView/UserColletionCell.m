@@ -1,14 +1,14 @@
 //
-//  UserCollcetionCell.m
+//  UserColletionCell.m
 //  DuiZhun
 //
 //  Created by  evafan2003 on 14-8-14.
 //  Copyright (c) 2014年 mosh. All rights reserved.
 //
 
-#import "UserCollcetionCell.h"
+#import "UserColletionCell.h"
 
-@implementation UserCollcetionCell
+@implementation UserColletionCell
 
 - (id)initWithFrame:(CGRect)frame
 {

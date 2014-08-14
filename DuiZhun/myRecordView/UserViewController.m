@@ -9,7 +9,7 @@
 #import "UserViewController.h"
 #import "IonIcons.h"
 #import "UserCell.h"
-#import "UserCollcetionCell.h"
+#import "UserColletionCell.h"
 
 @interface UserViewController ()
 
@@ -55,9 +55,8 @@
 
     //设置collectionview
     self.userCollection.hidden = NO;
-//    [self.userCollection registerNib:[UINib nibWithNibName:NSStringFromClass([UserCollcetionCell class]) bundle:nil] forCellWithReuseIdentifier:@"cell"];
-
-    [self.userCollection registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
+    [self.userCollection registerNib:[UINib nibWithNibName:NSStringFromClass([UserColletionCell class]) bundle:nil] forCellWithReuseIdentifier:@"GradientCell"];
+//    [self.userCollection registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"GradientCell"];
 
 }
 
@@ -142,7 +141,7 @@
 //collectionview
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 30;
+    return [self.dataArray count];
 }
 //定义展示的Section的个数
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -153,21 +152,22 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString * CellIdentifier = @"GradientCell";
-    UICollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    cell.backgroundColor = [UIColor colorWithRed:((10 * indexPath.row) / 255.0) green:((20 * indexPath.row)/255.0) blue:((30 * indexPath.row)/255.0) alpha:1.0f];
+//    UICollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    UserColletionCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    cell.collectionImage.image = [UIImage imageNamed:self.dataArray[indexPath.row]];
+//    cell.backgroundColor = [UIColor colorWithRed:((10 * indexPath.row) / 255.0) green:((20 * indexPath.row)/255.0) blue:((30 * indexPath.row)/255.0) alpha:1.0f];
     return cell;
 }
 //定义每个UICollectionView 的大小
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(96, 100);
+    return CGSizeMake(150, 160);
 }
 //定义每个UICollectionView 的 margin
--(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
-{
-    return UIEdgeInsetsMake(5, 5, 5, 5);
-}
+//-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+//{
+//    return UIEdgeInsetsMake(5, 5, 5, 5);
+//}
 //UICollectionView被选中时调用的方法
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {

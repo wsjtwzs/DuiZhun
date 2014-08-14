@@ -1,5 +1,5 @@
 //
-//  UserCollcetionCell.h
+//  UserColletionCell.h
 //  DuiZhun
 //
 //  Created by  evafan2003 on 14-8-14.
@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UserCollcetionCell : UICollectionViewCell
+@interface UserColletionCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *collectionImage;
 
 @end
