@@ -16,7 +16,7 @@
     [self.heart setImage:[IonIcons imageWithIcon:icon_ios7_heart iconColor:[UIColor whiteColor]
                                         iconSize:18.0f
                                        imageSize:CGSizeMake(18.0f, 18.0f)]];
-    self.userImageView.contentMode = UIViewContentModeScaleAspectFill;
+//    self.userImageView.contentMode = UIViewContentModeScaleAspectFill;
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     
 }

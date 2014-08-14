@@ -10,6 +10,7 @@
 #import "IonIcons.h"
 #import "UserCell.h"
 #import "UserColletionCell.h"
+#import "UserDetailViewController.h"
 
 @interface UserViewController ()
 
@@ -49,12 +50,12 @@
     //设置tableview
     self.baseTableView.frame = CGRectMake(0, 123, 320, 446);
     self.baseTableView.hidden = YES;
+    self.baseTableView.alpha = 0;
     [self.view addSubview:self.baseTableView];
     [self.baseTableView registerNib:[UINib nibWithNibName:NSStringFromClass([UserCell class]) bundle:nil] forCellReuseIdentifier:@"userCell"];
     self.cellHeight = 383;
 
     //设置collectionview
-    self.userCollection.hidden = NO;
     [self.userCollection registerNib:[UINib nibWithNibName:NSStringFromClass([UserColletionCell class]) bundle:nil] forCellWithReuseIdentifier:@"GradientCell"];
 //    [self.userCollection registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"GradientCell"];
 
@@ -97,10 +98,27 @@
     if (self.showType) {
         
         [self.showButton setImage:[UIImage imageNamed:@"record_four"] forState:UIControlStateNormal];
-        self.baseTableView.hidden = YES;
+        self.userCollection.hidden = NO;
+        [UIView animateWithDuration:0.3 animations:^(void){
+            self.baseTableView.alpha = 0;
+            self.userCollection.alpha = 1;
+            
+        } completion:^(BOOL a){
+            self.baseTableView.hidden = YES;
+        }];
+        
     } else {
         [self.showButton setImage:[UIImage imageNamed:@"record_one"] forState:UIControlStateNormal];
         self.baseTableView.hidden = NO;
+        [UIView animateWithDuration:0.3 animations:^(void){
+            self.baseTableView.alpha = 1;
+            self.userCollection.alpha = 0;
+            
+        } completion:^(BOOL a){
+            self.userCollection.hidden = YES;
+        }];
+        
+        
     }
 }
 
@@ -134,7 +152,7 @@
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.navigationController pushViewController:[Controllers viewControllerWithName:@"MainDetailViewController"] animated:YES];
+    [self.navigationController pushViewController:[Controllers viewControllerWithName:@"UserDetailViewController"] animated:YES];
     [self.tabBarController hidesBottomBarWhenPushed];
 }
 
@@ -161,7 +179,7 @@
 //定义每个UICollectionView 的大小
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(150, 160);
+    return CGSizeMake(155, 140);
 }
 //定义每个UICollectionView 的 margin
 //-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
@@ -171,7 +189,12 @@
 //UICollectionView被选中时调用的方法
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell * cell = (UICollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
-    cell.backgroundColor = [UIColor whiteColor];
+    UserDetailViewController *vc = (UserDetailViewController *)[Controllers viewControllerWithName:@"UserDetailViewController"];
+    vc.image = [UIImage imageNamed:self.dataArray[indexPath.row]];
+    [self.navigationController pushViewController:vc animated:YES];
+    [self.tabBarController hidesBottomBarWhenPushed];
+    
+//    UICollectionViewCell * cell = (UICollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+//    cell.backgroundColor = [UIColor whiteColor];
 }
 @end

@@ -584,6 +584,8 @@
 		108786C9199785F900530202 /* GuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108786C7199785F900530202 /* GuideViewController.xib */; };
 		50470741199D0D1B00F04F08 /* UserColletionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50470740199D0D1B00F04F08 /* UserColletionCell.m */; };
 		50470743199D10A900F04F08 /* UserColletionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50470742199D10A900F04F08 /* UserColletionCell.xib */; };
+		50470747199D35A900F04F08 /* UserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50470745199D35A900F04F08 /* UserDetailViewController.m */; };
+		50470748199D35A900F04F08 /* UserDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50470746199D35A900F04F08 /* UserDetailViewController.xib */; };
 		50A5EC4D199CA92D005EF757 /* dark_bg@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 50A5EC4C199CA92D005EF757 /* dark_bg@2X.png */; };
 		50A5EC55199CB563005EF757 /* IonIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A5EC51199CB563005EF757 /* IonIcons.m */; };
 		50A5EC56199CB563005EF757 /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50A5EC52199CB563005EF757 /* ionicons.ttf */; };
@@ -1290,6 +1292,9 @@
 		5047073F199D0D1B00F04F08 /* UserColletionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserColletionCell.h; sourceTree = "<group>"; };
 		50470740199D0D1B00F04F08 /* UserColletionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserColletionCell.m; sourceTree = "<group>"; };
 		50470742199D10A900F04F08 /* UserColletionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserColletionCell.xib; sourceTree = "<group>"; };
+		50470744199D35A900F04F08 /* UserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailViewController.h; sourceTree = "<group>"; };
+		50470745199D35A900F04F08 /* UserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailViewController.m; sourceTree = "<group>"; };
+		50470746199D35A900F04F08 /* UserDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserDetailViewController.xib; sourceTree = "<group>"; };
 		50A5EC4C199CA92D005EF757 /* dark_bg@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dark_bg@2X.png"; sourceTree = "<group>"; };
 		50A5EC4F199CB563005EF757 /* ionicons-codes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ionicons-codes.h"; sourceTree = "<group>"; };
 		50A5EC50199CB563005EF757 /* IonIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IonIcons.h; sourceTree = "<group>"; };
@@ -2239,6 +2244,9 @@
 				5047073F199D0D1B00F04F08 /* UserColletionCell.h */,
 				50470740199D0D1B00F04F08 /* UserColletionCell.m */,
 				50470742199D10A900F04F08 /* UserColletionCell.xib */,
+				50470744199D35A900F04F08 /* UserDetailViewController.h */,
+				50470745199D35A900F04F08 /* UserDetailViewController.m */,
+				50470746199D35A900F04F08 /* UserDetailViewController.xib */,
 			);
 			path = myRecordView;
 			sourceTree = "<group>";
@@ -2842,6 +2850,7 @@
 				1020863B19991DA700E151B3 /* paper-airplane.png in Resources */,
 				1020867519991DA700E151B3 /* social-pinterest.png in Resources */,
 				1020859919991DA700E151B3 /* ios7-film.png in Resources */,
+				50470748199D35A900F04F08 /* UserDetailViewController.xib in Resources */,
 				102085B619991DA700E151B3 /* ios7-medkit.png in Resources */,
 				102082DE199887A100E151B3 /* SearchViewController.xib in Resources */,
 				1020866119991DA700E151B3 /* social-buffer-outline.png in Resources */,
@@ -3065,6 +3074,7 @@
 				107C1CED198BD0A800E1198E /* AFHTTPClient.m in Sources */,
 				669F6CF5199635B600E41461 /* BlureViewController.m in Sources */,
 				107C1D3D198BD0D000E1198E /* BaseCell.m in Sources */,
+				50470747199D35A900F04F08 /* UserDetailViewController.m in Sources */,
 				107C1D43198BD0D000E1198E /* MoshDefine.m in Sources */,
 				102086BE199A38B400E151B3 /* APPInfoViewController.m in Sources */,
 				50470741199D0D1B00F04F08 /* UserColletionCell.m in Sources */,
