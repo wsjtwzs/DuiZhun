@@ -55,7 +55,9 @@
 
     //设置collectionview
     self.userCollection.hidden = NO;
-    [self.userCollection registerClass:[UserCollcetionCell class] forCellWithReuseIdentifier:@"cell"];
+//    [self.userCollection registerNib:[UINib nibWithNibName:NSStringFromClass([UserCollcetionCell class]) bundle:nil] forCellWithReuseIdentifier:@"cell"];
+
+    [self.userCollection registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
 
 }
 
@@ -151,8 +153,7 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString * CellIdentifier = @"GradientCell";
-
-    UserCollcetionCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    UICollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     
     cell.backgroundColor = [UIColor colorWithRed:((10 * indexPath.row) / 255.0) green:((20 * indexPath.row)/255.0) blue:((30 * indexPath.row)/255.0) alpha:1.0f];
     return cell;
