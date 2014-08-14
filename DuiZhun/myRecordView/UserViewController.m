@@ -9,6 +9,7 @@
 #import "UserViewController.h"
 #import "IonIcons.h"
 #import "UserCell.h"
+#import "UserCollcetionCell.h"
 
 @interface UserViewController ()
 
@@ -54,6 +55,7 @@
 
     //设置collectionview
     self.userCollection.hidden = NO;
+    [self.userCollection registerClass:[UserCollcetionCell class] forCellWithReuseIdentifier:@"cell"];
 
 }
 
@@ -150,7 +152,7 @@
 {
     static NSString * CellIdentifier = @"GradientCell";
 
-    UICollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    UserCollcetionCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     
     cell.backgroundColor = [UIColor colorWithRed:((10 * indexPath.row) / 255.0) green:((20 * indexPath.row)/255.0) blue:((30 * indexPath.row)/255.0) alpha:1.0f];
     return cell;

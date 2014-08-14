@@ -582,6 +582,8 @@
 		107C1D77198BD64F00E1198E /* WSTabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107C1D75198BD64F00E1198E /* WSTabBarController.xib */; };
 		108786C8199785F900530202 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 108786C6199785F900530202 /* GuideViewController.m */; };
 		108786C9199785F900530202 /* GuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108786C7199785F900530202 /* GuideViewController.xib */; };
+		50470741199D0D1B00F04F08 /* UserCollcetionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50470740199D0D1B00F04F08 /* UserCollcetionCell.m */; };
+		50470743199D10A900F04F08 /* UserCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50470742199D10A900F04F08 /* UserCollectionCell.xib */; };
 		50A5EC4D199CA92D005EF757 /* dark_bg@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 50A5EC4C199CA92D005EF757 /* dark_bg@2X.png */; };
 		50A5EC55199CB563005EF757 /* IonIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A5EC51199CB563005EF757 /* IonIcons.m */; };
 		50A5EC56199CB563005EF757 /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50A5EC52199CB563005EF757 /* ionicons.ttf */; };
@@ -1285,6 +1287,9 @@
 		108786C5199785F900530202 /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
 		108786C6199785F900530202 /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
 		108786C7199785F900530202 /* GuideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GuideViewController.xib; sourceTree = "<group>"; };
+		5047073F199D0D1B00F04F08 /* UserCollcetionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCollcetionCell.h; sourceTree = "<group>"; };
+		50470740199D0D1B00F04F08 /* UserCollcetionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCollcetionCell.m; sourceTree = "<group>"; };
+		50470742199D10A900F04F08 /* UserCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCollectionCell.xib; sourceTree = "<group>"; };
 		50A5EC4C199CA92D005EF757 /* dark_bg@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dark_bg@2X.png"; sourceTree = "<group>"; };
 		50A5EC4F199CB563005EF757 /* ionicons-codes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ionicons-codes.h"; sourceTree = "<group>"; };
 		50A5EC50199CB563005EF757 /* IonIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IonIcons.h; sourceTree = "<group>"; };
@@ -2231,6 +2236,9 @@
 				50A5EC64199CDFC4005EF757 /* UserCell.h */,
 				50A5EC65199CDFC4005EF757 /* UserCell.m */,
 				50A5EC66199CDFC4005EF757 /* UserCell.xib */,
+				5047073F199D0D1B00F04F08 /* UserCollcetionCell.h */,
+				50470740199D0D1B00F04F08 /* UserCollcetionCell.m */,
+				50470742199D10A900F04F08 /* UserCollectionCell.xib */,
 			);
 			path = myRecordView;
 			sourceTree = "<group>";
@@ -2495,6 +2503,7 @@
 				1020865119991DA700E151B3 /* record.png in Resources */,
 				1020866519991DA700E151B3 /* social-dribbble-outline.png in Resources */,
 				1020856F19991DA700E151B3 /* ios7-chatbubble-outline.png in Resources */,
+				50470743199D10A900F04F08 /* UserCollectionCell.xib in Resources */,
 				1020851319991DA700E151B3 /* close-circled.png in Resources */,
 				1020866A19991DA700E151B3 /* social-facebook.png in Resources */,
 				102086A219991DA700E151B3 /* wineglass.png in Resources */,
@@ -3058,6 +3067,7 @@
 				107C1D3D198BD0D000E1198E /* BaseCell.m in Sources */,
 				107C1D43198BD0D000E1198E /* MoshDefine.m in Sources */,
 				102086BE199A38B400E151B3 /* APPInfoViewController.m in Sources */,
+				50470741199D0D1B00F04F08 /* UserCollcetionCell.m in Sources */,
 				107C1D22198BD0C500E1198E /* BaseNavigationController.m in Sources */,
 				107C1D76198BD64F00E1198E /* WSTabBarController.m in Sources */,
 				107C1D09198BD0A800E1198E /* SBJsonWriter.m in Sources */,
