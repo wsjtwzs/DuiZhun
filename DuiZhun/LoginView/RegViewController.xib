@@ -6,7 +6,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegViewController">
             <connections>
+                <outlet property="pass_field" destination="dpm-YI-Jel" id="PZz-f4-hp8"/>
+                <outlet property="pass_icon" destination="GcB-Wu-UDe" id="TbE-Qc-xZi"/>
                 <outlet property="scrollView" destination="EiR-1e-Fe5" id="8yT-Ad-pL2"/>
+                <outlet property="user_field" destination="flL-w5-H1j" id="fpJ-hd-Kjh"/>
+                <outlet property="user_icon" destination="EU3-WS-XTP" id="URr-Pq-1mc"/>
                 <outlet property="view" destination="lwz-hT-TQS" id="zN0-Uw-Cug"/>
             </connections>
         </placeholder>
@@ -33,8 +37,9 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OdF-L5-vdv">
-                            <rect key="frame" x="249" y="20" width="46" height="30"/>
+                            <rect key="frame" x="254" y="20" width="46" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <state key="normal" title="登录">
                                 <color key="titleColor" red="0.23529411759999999" green="0.23921568630000001" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -65,8 +70,8 @@
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="忘记密码了" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UBl-kt-DwI">
-                            <rect key="frame" x="123" y="480" width="75" height="18"/>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="忘记密码了" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UBl-kt-DwI">
+                            <rect key="frame" x="126" y="480" width="75" height="18"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <color key="textColor" red="0.23529411759999999" green="0.23921568630000001" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -82,6 +87,8 @@
                                     <attributedString key="attributedText"/>
                                     <textInputTraits key="textInputTraits"/>
                                     <connections>
+                                        <action selector="user_end:" destination="-1" eventType="editingDidEnd" id="B0w-cz-xjr"/>
+                                        <action selector="user_start:" destination="-1" eventType="editingDidBegin" id="OKc-cy-S6J"/>
                                         <outlet property="delegate" destination="-1" id="6s1-UY-zli"/>
                                     </connections>
                                 </textField>
@@ -91,18 +98,20 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                     <connections>
+                                        <action selector="pass_end:" destination="-1" eventType="editingDidEnd" id="vqt-X3-WKe"/>
+                                        <action selector="pass_start:" destination="-1" eventType="editingDidBegin" id="qay-m2-yZx"/>
                                         <outlet property="delegate" destination="-1" id="ZRu-7d-She"/>
                                     </connections>
                                 </textField>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ios7-person.png" id="EU3-WS-XTP">
                                     <rect key="frame" x="30" y="27" width="20" height="20"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </imageView>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ios7-unlocked.png" id="GcB-Wu-UDe">
                                     <rect key="frame" x="30" y="66" width="20" height="20"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </imageView>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Py-T2-gOF">
                                     <rect key="frame" x="20" y="53" width="300" height="1"/>
