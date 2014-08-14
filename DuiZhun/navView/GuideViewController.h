@@ -10,7 +10,6 @@
 
 @interface GuideViewController :TransitionViewController
 
-- (IBAction)buttonPressed:(id)sender;
 
 - (IBAction)search:(id)sender;
 

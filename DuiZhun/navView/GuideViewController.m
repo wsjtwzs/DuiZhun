@@ -11,16 +11,17 @@
 #import "IonIcons.h"
 
 typedef enum {
-    buttonPressed_main      = 101,
-    buttonPressed_target    = 102,
-    buttonPressed_userRecord    = 103,
-    buttonPressed_config    =  104,
+    buttonPressed_main      = 100,
+    buttonPressed_target    = 101,
+    buttonPressed_userRecord    = 102,
+    buttonPressed_config    =  103,
 }buttonPressed;
 
 @interface GuideViewController ()
 {
     NSArray *_iconArray;
     NSArray *_titleArray;
+    GuideCell *_selectCell;
 }
 
 @end
@@ -71,23 +72,33 @@ typedef enum {
 {
     GuideCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GuideCell"];
 //    cell.imageView.image = [UIImage imageNamed:]
-    cell.iconImage.image = [IonIcons imageWithIcon:_iconArray[indexPath.row] size:30 color:WHITECOLOR];
-    
+    cell.iconImage.image = [IonIcons imageWithIcon:_iconArray[indexPath.row] size:30 color:(indexPath.row == 0 ? YELLOWCOLOR :WHITECOLOR)];
     cell.titleLabel.text = _titleArray[indexPath.row];
+    cell.titleLabel.textColor = (indexPath.row == 0 ? YELLOWCOLOR :WHITECOLOR);
+    if (indexPath.row == 0) {
+        _selectCell = cell;
+    }
     return cell;
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (_selectCell) {
+        NSIndexPath *index = [tableView indexPathForCell:_selectCell];
+        _selectCell.iconImage.image = [IonIcons imageWithIcon:_iconArray[index.row] size:30 color:WHITECOLOR];
+        _selectCell.titleLabel.textColor = WHITECOLOR;
+    }
     GuideCell *cell = (GuideCell *)[tableView cellForRowAtIndexPath:indexPath];
     cell.iconImage.image = [IonIcons imageWithIcon:_iconArray[indexPath.row] size:30 color:YELLOWCOLOR];
     
     cell.titleLabel.textColor = YELLOWCOLOR;
+    _selectCell = cell;
+    [self buttonPressed:(indexPath.row + 100)];
 }
 
-- (IBAction)buttonPressed:(id)sender {
-    UIButton *button = (UIButton *)sender;
-    switch (button.tag) {
+- (IBAction)buttonPressed:(NSInteger)tag {
+
+    switch (tag) {
         case buttonPressed_main:
             //首页
             [NOTIFICATIONCENTER postNotificationName:NOTI_MAIN object:nil];
