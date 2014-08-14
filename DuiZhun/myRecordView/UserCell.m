@@ -17,6 +17,7 @@
                                         iconSize:18.0f
                                        imageSize:CGSizeMake(18.0f, 18.0f)]];
     self.userImageView.contentMode = UIViewContentModeScaleAspectFill;
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
     
 }
 

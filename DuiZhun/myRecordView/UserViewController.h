@@ -14,6 +14,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *arcButton;
 @property (weak, nonatomic) IBOutlet UIButton *favButton;
 @property (weak, nonatomic) IBOutlet UIButton *showButton;
+
+@property (weak, nonatomic) IBOutlet UICollectionView *userCollection;
+
 - (IBAction)favPress:(id)sender;
 - (IBAction)arcPress:(id)sender;
 - (IBAction)showPress:(id)sender;

@@ -33,13 +33,27 @@
     self.showType = YES;
     self.favType = YES;
     [self setSegImage];
-    self.baseTableView.frame = CGRectMake(0, 123, 320, 446);
-    [self.view addSubview:self.baseTableView];
     
+    //设置两个button的高亮
+    [self.arcButton setImage:[IonIcons imageWithIcon:icon_archive iconColor:[UIColor yellowColor]
+                                            iconSize:29.0f
+                                           imageSize:CGSizeMake(160.0f, 53.0f)] forState:UIControlStateHighlighted];
+    [self.favButton setImage:[IonIcons imageWithIcon:icon_ios7_heart iconColor:[UIColor yellowColor]
+                                            iconSize:25.0f
+                                           imageSize:CGSizeMake(160.0f, 53.0f)] forState:UIControlStateHighlighted];
+    
+    //数据源
     self.dataArray = [NSMutableArray arrayWithArray:@[@"6.jpg",@"3.jpg",@"2.jpg",@"4.jpg"]];
-    self.cellHeight = 383;
-    [self.baseTableView registerNib:[UINib nibWithNibName:NSStringFromClass([UserCell class]) bundle:nil] forCellReuseIdentifier:@"userCell"];
     
+    //设置tableview
+    self.baseTableView.frame = CGRectMake(0, 123, 320, 446);
+    self.baseTableView.hidden = YES;
+    [self.view addSubview:self.baseTableView];
+    [self.baseTableView registerNib:[UINib nibWithNibName:NSStringFromClass([UserCell class]) bundle:nil] forCellReuseIdentifier:@"userCell"];
+    self.cellHeight = 383;
+
+    //设置collectionview
+    self.userCollection.hidden = NO;
 
 }
 
@@ -57,7 +71,9 @@
         [self.arcButton setImage:[IonIcons imageWithIcon:icon_archive iconColor:[UIColor whiteColor]
                                                 iconSize:29.0f
                                                imageSize:CGSizeMake(160.0f, 53.0f)] forState:UIControlStateNormal];
-        
+        [self.arcButton setImage:[IonIcons imageWithIcon:icon_archive iconColor:[UIColor yellowColor]
+                                                iconSize:29.0f
+                                               imageSize:CGSizeMake(160.0f, 53.0f)] forState:UIControlStateHighlighted];
         [self.favButton setImage:[IonIcons imageWithIcon:icon_ios7_heart iconColor:[UIColor grayColor]
                                                 iconSize:25.0f
                                                imageSize:CGSizeMake(160.0f, 53.0f)] forState:UIControlStateNormal];
@@ -78,8 +94,10 @@
     if (self.showType) {
         
         [self.showButton setImage:[UIImage imageNamed:@"record_four"] forState:UIControlStateNormal];
+        self.baseTableView.hidden = YES;
     } else {
         [self.showButton setImage:[UIImage imageNamed:@"record_one"] forState:UIControlStateNormal];
+        self.baseTableView.hidden = NO;
     }
 }
 
@@ -117,5 +135,40 @@
     [self.tabBarController hidesBottomBarWhenPushed];
 }
 
+//collectionview
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 30;
+}
+//定义展示的Section的个数
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
+//每个UICollectionView展示的内容
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString * CellIdentifier = @"GradientCell";
 
+    UICollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    cell.backgroundColor = [UIColor colorWithRed:((10 * indexPath.row) / 255.0) green:((20 * indexPath.row)/255.0) blue:((30 * indexPath.row)/255.0) alpha:1.0f];
+    return cell;
+}
+//定义每个UICollectionView 的大小
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return CGSizeMake(96, 100);
+}
+//定义每个UICollectionView 的 margin
+-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    return UIEdgeInsetsMake(5, 5, 5, 5);
+}
+//UICollectionView被选中时调用的方法
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionViewCell * cell = (UICollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    cell.backgroundColor = [UIColor whiteColor];
+}
 @end
