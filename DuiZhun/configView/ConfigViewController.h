@@ -9,6 +9,17 @@
 #import "TransitionViewController.h"
 
 @interface ConfigViewController :TransitionViewController
+{
+    __weak IBOutlet UIImageView *configImage;
+
+    __weak IBOutlet UIImageView *suggessImage;
+    __weak IBOutlet UIImageView *cleanImage;
+    __weak IBOutlet UIImageView *infoImage;
+    __weak IBOutlet UIImageView *wifiImage;
+    __weak IBOutlet UIButton *leftImage;
+    __weak IBOutlet UIImageView *bindingImage;
+    __weak IBOutlet UIImageView *notiImage;
+}
 - (IBAction)exit:(id)sender;
 
 - (IBAction)close:(id)sender;
