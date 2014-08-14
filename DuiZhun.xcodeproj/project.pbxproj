@@ -585,6 +585,9 @@
 		50A5EC4D199CA92D005EF757 /* dark_bg@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 50A5EC4C199CA92D005EF757 /* dark_bg@2X.png */; };
 		50A5EC55199CB563005EF757 /* IonIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A5EC51199CB563005EF757 /* IonIcons.m */; };
 		50A5EC56199CB563005EF757 /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50A5EC52199CB563005EF757 /* ionicons.ttf */; };
+		50A5EC63199CD025005EF757 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A5EC62199CD025005EF757 /* HMSegmentedControl.m */; };
+		50A5EC67199CDFC4005EF757 /* UserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A5EC65199CDFC4005EF757 /* UserCell.m */; };
+		50A5EC68199CDFC4005EF757 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50A5EC66199CDFC4005EF757 /* UserCell.xib */; };
 		6656A91819939C9900E0C930 /* GestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6656A91719939C9900E0C930 /* GestureViewController.m */; };
 		6656A91C1993A01800E0C930 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6656A91B1993A01800E0C930 /* FXBlurView.m */; };
 		6656A9211993A51E00E0C930 /* 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6656A9201993A51E00E0C930 /* 1@2x.png */; };
@@ -1285,6 +1288,11 @@
 		50A5EC50199CB563005EF757 /* IonIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IonIcons.h; sourceTree = "<group>"; };
 		50A5EC51199CB563005EF757 /* IonIcons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IonIcons.m; sourceTree = "<group>"; };
 		50A5EC52199CB563005EF757 /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
+		50A5EC61199CD025005EF757 /* HMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSegmentedControl.h; sourceTree = "<group>"; };
+		50A5EC62199CD025005EF757 /* HMSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSegmentedControl.m; sourceTree = "<group>"; };
+		50A5EC64199CDFC4005EF757 /* UserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCell.h; sourceTree = "<group>"; };
+		50A5EC65199CDFC4005EF757 /* UserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCell.m; sourceTree = "<group>"; };
+		50A5EC66199CDFC4005EF757 /* UserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 		6656A91619939C9900E0C930 /* GestureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureViewController.h; sourceTree = "<group>"; };
 		6656A91719939C9900E0C930 /* GestureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureViewController.m; sourceTree = "<group>"; };
 		6656A91A1993A01800E0C930 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
@@ -1889,6 +1897,7 @@
 		107C1C78198BD0A800E1198E /* resouce */ = {
 			isa = PBXGroup;
 			children = (
+				50A5EC60199CD025005EF757 /* HMSegmentControl */,
 				50A5EC4E199CB563005EF757 /* ionicons */,
 				6656A9191993A01800E0C930 /* FXBlurView */,
 				107C1C79198BD0A800E1198E /* AFNetworking */,
@@ -2214,6 +2223,9 @@
 				107C1D56198BD41100E1198E /* UserViewController.h */,
 				107C1D57198BD41100E1198E /* UserViewController.m */,
 				107C1D58198BD41100E1198E /* UserViewController.xib */,
+				50A5EC64199CDFC4005EF757 /* UserCell.h */,
+				50A5EC65199CDFC4005EF757 /* UserCell.m */,
+				50A5EC66199CDFC4005EF757 /* UserCell.xib */,
 			);
 			path = myRecordView;
 			sourceTree = "<group>";
@@ -2313,6 +2325,15 @@
 				50A5EC52199CB563005EF757 /* ionicons.ttf */,
 			);
 			path = ionicons;
+			sourceTree = "<group>";
+		};
+		50A5EC60199CD025005EF757 /* HMSegmentControl */ = {
+			isa = PBXGroup;
+			children = (
+				50A5EC61199CD025005EF757 /* HMSegmentedControl.h */,
+				50A5EC62199CD025005EF757 /* HMSegmentedControl.m */,
+			);
+			path = HMSegmentControl;
 			sourceTree = "<group>";
 		};
 		6656A91519939C8000E0C930 /* gestureView */ = {
@@ -2591,6 +2612,7 @@
 				102085FC19991DA700E151B3 /* ios7-telephone.png in Resources */,
 				1020863F19991DA700E151B3 /* person-stalker.png in Resources */,
 				1020862719991DA700E151B3 /* magnet.png in Resources */,
+				50A5EC68199CDFC4005EF757 /* UserCell.xib in Resources */,
 				1020853D19991DA700E151B3 /* help-buoy.png in Resources */,
 				102082F819991C3600E151B3 /* record_one@2x.png in Resources */,
 				1020862619991DA700E151B3 /* loop.png in Resources */,
@@ -2990,6 +3012,7 @@
 				102082E1199888FB00E151B3 /* TransitionViewController.m in Sources */,
 				107C1CF0198BD0A800E1198E /* AFJSONRequestOperation.m in Sources */,
 				102082E4199899F200E151B3 /* KeyBoardViewController.m in Sources */,
+				50A5EC63199CD025005EF757 /* HMSegmentedControl.m in Sources */,
 				107C1D26198BD0C500E1198E /* WSScrollViewController.m in Sources */,
 				107C1D04198BD0A800E1198E /* SBJsonStreamWriter.m in Sources */,
 				107C1D23198BD0C500E1198E /* BaseTableViewController.m in Sources */,
@@ -3020,6 +3043,7 @@
 				107C1D3E198BD0D000E1198E /* BaseModel.m in Sources */,
 				107C1CFE198BD0A800E1198E /* NSObject+SBJson.m in Sources */,
 				107C1D70198BD4E200E1198E /* RegViewController.m in Sources */,
+				50A5EC67199CDFC4005EF757 /* UserCell.m in Sources */,
 				107C1CED198BD0A800E1198E /* AFHTTPClient.m in Sources */,
 				669F6CF5199635B600E41461 /* BlureViewController.m in Sources */,
 				107C1D3D198BD0D000E1198E /* BaseCell.m in Sources */,
