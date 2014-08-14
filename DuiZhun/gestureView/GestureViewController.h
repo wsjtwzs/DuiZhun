@@ -7,7 +7,14 @@
 //
 
 #import "BaseTableViewController.h"
+@protocol GestureViewControllerDelegate;
 
 @interface GestureViewController : BaseTableViewController
+@property (nonatomic, assign) id<GestureViewControllerDelegate> delegate;
+@end
+
+@protocol GestureViewControllerDelegate <NSObject>
+
+- (void) panGesture:(UIPanGestureRecognizer *)ges;
 
 @end

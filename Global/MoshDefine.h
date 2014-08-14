@@ -184,6 +184,7 @@ _Pragma("clang diagnostic pop") \
 
 //消息
 #define NOTI_GESTURE_RIGHT      @"NOTI_GES_RIGHT"
+#define NOTI_GESTURE_LEFT       @"NOTI_GES_LEFT"
 #define NOTI_NAVBUTTON_PRESS    @"NOTI_NAVBUTTON_PRESS"
 #define NOTI_MAIN               @"NOTI_MAIN"
 #define NOTI_USER               @"NOTI_USER"

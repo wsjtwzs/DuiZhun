@@ -38,18 +38,29 @@
 
 }
 
+//- (void) pan:(UIPanGestureRecognizer *)rec
+//{
+//    if ([self.delegate respondsToSelector:@selector(panGesture:)]) {
+//        [self.delegate panGesture:rec];
+//    }
+//    
+//    CGPoint coordinate_start;
+//    if (rec.state == UIGestureRecognizerStateBegan) {
+//        coordinate_start = [rec translationInView:self.view];
+//    }
+//    else if (rec.state == UIGestureRecognizerStateEnded) {
+//        CGPoint coordinate_end = [rec translationInView:self.view];
+//        if (coordinate_end.x < -50) {
+//            [NOTIFICATIONCENTER  postNotificationName:NOTI_GESTURE_RIGHT object:rec];
+//        }
+//    }
+//}
+
 - (void) pan:(UIPanGestureRecognizer *)rec
 {
-    CGPoint coordinate_start;
-    if (rec.state == UIGestureRecognizerStateBegan) {
-        coordinate_start = [rec translationInView:self.view];
-    }
-    else if (rec.state == UIGestureRecognizerStateEnded) {
-        CGPoint coordinate_end = [rec translationInView:self.view];
-        if (coordinate_end.x < -50) {
-            [NOTIFICATIONCENTER  postNotificationName:NOTI_GESTURE_RIGHT object:nil];
-        }
-    }
+   
+    [NOTIFICATIONCENTER  postNotificationName:NOTI_GESTURE_LEFT object:rec];
+
 }
 
 - (void)didReceiveMemoryWarning

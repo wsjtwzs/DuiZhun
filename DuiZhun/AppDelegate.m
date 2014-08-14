@@ -21,7 +21,7 @@ static NSString *firstLaunch = @"firstLaunch";
     
     //第一次登陆设置初始值
     if (![USERDEFAULT objectForKey:firstLaunch]) {
-//        [GlobalConfig saveUserDefaultWithDictionary:@{USERDEFAULT_AUTOLOGIN:@YES,USERDEFAULT_RECEIVENOTI:@YES,firstLaunch:@YES}];
+        [GlobalConfig saveUserDefaultWithDictionary:@{USERDEFAULT_AUTOLOGIN:@YES,USERDEFAULT_RECEIVENOTI:@YES,firstLaunch:@YES}];
     }
     
     self.window.rootViewController = [Controllers firstViewController];

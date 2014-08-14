@@ -7,6 +7,7 @@
 //
 
 #import "GuideViewController.h"
+//#import "GUideCell.h"
 
 typedef enum {
     buttonPressed_main      = 101,
@@ -16,7 +17,10 @@ typedef enum {
 }buttonPressed;
 
 @interface GuideViewController ()
-
+{
+    NSArray *_iconArray;
+    NSArray *_titleArray;
+}
 
 @end
 
@@ -38,6 +42,11 @@ typedef enum {
     
     UIPanGestureRecognizer *ges = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
     [self.view addGestureRecognizer:ges];
+    
+    [self.view addSubview:self.baseTableView];
+    [self.baseTableView registerNib:[UINib nibWithNibName:@"" bundle:nil] forCellReuseIdentifier:@"GuideCell"];
+    
+//    _iconArray = [@""]
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,18 +55,17 @@ typedef enum {
     // Dispose of any resources that can be recreated.
 }
 
+
 - (void) pan:(UIPanGestureRecognizer *)rec
 {
-    CGPoint coordinate_start;
-    if (rec.state == UIGestureRecognizerStateBegan) {
-        coordinate_start = [rec translationInView:self.view];
-    }
-    else if (rec.state == UIGestureRecognizerStateEnded) {
-        CGPoint coordinate_end = [rec translationInView:self.view];
-        if (coordinate_end.x > 50) {
-            [NOTIFICATIONCENTER  postNotificationName:NOTI_NAVBUTTON_PRESS object:nil];
-        }
-    }
+    [NOTIFICATIONCENTER  postNotificationName:NOTI_GESTURE_RIGHT object:rec];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GuideCell"];
+//    cell.imageView.image = [UIImage imageNamed:]
+    return cell;
 }
 
 - (IBAction)buttonPressed:(id)sender {
