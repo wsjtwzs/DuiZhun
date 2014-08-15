@@ -61,7 +61,7 @@
                             </connections>
                         </button>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_duizhun.png" id="yHV-fY-w6P">
-                            <rect key="frame" x="80" y="141" width="167" height="90"/>
+                            <rect key="frame" x="80" y="141" width="161" height="68"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登录" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7r1-sT-NTp">
@@ -145,7 +145,7 @@
         </view>
     </objects>
     <resources>
-        <image name="icon_duizhun.png" width="167" height="90"/>
+        <image name="icon_duizhun.png" width="161" height="68"/>
         <image name="ios7-arrow-left.png" width="512" height="512"/>
         <image name="ios7-person.png" width="512" height="512"/>
         <image name="ios7-unlocked.png" width="512" height="512"/>

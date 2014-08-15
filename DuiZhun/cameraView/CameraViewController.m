@@ -59,12 +59,6 @@
     [self.shotScreenBtn setBackgroundImage:[IonIcons imageWithIcon:icon_ios7_camera_outline size:40 color:YELLOWCOLOR] forState:UIControlStateHighlighted];
     
     //录像view图标
-    [self.record setBackgroundColor:[UIColor yellowColor]];
-    self.record.layer.cornerRadius = 27;
-//    self.record.layer.borderWidth = 2;
-//    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-//    CGColorRef colorref = CGColorCreate(colorSpace,(CGFloat[]){ 1, 0, 0, 1 });
-//    [self.record.layer setBorderColor:colorref];//边框颜色
     
     self.record.clipsToBounds = YES;
     [self.refesh setImage:[IonIcons imageWithIcon:icon_ios7_refresh iconColor:[UIColor whiteColor]

@@ -53,14 +53,7 @@ typedef enum {
     
     
     //相机按钮
-    [self.camButton setBackgroundColor:[UIColor yellowColor]];
-    self.camButton.layer.cornerRadius = 15;
-    self.camButton.clipsToBounds = YES;
     [self.view addSubview:self.camButton];
-    //    self.record.layer.borderWidth = 2;
-    //    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    //    CGColorRef colorref = CGColorCreate(colorSpace,(CGFloat[]){ 1, 0, 0, 1 });
-    //    [self.record.layer setBorderColor:colorref];//边框颜色
     
 
 }
