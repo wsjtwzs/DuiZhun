@@ -9,5 +9,7 @@
 #import "GestureViewController.h"
 
 @interface MainViewController : BaseTableViewController
+- (IBAction)showMenu:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *menu;
 
 @end

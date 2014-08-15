@@ -13,4 +13,9 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *backImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLable;
+
+- (void)cellOnTableView:(UITableView *)tableView didScrollOnView:(UIView *)view;
+
+- (void) cellScroll:(UIScrollView *)scrollView;
+
 @end
