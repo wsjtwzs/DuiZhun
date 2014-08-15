@@ -16,8 +16,8 @@ typedef enum{
 } buttonPressed;
 
 
-#define rect_hidden CGRectMake(0, SCREENHEIGHT, 320, 180);
-#define rect_show CGRectMake(0, SCREENHEIGHT - 180, 320, 180);
+#define rect_hidden CGRectMake(0, SCREENHEIGHT, 320, 190);
+#define rect_show CGRectMake(0, SCREENHEIGHT - 190, 320, 190);
 @interface MainDetailViewController ()
 {
     BOOL _selectHeart;
