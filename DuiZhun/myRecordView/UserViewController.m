@@ -14,6 +14,9 @@
 #import "CameraViewController.h"
 #import "ShareViewController.h"
 
+static NSMutableArray *titleArr;
+static NSMutableArray *introArr;
+
 @interface UserViewController ()
 
 @end
@@ -48,7 +51,13 @@
                                            imageSize:CGSizeMake(160.0f, 53.0f)] forState:UIControlStateHighlighted];
     
     //数据源
-    self.dataArray = [NSMutableArray arrayWithArray:@[@"6.jpg",@"3.jpg",@"2.jpg",@"4.jpg"]];
+    self.dataArray = [NSMutableArray arrayWithArray:@[@"6.jpg",
+                                                      @"3.jpg",
+                                                      @"2.jpg",
+                                                      @"4.jpg"]];
+    titleArr = [NSMutableArray arrayWithArray:@[]];
+    introArr = [NSMutableArray arrayWithArray:@[]];
+    
     
     //设置tableview
     self.baseTableView.frame = CGRectMake(0, 123, 320, 446);
