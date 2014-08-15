@@ -586,6 +586,10 @@
 		50470743199D10A900F04F08 /* UserColletionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50470742199D10A900F04F08 /* UserColletionCell.xib */; };
 		50470747199D35A900F04F08 /* UserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50470745199D35A900F04F08 /* UserDetailViewController.m */; };
 		50470748199D35A900F04F08 /* UserDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50470746199D35A900F04F08 /* UserDetailViewController.xib */; };
+		50473BCF199DB8CD0034C7FE /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50473BCD199DB8CD0034C7FE /* CameraViewController.m */; };
+		50473BD0199DB8CD0034C7FE /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50473BCE199DB8CD0034C7FE /* CameraViewController.xib */; };
+		50473BD6199DD1F20034C7FE /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50473BD4199DD1F20034C7FE /* ShareViewController.m */; };
+		50473BD7199DD1F20034C7FE /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50473BD5199DD1F20034C7FE /* ShareViewController.xib */; };
 		50A5EC4D199CA92D005EF757 /* dark_bg@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 50A5EC4C199CA92D005EF757 /* dark_bg@2X.png */; };
 		50A5EC55199CB563005EF757 /* IonIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A5EC51199CB563005EF757 /* IonIcons.m */; };
 		50A5EC56199CB563005EF757 /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50A5EC52199CB563005EF757 /* ionicons.ttf */; };
@@ -1312,6 +1316,12 @@
 		50470744199D35A900F04F08 /* UserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailViewController.h; sourceTree = "<group>"; };
 		50470745199D35A900F04F08 /* UserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailViewController.m; sourceTree = "<group>"; };
 		50470746199D35A900F04F08 /* UserDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserDetailViewController.xib; sourceTree = "<group>"; };
+		50473BCC199DB8CD0034C7FE /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		50473BCD199DB8CD0034C7FE /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		50473BCE199DB8CD0034C7FE /* CameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
+		50473BD3199DD1F20034C7FE /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
+		50473BD4199DD1F20034C7FE /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
+		50473BD5199DD1F20034C7FE /* ShareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareViewController.xib; sourceTree = "<group>"; };
 		50A5EC4C199CA92D005EF757 /* dark_bg@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dark_bg@2X.png"; sourceTree = "<group>"; };
 		50A5EC4F199CB563005EF757 /* ionicons-codes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ionicons-codes.h"; sourceTree = "<group>"; };
 		50A5EC50199CB563005EF757 /* IonIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IonIcons.h; sourceTree = "<group>"; };
@@ -1946,6 +1956,8 @@
 		107C1C4F198BCFDD00E1198E /* DuiZhun */ = {
 			isa = PBXGroup;
 			children = (
+				50473BD2199DD1B80034C7FE /* shareView */,
+				50473BCB199DB8BD0034C7FE /* cameraView */,
 				102082D91998877D00E151B3 /* searchView */,
 				6656A91519939C8000E0C930 /* gestureView */,
 				107C1D78198BD98B00E1198E /* navView */,
@@ -2427,6 +2439,26 @@
 			path = navView;
 			sourceTree = "<group>";
 		};
+		50473BCB199DB8BD0034C7FE /* cameraView */ = {
+			isa = PBXGroup;
+			children = (
+				50473BCC199DB8CD0034C7FE /* CameraViewController.h */,
+				50473BCD199DB8CD0034C7FE /* CameraViewController.m */,
+				50473BCE199DB8CD0034C7FE /* CameraViewController.xib */,
+			);
+			path = cameraView;
+			sourceTree = "<group>";
+		};
+		50473BD2199DD1B80034C7FE /* shareView */ = {
+			isa = PBXGroup;
+			children = (
+				50473BD3199DD1F20034C7FE /* ShareViewController.h */,
+				50473BD4199DD1F20034C7FE /* ShareViewController.m */,
+				50473BD5199DD1F20034C7FE /* ShareViewController.xib */,
+			);
+			path = shareView;
+			sourceTree = "<group>";
+		};
 		50A5EC4E199CB563005EF757 /* ionicons */ = {
 			isa = PBXGroup;
 			children = (
@@ -2739,6 +2771,7 @@
 				1020864519991DA700E151B3 /* plane.png in Resources */,
 				1020867319991DA700E151B3 /* social-linkedin.png in Resources */,
 				1020867119991DA700E151B3 /* social-hackernews.png in Resources */,
+				50473BD0199DB8CD0034C7FE /* CameraViewController.xib in Resources */,
 				1020854C19991DA700E151B3 /* ios7-albums.png in Resources */,
 				1020852919991DA700E151B3 /* eye.png in Resources */,
 				1020856019991DA700E151B3 /* ios7-box.png in Resources */,
@@ -2877,6 +2910,7 @@
 				1020867919991DA700E151B3 /* social-rss.png in Resources */,
 				102085CE19991DA700E151B3 /* ios7-people.png in Resources */,
 				1020853319991DA700E151B3 /* fork.png in Resources */,
+				50473BD7199DD1F20034C7FE /* ShareViewController.xib in Resources */,
 				102085F519991DA700E151B3 /* ios7-star-outline.png in Resources */,
 				102084DE19991DA700E151B3 /* arrow-down-c.png in Resources */,
 				1020855019991DA700E151B3 /* ios7-arrow-left.png in Resources */,
@@ -3183,6 +3217,7 @@
 				107C1D21198BD0C500E1198E /* ServerRequest.m in Sources */,
 				107C1CFB198BD0A800E1198E /* EGORefreshTableHeaderView.m in Sources */,
 				107C1C5A198BCFDD00E1198E /* AppDelegate.m in Sources */,
+				50473BCF199DB8CD0034C7FE /* CameraViewController.m in Sources */,
 				6656A91C1993A01800E0C930 /* FXBlurView.m in Sources */,
 				107C1CF4198BD0A800E1198E /* AFXMLRequestOperation.m in Sources */,
 				107C1D25198BD0C500E1198E /* WebViewController.m in Sources */,
@@ -3221,6 +3256,7 @@
 				107C1D02198BD0A800E1198E /* SBJsonStreamParserAdapter.m in Sources */,
 				107C1D5E198BD43500E1198E /* TargetListViewController.m in Sources */,
 				50A5EC55199CB563005EF757 /* IonIcons.m in Sources */,
+				50473BD6199DD1F20034C7FE /* ShareViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

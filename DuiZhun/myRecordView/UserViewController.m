@@ -11,6 +11,7 @@
 #import "UserCell.h"
 #import "UserColletionCell.h"
 #import "UserDetailViewController.h"
+#import "CameraViewController.h"
 
 @interface UserViewController ()
 
@@ -189,9 +190,10 @@
 //UICollectionView被选中时调用的方法
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UserDetailViewController *vc = (UserDetailViewController *)[Controllers viewControllerWithName:@"UserDetailViewController"];
-    vc.image = [UIImage imageNamed:self.dataArray[indexPath.row]];
-    [self.navigationController pushViewController:vc animated:YES];
+//    UserDetailViewController *vc = (UserDetailViewController *)[Controllers viewControllerWithName:@"UserDetailViewController"];
+    
+//    vc.image = [UIImage imageNamed:self.dataArray[indexPath.row]];
+    [self.navigationController pushViewController:[Controllers viewControllerWithName:@"CameraViewController"] animated:YES];
     [self.tabBarController hidesBottomBarWhenPushed];
     
 //    UICollectionViewCell * cell = (UICollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
