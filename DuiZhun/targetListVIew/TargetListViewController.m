@@ -35,6 +35,9 @@
     [self.view addSubview:self.baseTableView];
     self.baseTableView.frame = CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT);
     [self.baseTableView registerNib:[UINib nibWithNibName:NSStringFromClass([TargetCell class]) bundle:nil] forCellReuseIdentifier:@"targetCell"];
+    
+    self.menuButton.frame = CGRectOffset(self.menuButton.frame, 250, 20);
+    [self.baseTableView addSubview:self.menuButton];
 }
 
 - (void)didReceiveMemoryWarning
@@ -68,12 +71,7 @@
 //}
 
 
-- (IBAction)buttonpressed:(id)sender {
-    [self.navigationController pushViewController:[Controllers viewControllerWithName:@"GuideViewController"] animated:YES];
-}
-
-- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-
+- (IBAction)showMenu:(id)sender {
+    [NOTIFICATIONCENTER postNotificationName:NOTI_GESTURE_LEFT object:nil];
 }
 @end

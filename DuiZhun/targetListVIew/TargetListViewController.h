@@ -9,6 +9,7 @@
 #import "GestureViewController.h"
 
 @interface TargetListViewController : GestureViewController
-- (IBAction)buttonpressed:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *menuButton;
+- (IBAction)showMenu:(id)sender;
 
 @end
