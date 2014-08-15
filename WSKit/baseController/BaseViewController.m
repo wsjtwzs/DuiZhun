@@ -32,6 +32,7 @@
 {
     [super viewDidLoad];
 //    self.view.backgroundColor = BACKGROUND;
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"dark_bg"]];
     if (!self.dataArray) {
         self.dataArray = [NSMutableArray array];
     }

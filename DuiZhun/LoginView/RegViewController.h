@@ -9,6 +9,10 @@
 #import "KeyBoardViewController.h"
 
 @interface RegViewController : KeyBoardViewController
+{
+
+    __weak IBOutlet UIButton *leftImage;
+}
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 - (IBAction)login:(id)sender;

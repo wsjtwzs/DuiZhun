@@ -36,6 +36,7 @@ typedef enum{
 {
     [super viewDidLoad];
     [self changeImageColor];
+    self.view.backgroundColor = CLEARCOLOR;
 }
 
 - (void)didReceiveMemoryWarning

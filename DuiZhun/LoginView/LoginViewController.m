@@ -27,7 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [self changeImageColor];
     self.scrollView.frame = CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT);
     self.scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.scrollView.frame), CGRectGetHeight(self.scrollView.frame)+1);
     
@@ -44,6 +44,13 @@
     self.pass_field.textColor = [UIColor whiteColor];
 //    self.user_field.
     
+}
+
+- (void) changeImageColor
+{
+    
+    [leftImage setBackgroundImage:[IonIcons imageWithIcon:icon_ios7_arrow_left size:27 color:WHITECOLOR] forState:UIControlStateNormal];
+    [leftImage setBackgroundImage:[IonIcons imageWithIcon:icon_ios7_arrow_left size:27 color:YELLOWCOLOR] forState:UIControlStateHighlighted];
 }
 
 - (void)didReceiveMemoryWarning

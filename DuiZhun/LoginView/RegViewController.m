@@ -27,9 +27,11 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self changeImageColor];
     
-        _keyboardScrollView = self.scrollView;
-        _keyboardScrollView.contentSize = CGSizeMake(CGRectGetWidth(_keyboardScrollView.frame), CGRectGetHeight(_keyboardScrollView.frame)+100);
+    self.scrollView.frame = CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT);
+    self.scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.scrollView.frame), CGRectGetHeight(self.scrollView.frame)+1);
+    _keyboardScrollView = self.scrollView;
     
     //给图标设置图片
     self.user_icon.image = [IonIcons imageWithIcon:icon_ios7_person iconColor:[UIColor grayColor]
@@ -49,12 +51,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) keyBoardWillHidden:(NSNotification *)noti
+
+- (void) changeImageColor
 {
-    //    [GlobalConfig keyBoardDidDisapper:noti scrollView:_keyboardScrollView];
-    self.scrollView.contentInset = UIEdgeInsetsZero;
-    self.scrollView.scrollIndicatorInsets = UIEdgeInsetsZero;
+    
+    [leftImage setBackgroundImage:[IonIcons imageWithIcon:icon_ios7_arrow_left size:27 color:WHITECOLOR] forState:UIControlStateNormal];
+    [leftImage setBackgroundImage:[IonIcons imageWithIcon:icon_ios7_arrow_left size:27 color:YELLOWCOLOR] forState:UIControlStateHighlighted];
 }
+
 
 
 
