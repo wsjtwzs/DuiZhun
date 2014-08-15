@@ -26,14 +26,14 @@
     return self;
 }
 
-- (void) viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    [self scrollViewDidScroll:self.baseTableView];
-    [UIView animateWithDuration:0.5 animations:^{
-        self.view.alpha = 1;
-    }];
-}
+//- (void) viewDidAppear:(BOOL)animated
+//{
+//    [super viewDidAppear:animated];
+//    [self scrollViewDidScroll:self.baseTableView];
+//    [UIView animateWithDuration:0.5 animations:^{
+//        self.view.alpha = 1;
+//    }];
+//}
 
 - (void)viewDidLoad
 {
@@ -46,7 +46,7 @@
     self.baseTableView.frame = CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT);
     [self.baseTableView addSubview:self.menu];
     [self.baseTableView registerNib:[UINib nibWithNibName:NSStringFromClass([MainCell class]) bundle:nil] forCellReuseIdentifier:@"mainCell"];
-    self.view.alpha = 0;
+//    self.view.alpha = 0;
     
     
 }

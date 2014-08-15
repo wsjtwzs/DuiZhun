@@ -19,6 +19,8 @@ static NSString *firstLaunch = @"firstLaunch";
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
+     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     //初始化百度Frontia
     [Frontia initWithApiKey:APPKEY_BAIDU];
     
