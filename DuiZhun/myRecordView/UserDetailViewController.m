@@ -8,6 +8,7 @@
 
 #import "UserDetailViewController.h"
 #import "Ionicons.h"
+#import "ShareViewController.h"
 
 @interface UserDetailViewController ()
 
@@ -35,6 +36,9 @@ static BOOL hasFav = NO;
     }
     self.detailImage.image = self.image;
 
+    self.navTitle.text = self.navTitleText;
+    self.intro.text = self.introText;
+    
     //设置按钮图片
     [self.heart setImage:[IonIcons imageWithIcon:icon_ios7_heart iconColor:[UIColor whiteColor]
                                             iconSize:25.0f
@@ -69,6 +73,11 @@ static BOOL hasFav = NO;
 }
 
 - (IBAction)sharePress:(id)sender {
+    ShareViewController *vc = (ShareViewController *)[Controllers viewControllerWithName:@"ShareViewController"];
+    vc.imageIndex = self.imageIndex;
+    vc.shareText = self.introText;
+    vc.imageIndex = self.imageIndex;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)removePress:(id)sender {

@@ -22,5 +22,7 @@
 - (IBAction)sharePress:(id)sender;
 - (IBAction)removePress:(id)sender;
 
-
+@property (nonatomic, strong) NSString *navTitleText;
+@property (nonatomic, strong) NSString *introText;
+@property (nonatomic, assign) int imageIndex;
 @end

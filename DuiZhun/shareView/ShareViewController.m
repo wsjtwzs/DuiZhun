@@ -16,6 +16,7 @@
 static BOOL actSina;
 static BOOL actTencent;
 static BOOL actWX;
+static NSArray *imageArr;
 
 @implementation ShareViewController
 
@@ -32,6 +33,22 @@ static BOOL actWX;
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //数据源
+    self.dataArray = [NSMutableArray arrayWithArray:@[@"user_big_01.jpg",
+                                                      @"user_big_02.jpg",
+                                                      @"user_big_03.jpg",
+                                                      @"user_big_04.jpg",
+                                                      @"user_big_05.jpg",
+                                                      @"user_big_06.jpg",
+                                                      @"user_big_07.jpg",
+                                                      @"user_big_08.jpg",
+                                                      @"user_big_09.jpg",
+                                                      @"user_big_10.jpg",
+                                                      @"user_big_11.jpg",
+                                                      @"user_big_12.jpg",
+                                                      @"user_big_13.jpg"]];
+    
+    
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_"]];
     //初始化
     actSina = NO;
@@ -56,16 +73,22 @@ static BOOL actWX;
         
     } else {
         //取图片
-        if (!self.image) {
+        if (!self.image && self.imageIndex == 0) {
             
-            self.imageView.image = [UIImage imageNamed:@"2.jpg"];
+            self.imageView.image = [UIImage imageNamed:@"user_big_01.jpg"];
             
         } else {
             self.imageView.image = self.image;
         }
-
-        
+        if (self.imageIndex) {
+            self.imageView.image = [UIImage imageNamed:self.dataArray[self.imageIndex]];
+        }
     }
+
+    if (self.shareText) {
+        self.shareTextView.text = self.shareText;
+    }
+
     
 }
 

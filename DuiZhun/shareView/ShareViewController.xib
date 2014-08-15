@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -9,6 +9,7 @@
                 <outlet property="imageView" destination="exN-wC-DKo" id="MnO-8q-1zw"/>
                 <outlet property="paperClip" destination="qkT-xJ-0gS" id="U0i-XB-JCQ"/>
                 <outlet property="playMark" destination="RYS-uF-fge" id="gPM-yu-XYX"/>
+                <outlet property="shareTextView" destination="oxk-NI-hND" id="89B-b2-Dot"/>
                 <outlet property="shareView" destination="Q8L-lp-z6H" id="4Ss-lm-ZWP"/>
                 <outlet property="sinaButton" destination="kNy-O9-ZK7" id="4BP-lf-Zno"/>
                 <outlet property="tButton" destination="hhd-OA-adH" id="gSa-IT-2d6"/>
@@ -44,7 +45,7 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </imageView>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="随便说说随便说说随便说说随便说说随便说说随便说说随便说说" translatesAutoresizingMaskIntoConstraints="NO" id="oxk-NI-hND">
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="在这里写下分享的内容.." translatesAutoresizingMaskIntoConstraints="NO" id="oxk-NI-hND">
                             <rect key="frame" x="20" y="374" width="280" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

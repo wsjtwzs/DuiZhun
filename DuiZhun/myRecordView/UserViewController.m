@@ -16,6 +16,7 @@
 
 static NSMutableArray *titleArr;
 static NSMutableArray *introArr;
+static NSMutableArray *heartArr;
 
 @interface UserViewController ()
 
@@ -51,16 +52,52 @@ static NSMutableArray *introArr;
                                            imageSize:CGSizeMake(160.0f, 53.0f)] forState:UIControlStateHighlighted];
     
     //数据源
-    self.dataArray = [NSMutableArray arrayWithArray:@[@"6.jpg",
-                                                      @"3.jpg",
-                                                      @"2.jpg",
-                                                      @"4.jpg"]];
-    titleArr = [NSMutableArray arrayWithArray:@[]];
-    introArr = [NSMutableArray arrayWithArray:@[]];
+    self.dataArray = [NSMutableArray arrayWithArray:@[@"user_small_01.jpg",
+                                                      @"user_small_02.jpg",
+                                                      @"user_small_03.jpg",
+                                                      @"user_small_04.jpg",
+                                                        @"user_small_05.jpg",
+                                                        @"user_small_06.jpg",
+                                                        @"user_small_07.jpg",
+                                                        @"user_small_08.jpg",
+                                                        @"user_small_09.jpg",
+                                                        @"user_small_10.jpg",
+                                                        @"user_small_11.jpg",
+                                                        @"user_small_12.jpg",
+                                                        @"user_small_13.jpg"]];
     
+    titleArr = [NSMutableArray arrayWithArray:@[@"霍比特传奇",
+                                                @"朋克还是挺有看头的",
+                                                @"我就是歧视黑人",
+                                                @"这车的马达轰真响",
+                                                @"赛车游戏独孤求败",
+                                                @"美队帅的没朋友",
+                                                @"一个失败的页面",
+                                                @"逆光拍摄有技巧",
+                                                @"世界杯模拟赛",
+                                                @"这么有爱的动画谁做的",
+                                                @"大叔太唠叨了谢谢",
+                                                @"收集7个召唤神龙",
+                                                @"歌声挺渗人的"]];
+    
+    introArr = [NSMutableArray arrayWithArray:@[@"「这些小个子满脸写着萌啊」",
+                                                @"「这帮家伙居然还在玩音乐」",
+                                                @"「但这个黑人还让我挺有感觉的」",
+                                                @"「等有钱了还是要买辆RENAULT嘛」",
+                                                @"「目前已领先其他选手一块钱」",
+                                                @"「预告片中的彩蛋你们都发现了吗」",
+                                                @"「和一个失败的动画，吐槽无能」",
+                                                @"「如果你有钱到这里旅行，就有钱买个单反」",
+                                                @"「但我支持的球队从来没冲出五环」",
+                                                @"「你要不要也来摸一摸，有点硬」",
+                                                @"「清洁员大叔和你讲公司秘闻」",
+                                                @"「圣诞节麋鹿已经迷路，需求帮助」",
+                                                @"「我能告诉你这段视频其实没有歌声吗」"]];
+    
+    heartArr = [NSMutableArray arrayWithArray:@[]];
     
     //设置tableview
-    self.baseTableView.frame = CGRectMake(0, 123, 320, 446);
+    self.baseTableView.frame = CGRectMake(0, 125, 320, 444);
     self.baseTableView.hidden = YES;
     self.baseTableView.alpha = 0;
     [self.view addSubview:self.baseTableView];
@@ -163,13 +200,19 @@ static NSMutableArray *introArr;
 {
     UserCell *cell = [tableView dequeueReusableCellWithIdentifier:@"userCell"];
     cell.userImageView.image = [UIImage imageNamed:self.dataArray[indexPath.row]];
+    cell.title.text = titleArr[indexPath.row];
+    cell.intro.text = introArr[indexPath.row];
     return cell;
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.navigationController pushViewController:[Controllers viewControllerWithName:@"UserDetailViewController"] animated:YES];
-//    [self.tabBarController hidesBottomBarWhenPushed];
+    UserDetailViewController *vc = (UserDetailViewController *)[Controllers viewControllerWithName:@"UserDetailViewController"];
+    vc.image = [UIImage imageNamed:self.dataArray[indexPath.row]];
+    vc.navTitleText = titleArr[indexPath.row];
+    vc.introText = introArr[indexPath.row];
+    vc.imageIndex = indexPath.row;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 //collectionview
@@ -186,10 +229,8 @@ static NSMutableArray *introArr;
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString * CellIdentifier = @"GradientCell";
-//    UICollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     UserColletionCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     cell.collectionImage.image = [UIImage imageNamed:self.dataArray[indexPath.row]];
-//    cell.backgroundColor = [UIColor colorWithRed:((10 * indexPath.row) / 255.0) green:((20 * indexPath.row)/255.0) blue:((30 * indexPath.row)/255.0) alpha:1.0f];
     return cell;
 }
 //定义每个UICollectionView 的大小
@@ -197,21 +238,15 @@ static NSMutableArray *introArr;
 {
     return CGSizeMake(155, 140);
 }
-//定义每个UICollectionView 的 margin
-//-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
-//{
-//    return UIEdgeInsetsMake(5, 5, 5, 5);
-//}
 //UICollectionView被选中时调用的方法
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-//    UserDetailViewController *vc = (UserDetailViewController *)[Controllers viewControllerWithName:@"UserDetailViewController"];
-    
-//    vc.image = [UIImage imageNamed:self.dataArray[indexPath.row]];
-    [self.navigationController pushViewController:[Controllers viewControllerWithName:@"ShareViewController"] animated:YES];
-//    [self.tabBarController hidesBottomBarWhenPushed];
-    
-//    UICollectionViewCell * cell = (UICollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
-//    cell.backgroundColor = [UIColor whiteColor];
+        UserDetailViewController *vc = (UserDetailViewController *)[Controllers viewControllerWithName:@"UserDetailViewController"];
+        vc.image = [UIImage imageNamed:self.dataArray[indexPath.row]];
+        vc.navTitleText = titleArr[indexPath.row];
+        vc.introText = introArr[indexPath.row];
+        vc.imageIndex = indexPath.row;
+        [self.navigationController pushViewController:vc animated:YES];
+
 }
 @end

@@ -31,6 +31,7 @@
 @property (retain, nonatomic) IBOutlet UIButton *tButton;
 @property (retain, nonatomic) IBOutlet UIButton *wxButton;
 
+@property (weak, nonatomic) IBOutlet UITextView *shareTextView;
 - (IBAction)sinaPress:(id)sender;
 - (IBAction)tPress:(id)sender;
 - (IBAction)wxPress:(id)sender;
@@ -38,4 +39,6 @@
 - (IBAction)share:(id)sender;
 
 @property (nonatomic, strong) UIImage *image;
+@property (nonatomic, assign) int imageIndex;
+@property (nonatomic, strong) NSString *shareText;
 @end
