@@ -53,6 +53,16 @@ typedef enum{
     shareView.frame = rect_hidden;
     [self.view addSubview:shareView];
     
+    [self setValueForView];
+    
+    
+}
+
+- (void) setValueForView
+{
+    self.imageView.image = [UIImage imageNamed:self.model.image];
+    self.titleLabel.text = self.model.title;
+    self.heartNumber.text = self.model.heart;
     
 }
 
@@ -94,7 +104,7 @@ typedef enum{
             }
             break;
         case buttonPressed_share:
-            [self share];
+//            [self share];
             [self shareViewHidden:NO];
             break;
         default:

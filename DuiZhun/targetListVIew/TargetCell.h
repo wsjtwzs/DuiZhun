@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseCell.h"
 
-@interface TargetCell : UITableViewCell
+@interface TargetCell : BaseCell
 @property (weak, nonatomic) IBOutlet UIImageView *heart;
 @property (weak, nonatomic) IBOutlet UILabel *heartNumber;
 @property (weak, nonatomic) IBOutlet UIImageView *bgImage;

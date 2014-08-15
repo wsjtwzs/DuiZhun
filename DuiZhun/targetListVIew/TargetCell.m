@@ -9,6 +9,7 @@
 #import "TargetCell.h"
 #import "GlobalConfig.h"
 #import "IonIcons.h"
+#import "TargetModel.h"
 
 @implementation TargetCell
 
@@ -22,6 +23,15 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void) setValueForCell:(BaseModel *)model
+{
+    TargetModel *m = (TargetModel *)model;
+    self.bgImage.image = [UIImage imageNamed:m.smallImage];
+    self.title.text = m.title;
+    self.heartNumber.text = m.heart;
+    self.subtitle.text = m.subTitle;
 }
 
 @end

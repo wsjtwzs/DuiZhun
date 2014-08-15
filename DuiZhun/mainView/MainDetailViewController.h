@@ -8,6 +8,7 @@
 
 #import "BaseViewController.h"
 #import "GestureViewController.h"
+#import "MainModel.h"
 
 @interface MainDetailViewController : BaseViewController
 {
@@ -15,6 +16,7 @@
     IBOutlet UIView *shareView;
     __weak IBOutlet UIImageView *heartImage;
 }
+@property (nonatomic, strong) MainModel *model;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *heartNumber;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;

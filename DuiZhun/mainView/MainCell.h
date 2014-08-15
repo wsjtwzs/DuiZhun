@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseCell.h"
+#import "MainModel.h"
 
 @interface MainCell : BaseCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *backImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLable;
 @property (weak, nonatomic) IBOutlet UIImageView *heart;
+@property (weak, nonatomic) IBOutlet UILabel *heartNumber;
 
 - (void)cellOnTableView:(UITableView *)tableView didScrollOnView:(UIView *)view;
 
