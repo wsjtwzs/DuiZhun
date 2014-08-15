@@ -49,6 +49,12 @@
     
 }
 
+- (void)removeFromParentViewController
+{
+    [super removeFromParentViewController];
+    self.backgroundView.hidden = YES;
+}
+
 
 
 - (void)viewDidLoad

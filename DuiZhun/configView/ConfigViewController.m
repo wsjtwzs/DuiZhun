@@ -91,6 +91,7 @@ typedef enum{
             [self transitionWithType:TransitionType_push fromViewController:self toView:[Controllers viewControllerWithName:@"SuggessViewController"]];
             break;
         case buttonPressed_clean:
+            cache.text = @"0M";
             [GlobalConfig alert:@"缓存清除成功"];
             break;
 

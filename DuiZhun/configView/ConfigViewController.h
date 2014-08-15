@@ -17,6 +17,7 @@
     __weak IBOutlet UIImageView *infoImage;
     __weak IBOutlet UIImageView *wifiImage;
     __weak IBOutlet UIButton *leftImage;
+    __weak IBOutlet UILabel *cache;
     __weak IBOutlet UIImageView *bindingImage;
     __weak IBOutlet UIImageView *notiImage;
 }
