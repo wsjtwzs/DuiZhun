@@ -12,6 +12,7 @@
 #import "UserColletionCell.h"
 #import "UserDetailViewController.h"
 #import "CameraViewController.h"
+#import "ShareViewController.h"
 
 @interface UserViewController ()
 
@@ -193,7 +194,7 @@
 //    UserDetailViewController *vc = (UserDetailViewController *)[Controllers viewControllerWithName:@"UserDetailViewController"];
     
 //    vc.image = [UIImage imageNamed:self.dataArray[indexPath.row]];
-    [self.navigationController pushViewController:[Controllers viewControllerWithName:@"CameraViewController"] animated:YES];
+    [self.navigationController pushViewController:[Controllers viewControllerWithName:@"ShareViewController"] animated:YES];
     [self.tabBarController hidesBottomBarWhenPushed];
     
 //    UICollectionViewCell * cell = (UICollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];

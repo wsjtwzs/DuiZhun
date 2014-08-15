@@ -22,6 +22,7 @@
 @interface ShareViewController : BaseViewController
 @property (nonatomic, strong) ALAssetsLibrary *lib;
 @property (nonatomic, assign) BOOL video;
+@property (weak, nonatomic) IBOutlet UIImageView *paperClip;
 @property (retain, nonatomic) IBOutlet UIView *shareView;
 @property (retain, nonatomic) IBOutlet UIImageView *imageView;
 

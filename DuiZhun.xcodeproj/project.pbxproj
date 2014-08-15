@@ -590,6 +590,7 @@
 		50473BD0199DB8CD0034C7FE /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50473BCE199DB8CD0034C7FE /* CameraViewController.xib */; };
 		50473BD6199DD1F20034C7FE /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50473BD4199DD1F20034C7FE /* ShareViewController.m */; };
 		50473BD7199DD1F20034C7FE /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50473BD5199DD1F20034C7FE /* ShareViewController.xib */; };
+		50473BD9199DD5E90034C7FE /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50473BD8199DD5E90034C7FE /* play@2x.png */; };
 		50A5EC4D199CA92D005EF757 /* dark_bg@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 50A5EC4C199CA92D005EF757 /* dark_bg@2X.png */; };
 		50A5EC55199CB563005EF757 /* IonIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A5EC51199CB563005EF757 /* IonIcons.m */; };
 		50A5EC56199CB563005EF757 /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50A5EC52199CB563005EF757 /* ionicons.ttf */; };
@@ -1322,6 +1323,7 @@
 		50473BD3199DD1F20034C7FE /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
 		50473BD4199DD1F20034C7FE /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
 		50473BD5199DD1F20034C7FE /* ShareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareViewController.xib; sourceTree = "<group>"; };
+		50473BD8199DD5E90034C7FE /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@2x.png"; sourceTree = "<group>"; };
 		50A5EC4C199CA92D005EF757 /* dark_bg@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dark_bg@2X.png"; sourceTree = "<group>"; };
 		50A5EC4F199CB563005EF757 /* ionicons-codes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ionicons-codes.h"; sourceTree = "<group>"; };
 		50A5EC50199CB563005EF757 /* IonIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IonIcons.h; sourceTree = "<group>"; };
@@ -2556,6 +2558,7 @@
 				102082FC19991CA500E151B3 /* share_tengxun@2x.png */,
 				102082FD19991CA500E151B3 /* share_wechat_h@2x.png */,
 				102082FE19991CA500E151B3 /* share_wechat@2x.png */,
+				50473BD8199DD5E90034C7FE /* play@2x.png */,
 				102082F519991C3600E151B3 /* record_four@2x.png */,
 				102082F619991C3600E151B3 /* record_one@2x.png */,
 				102082E919991BEC00E151B3 /* icon_sina_h@2x.png */,
@@ -2904,6 +2907,7 @@
 				1020859B19991DA700E151B3 /* ios7-flag.png in Resources */,
 				1020857419991DA700E151B3 /* ios7-circle-filled.png in Resources */,
 				1020859F19991DA700E151B3 /* ios7-gear.png in Resources */,
+				50473BD9199DD5E90034C7FE /* play@2x.png in Resources */,
 				1020857A19991DA700E151B3 /* ios7-close.png in Resources */,
 				102085F819991DA700E151B3 /* ios7-stopwatch.png in Resources */,
 				1020865819991DA700E151B3 /* shuffle.png in Resources */,
