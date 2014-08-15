@@ -8,9 +8,13 @@
             <connections>
                 <outlet property="contentLabel" destination="Ntk-js-iU2" id="Cu0-82-S4E"/>
                 <outlet property="heartButton" destination="J8M-4a-9nK" id="w97-M9-Tpv"/>
+                <outlet property="heartButtonImae" destination="26N-vA-xU4" id="uDe-Cf-X5c"/>
+                <outlet property="heartImage" destination="ywH-tL-NG4" id="dv2-SX-cYN"/>
                 <outlet property="heartNumber" destination="CjU-BI-ufy" id="8IT-np-L3b"/>
                 <outlet property="imageView" destination="Cna-jI-kMv" id="pyx-jL-One"/>
                 <outlet property="shareButton" destination="QDB-Sa-zaS" id="D2M-Fr-e9g"/>
+                <outlet property="shareImage" destination="IVh-Pg-9KD" id="yu4-cf-1MD"/>
+                <outlet property="shareView" destination="UPW-Uy-tbS" id="c3G-aL-GR9"/>
                 <outlet property="titleLabel" destination="B7o-Q1-tSA" id="Ssr-X5-m69"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -25,7 +29,7 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ios7-heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="ywH-tL-NG4">
-                    <rect key="frame" x="239" y="286" width="30" height="30"/>
+                    <rect key="frame" x="253" y="294" width="20" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="103" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CjU-BI-ufy">
@@ -63,7 +67,6 @@
                         <button opaque="NO" tag="401" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8M-4a-9nK">
                             <rect key="frame" x="0.0" y="184" width="161" height="60"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.98823529409999999" green="1" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                             <state key="normal">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -72,13 +75,13 @@
                             </connections>
                         </button>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ios7-heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="26N-vA-xU4">
-                            <rect key="frame" x="65" y="199" width="30" height="30"/>
+                            <rect key="frame" x="70" y="199" width="20" height="20"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <button opaque="NO" tag="402" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDB-Sa-zaS">
                             <rect key="frame" x="159" y="184" width="161" height="60"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <state key="normal">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -87,28 +90,122 @@
                             </connections>
                         </button>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="share.png" translatesAutoresizingMaskIntoConstraints="NO" id="IVh-Pg-9KD">
-                            <rect key="frame" x="197" y="199" width="30" height="30"/>
+                            <rect key="frame" x="206" y="194" width="29" height="29"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         </imageView>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="分享" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HS1-Y6-osF">
-                            <rect key="frame" x="240" y="203" width="42" height="21"/>
+                            <rect key="frame" x="240" y="198" width="42" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
+        <view contentMode="scaleToFill" id="UPW-Uy-tbS">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8D-Dx-7Xh">
+                    <rect key="frame" x="-5" y="0.0" width="325" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.24307139598540145" green="0.2449532390510949" blue="0.25413435218978103" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="shareToSina:" destination="-1" eventType="touchUpInside" id="lod-KB-2O5"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_sina.png" translatesAutoresizingMaskIntoConstraints="NO" id="cwa-J6-y3a">
+                    <rect key="frame" x="15" y="0.0" width="44" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="分享到新浪微博" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5jY-Mh-hNr">
+                    <rect key="frame" x="58" y="11" width="217" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wP6-bc-RoO">
+                    <rect key="frame" x="-5" y="45" width="325" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.243071396" green="0.2449532391" blue="0.25413435220000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="shareTotengxun:" destination="-1" eventType="touchUpInside" id="7yQ-f4-XYP"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_tengxun.png" translatesAutoresizingMaskIntoConstraints="NO" id="h5X-ME-rK5">
+                    <rect key="frame" x="15" y="45" width="44" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="分享到腾讯微博" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jto-i7-lDQ">
+                    <rect key="frame" x="58" y="56" width="217" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DfT-HK-cLv">
+                    <rect key="frame" x="-5" y="90" width="325" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.243071396" green="0.2449532391" blue="0.25413435220000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="shareTowechat:" destination="-1" eventType="touchUpInside" id="Ki5-CT-Ucz"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_wechat.png" translatesAutoresizingMaskIntoConstraints="NO" id="5GX-Go-3ig">
+                    <rect key="frame" x="15" y="90" width="44" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="分享到微信" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rVb-M5-7av">
+                    <rect key="frame" x="58" y="101" width="217" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDB-xe-QC9">
+                    <rect key="frame" x="-5" y="135" width="325" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="shareCancle:" destination="-1" eventType="touchUpInside" id="bx1-6t-QFr"/>
+                    </connections>
+                </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="取消" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9t-uS-oaD">
+                    <rect key="frame" x="142" y="146" width="30" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
     </objects>
     <resources>
         <image name="2.jpg" width="1440" height="900"/>
+        <image name="icon_sina.png" width="44" height="44"/>
+        <image name="icon_tengxun.png" width="44" height="44"/>
+        <image name="icon_wechat.png" width="44" height="44"/>
         <image name="ios7-heart.png" width="512" height="512"/>
         <image name="share.png" width="512" height="512"/>
     </resources>

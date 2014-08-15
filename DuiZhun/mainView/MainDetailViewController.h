@@ -9,6 +9,13 @@
 #import "BaseViewController.h"
 
 @interface MainDetailViewController : BaseViewController
+{
+    
+    IBOutlet UIView *shareView;
+    __weak IBOutlet UIImageView *shareImage;
+    __weak IBOutlet UIImageView *heartButtonImae;
+    __weak IBOutlet UIImageView *heartImage;
+}
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *heartNumber;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -16,5 +23,12 @@
 @property (weak, nonatomic) IBOutlet UIButton *heartButton;
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
 - (IBAction)buttonPressed:(id)sender;
+
+- (IBAction)shareCancle:(id)sender;
+
+- (IBAction)shareTotengxun:(id)sender;
+- (IBAction)shareTowechat:(id)sender;
+
+- (IBAction)shareToSina:(id)sender;
 
 @end
