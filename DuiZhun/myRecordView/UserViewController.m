@@ -77,20 +77,24 @@
         [self.arcButton setImage:[IonIcons imageWithIcon:icon_archive iconColor:[UIColor whiteColor]
                                                 iconSize:29.0f
                                                imageSize:CGSizeMake(160.0f, 53.0f)] forState:UIControlStateNormal];
-        [self.arcButton setImage:[IonIcons imageWithIcon:icon_archive iconColor:[UIColor yellowColor]
-                                                iconSize:29.0f
-                                               imageSize:CGSizeMake(160.0f, 53.0f)] forState:UIControlStateHighlighted];
+
         [self.favButton setImage:[IonIcons imageWithIcon:icon_ios7_heart iconColor:[UIColor grayColor]
                                                 iconSize:25.0f
                                                imageSize:CGSizeMake(160.0f, 53.0f)] forState:UIControlStateNormal];
+        [self.favButton setBackgroundColor:CLEARCOLOR];
+        [self.arcButton setBackgroundColor:BLACKCOLOR];
+        
     } else {
         [self.arcButton setImage:[IonIcons imageWithIcon:icon_archive iconColor:[UIColor grayColor]
                                                 iconSize:29.0f
                                                imageSize:CGSizeMake(160.0f, 53.0f)] forState:UIControlStateNormal];
         
+        
         [self.favButton setImage:[IonIcons imageWithIcon:icon_ios7_heart iconColor:[UIColor whiteColor]
                                                 iconSize:25.0f
                                                imageSize:CGSizeMake(160.0f, 53.0f)] forState:UIControlStateNormal];
+        [self.arcButton setBackgroundColor:CLEARCOLOR];
+        [self.favButton setBackgroundColor:BLACKCOLOR];
     }
     
 }

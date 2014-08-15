@@ -35,11 +35,15 @@
     self.video_bg.hidden = YES;
     
     //公用button样式
-    [self.backBtn setBackgroundImage:[IonIcons imageWithIcon:icon_close_round size:29 color:WHITECOLOR] forState:UIControlStateNormal];
-    [self.backBtn setBackgroundImage:[IonIcons imageWithIcon:icon_close_round size:29 color:YELLOWCOLOR] forState:UIControlStateHighlighted];
+    [self.backBtn setImage:[IonIcons imageWithIcon:icon_close_round iconColor:WHITECOLOR
+                                          iconSize:29.0f
+                                         imageSize:CGSizeMake(44.0f, 44.0f)] forState:UIControlStateNormal];
+    [self.backBtn setImage: [IonIcons imageWithIcon:icon_close_round iconColor:YELLOWCOLOR
+                                 iconSize:29.0f
+                                imageSize:CGSizeMake(44.0f, 44.0f)] forState:UIControlStateHighlighted];;
 
-    [self.light setBackgroundImage:[IonIcons imageWithIcon:icon_flash_off size:29 color:WHITECOLOR] forState:UIControlStateNormal];
-    [self.light setBackgroundImage:[IonIcons imageWithIcon:icon_flash_off size:29 color:YELLOWCOLOR] forState:UIControlStateHighlighted];
+    [self.light setImage:[IonIcons imageWithIcon:icon_flash_off iconColor:WHITECOLOR iconSize:30 imageSize:CGSizeMake(44, 44)] forState:UIControlStateNormal];
+    [self.light setImage:[IonIcons imageWithIcon:icon_flash_off iconColor:WHITECOLOR iconSize:30 imageSize:CGSizeMake(44, 44)] forState:UIControlStateNormal];
 
     [self.frot setBackgroundImage:[IonIcons imageWithIcon:icon_ios7_reverse_camera_outline size:29 color:WHITECOLOR] forState:UIControlStateNormal];
     [self.frot setBackgroundImage:[IonIcons imageWithIcon:icon_ios7_reverse_camera_outline size:29 color:YELLOWCOLOR] forState:UIControlStateHighlighted];
