@@ -77,12 +77,13 @@ typedef enum {
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     GuideCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GuideCell"];
-//    cell.imageView.image = [UIImage imageNamed:]
-    cell.iconImage.image = [IonIcons imageWithIcon:_iconArray[indexPath.row] size:30 color:(indexPath.row == 0 ? YELLOWCOLOR :WHITECOLOR)];
+
+    cell.iconImage.image = [IonIcons imageWithIcon:_iconArray[indexPath.row] size:30 color:(indexPath.row == 0 ? BLACKCOLOR :WHITECOLOR)];
     cell.titleLabel.text = _titleArray[indexPath.row];
-    cell.titleLabel.textColor = (indexPath.row == 0 ? YELLOWCOLOR :WHITECOLOR);
+    cell.titleLabel.textColor = (indexPath.row == 0 ? BLACKCOLOR :WHITECOLOR);
     if (indexPath.row == 0) {
         _selectCell = cell;
+        cell.backgroundVIew.backgroundColor = YELLOWCOLOR;
     }
     return cell;
 }
@@ -93,11 +94,12 @@ typedef enum {
         NSIndexPath *index = [tableView indexPathForCell:_selectCell];
         _selectCell.iconImage.image = [IonIcons imageWithIcon:_iconArray[index.row] size:30 color:WHITECOLOR];
         _selectCell.titleLabel.textColor = WHITECOLOR;
+        _selectCell.backgroundVIew.backgroundColor = CLEARCOLOR;
     }
     GuideCell *cell = (GuideCell *)[tableView cellForRowAtIndexPath:indexPath];
-    cell.iconImage.image = [IonIcons imageWithIcon:_iconArray[indexPath.row] size:30 color:YELLOWCOLOR];
-    
-    cell.titleLabel.textColor = YELLOWCOLOR;
+    cell.iconImage.image = [IonIcons imageWithIcon:_iconArray[indexPath.row] size:30 color:BLACKCOLOR];
+    cell.backgroundVIew.backgroundColor = YELLOWCOLOR;
+    cell.titleLabel.textColor = BLACKCOLOR;
     _selectCell = cell;
     [self buttonPressed:(indexPath.row + 100)];
 }

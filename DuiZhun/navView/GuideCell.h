@@ -12,5 +12,6 @@
 @interface GuideCell : BaseCell
 @property (weak, nonatomic) IBOutlet UIImageView *iconImage;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIView *backgroundVIew;
 
 @end
