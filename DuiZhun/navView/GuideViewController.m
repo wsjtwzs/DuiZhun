@@ -50,6 +50,19 @@ typedef enum {
     self.baseTableView.frame = CGRectOffset(self.baseTableView.frame, 0, 100);
     _iconArray = @[icon_home,icon_pricetag,icon_person,icon_settings];
     _titleArray = @[@"首页",@"目标列表",@"我的记录",@"设置"];
+    
+    
+    //相机按钮
+    [self.camButton setBackgroundColor:[UIColor yellowColor]];
+    self.camButton.layer.cornerRadius = 15;
+    self.camButton.clipsToBounds = YES;
+    [self.view addSubview:self.camButton];
+    //    self.record.layer.borderWidth = 2;
+    //    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    //    CGColorRef colorref = CGColorCreate(colorSpace,(CGFloat[]){ 1, 0, 0, 1 });
+    //    [self.record.layer setBorderColor:colorref];//边框颜色
+    
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -133,6 +146,11 @@ typedef enum {
 {
 //    [self transitionWithType:TransitionType_push fromViewController:self toView:[Controllers viewControllerWithName:@"SearchViewController"]];
 
+}
+
+- (IBAction)openCam:(id)sender {
+            [self.navigationController pushViewController:[Controllers viewControllerWithName:@"CameraViewController"] animated:YES];
+    
 }
 
 

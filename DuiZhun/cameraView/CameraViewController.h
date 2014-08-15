@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface CameraViewController : BaseViewController
 
@@ -14,6 +15,7 @@
 @property (nonatomic,strong) IBOutlet UIButton *backBtn;
 @property (weak, nonatomic) IBOutlet UIButton *light;
 @property (weak, nonatomic) IBOutlet UIButton *frot;
+@property (weak, nonatomic) IBOutlet UIView *captureView;
 
 
 //拍照view
@@ -32,6 +34,7 @@
 //公用button
 - (IBAction)turnToPhoto:(id)sender;
 - (IBAction)recordFront:(id)sender;
+- (IBAction)back:(id)sender;
 
 //牌照方法
 - (IBAction)takePhoto:(id)sender;
@@ -43,6 +46,14 @@
 - (IBAction)refresh:(id)sender;
 - (IBAction)nextStep:(id)sender;
 
+
+
+//
+@property (nonatomic, strong) AVCaptureSession *session;
+@property (nonatomic, strong) AVCaptureVideoPreviewLayer *previewLayer;
+@property (nonatomic, strong) AVCaptureDeviceInput *inputDevice;
+@property (nonatomic, strong) AVCaptureStillImageOutput *stillImageOutput;
+@property (nonatomic, strong) AVCaptureConnection *myVideoConnection;
 @property (nonatomic, assign) BOOL videoMode;
 
 @end

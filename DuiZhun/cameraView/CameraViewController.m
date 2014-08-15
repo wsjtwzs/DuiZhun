@@ -8,6 +8,7 @@
 
 #import "CameraViewController.h"
 #import "Ionicons.h"
+#import "ShareViewController.h"
 
 @interface CameraViewController ()
 
@@ -66,6 +67,51 @@
                                             iconSize:39.0f
                                            imageSize:CGSizeMake(39.0f, 39.0f)] forState:UIControlStateNormal];
     
+    
+    
+    //初始化相机
+    AVCaptureSession *session = [[AVCaptureSession alloc] init];
+    [session setSessionPreset:AVCaptureSessionPresetPhoto];
+    //查找摄像头
+    NSArray *devices = [AVCaptureDevice devices];
+    for (AVCaptureDevice *device in devices) {
+        if ([device hasMediaType:AVMediaTypeVideo]) {
+            if ([device position] == AVCaptureDevicePositionBack) {
+                //后面
+                AVCaptureDeviceInput *myDeviceInput = [AVCaptureDeviceInput deviceInputWithDevice:device error:nil];
+                [session addInput:myDeviceInput];
+            }
+        }
+    }
+    
+    //建立 AVCaptureVideoPreviewLayer
+    AVCaptureVideoPreviewLayer *myPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:session];
+    [myPreviewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
+    
+    myPreviewLayer.frame = CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT);
+
+    [self.captureView.layer addSublayer:myPreviewLayer];
+    [session startRunning];
+    
+    //建立 AVCaptureStillImageOutput
+//    AVCaptureStillImageOutput *myStillImageOutput;
+    self.stillImageOutput = [[AVCaptureStillImageOutput alloc] init];
+    NSDictionary *myOutputSettings = [[NSDictionary alloc] initWithObjectsAndKeys:AVVideoCodecJPEG,AVVideoCodecKey,nil];
+    [self.stillImageOutput setOutputSettings:myOutputSettings];
+    [session addOutput:self.stillImageOutput];
+    
+    
+    //从 AVCaptureStillImageOutput 中取得正确类型的 AVCaptureConnection
+//    AVCaptureConnection *myVideoConnection = nil;
+    for (AVCaptureConnection *connection in self.stillImageOutput.connections) {
+        for (AVCaptureInputPort *port in [connection inputPorts]) {
+            if ([[port mediaType] isEqual:AVMediaTypeVideo]) {
+                
+                self.myVideoConnection = connection;
+                break;
+            }
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -113,11 +159,36 @@
 - (IBAction)recordFront:(id)sender {
 }
 
+- (IBAction)back:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+    
+}
+
 - (IBAction)nextStep:(id)sender {
     //弹出查看结果按钮
 }
 
 - (IBAction)takePhoto:(id)sender {
+    
+    [self.stillImageOutput captureStillImageAsynchronouslyFromConnection:self.myVideoConnection completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
+        
+        //完成撷取时的处理程序(Block)
+        if (imageDataSampleBuffer) {
+            NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
+            
+            //取得的静态影像
+            UIImage *myImage = [[UIImage alloc] initWithData:imageData];
+            ShareViewController *vc = (ShareViewController *)[Controllers viewControllerWithName:@"ShareViewController"];
+            vc.imageView.image = myImage;
+            [self.navigationController pushViewController:vc animated:YES];
+//            [self setImage:myImage];
+            
+            //取得影像数据（需要ImageIO.framework 与 CoreMedia.framework）
+//            CFDictionaryRef myAttachments = CMGetAttachment(imageDataSampleBuffer, kCGImagePropertyExifDictionary, NULL);
+//            NSLog(@"影像属性: %@", myAttachments);
+            
+        }
+    }];
 }
 
 - (IBAction)heartPress:(id)sender {
