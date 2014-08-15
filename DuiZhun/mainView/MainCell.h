@@ -13,6 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *backImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLable;
+@property (weak, nonatomic) IBOutlet UIImageView *heart;
 
 - (void)cellOnTableView:(UITableView *)tableView didScrollOnView:(UIView *)view;
 

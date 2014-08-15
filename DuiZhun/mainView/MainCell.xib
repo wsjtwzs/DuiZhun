@@ -32,7 +32,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ios7-heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="fOc-T6-lU1">
-                        <rect key="frame" x="232" y="159" width="30" height="30"/>
+                        <rect key="frame" x="243" y="164" width="20" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="103" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0c-oe-4Wa">
@@ -46,6 +46,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="backImageView" destination="Ps2-xR-gje" id="Cgv-QY-kx9"/>
+                <outlet property="heart" destination="fOc-T6-lU1" id="wqh-FV-Ut6"/>
                 <outlet property="titleLable" destination="dNa-Ms-xak" id="4e6-Xb-vin"/>
             </connections>
         </tableViewCell>
