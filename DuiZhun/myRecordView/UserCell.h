@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *intro;
 @property (weak, nonatomic) IBOutlet UILabel *date;
 @property (weak, nonatomic) IBOutlet UIImageView *heart;
+@property (weak, nonatomic) IBOutlet UILabel *heartNum;
 
 @end

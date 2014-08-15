@@ -666,6 +666,8 @@
 		505B8691199E85B900D4D934 /* target_small_12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 505B8675199E85B900D4D934 /* target_small_12.jpg */; };
 		505B8692199E85B900D4D934 /* target_small_13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 505B8676199E85B900D4D934 /* target_small_13.jpg */; };
 		505B8693199E85B900D4D934 /* target_small_14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 505B8677199E85B900D4D934 /* target_small_14.jpg */; };
+		505B8697199E99CD00D4D934 /* TargetDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505B8695199E99CD00D4D934 /* TargetDetailViewController.m */; };
+		505B8698199E99CD00D4D934 /* TargetDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 505B8696199E99CD00D4D934 /* TargetDetailViewController.xib */; };
 		50A5EC55199CB563005EF757 /* IonIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A5EC51199CB563005EF757 /* IonIcons.m */; };
 		50A5EC56199CB563005EF757 /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50A5EC52199CB563005EF757 /* ionicons.ttf */; };
 		50A5EC63199CD025005EF757 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A5EC62199CD025005EF757 /* HMSegmentedControl.m */; };
@@ -1484,6 +1486,9 @@
 		505B8675199E85B900D4D934 /* target_small_12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = target_small_12.jpg; sourceTree = "<group>"; };
 		505B8676199E85B900D4D934 /* target_small_13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = target_small_13.jpg; sourceTree = "<group>"; };
 		505B8677199E85B900D4D934 /* target_small_14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = target_small_14.jpg; sourceTree = "<group>"; };
+		505B8694199E99CD00D4D934 /* TargetDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetDetailViewController.h; sourceTree = "<group>"; };
+		505B8695199E99CD00D4D934 /* TargetDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetDetailViewController.m; sourceTree = "<group>"; };
+		505B8696199E99CD00D4D934 /* TargetDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TargetDetailViewController.xib; sourceTree = "<group>"; };
 		50A5EC4F199CB563005EF757 /* ionicons-codes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ionicons-codes.h"; sourceTree = "<group>"; };
 		50A5EC50199CB563005EF757 /* IonIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IonIcons.h; sourceTree = "<group>"; };
 		50A5EC51199CB563005EF757 /* IonIcons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IonIcons.m; sourceTree = "<group>"; };
@@ -2538,6 +2543,9 @@
 				505B8606199E7CFA00D4D934 /* TargetCell.xib */,
 				664A72B1199E9032006FB3DB /* TargetModel.h */,
 				664A72B2199E9032006FB3DB /* TargetModel.m */,
+				505B8694199E99CD00D4D934 /* TargetDetailViewController.h */,
+				505B8695199E99CD00D4D934 /* TargetDetailViewController.m */,
+				505B8696199E99CD00D4D934 /* TargetDetailViewController.xib */,
 			);
 			path = targetListVIew;
 			sourceTree = "<group>";
@@ -3161,6 +3169,7 @@
 				1020851419991DA700E151B3 /* close-round.png in Resources */,
 				102086B319993BFF00E151B3 /* 2.jpg in Resources */,
 				1020869819991DA700E151B3 /* unlocked.png in Resources */,
+				505B8698199E99CD00D4D934 /* TargetDetailViewController.xib in Resources */,
 				1020861219991DA700E151B3 /* ios7-world.png in Resources */,
 				102085B319991DA700E151B3 /* ios7-locked-outline.png in Resources */,
 				102084F819991DA700E151B3 /* battery-half.png in Resources */,
@@ -3604,6 +3613,7 @@
 				107C1CFD198BD0A800E1198E /* MBProgressHUD.m in Sources */,
 				107C1CF3198BD0A800E1198E /* AFURLConnectionOperation.m in Sources */,
 				664A72B3199E9032006FB3DB /* TargetModel.m in Sources */,
+				505B8697199E99CD00D4D934 /* TargetDetailViewController.m in Sources */,
 				107C1D40198BD0D000E1198E /* Controllers.m in Sources */,
 				107C1D4F198BD3DB00E1198E /* ConfigViewController.m in Sources */,
 				107C1D21198BD0C500E1198E /* ServerRequest.m in Sources */,

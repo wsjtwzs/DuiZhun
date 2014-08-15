@@ -24,5 +24,6 @@
 
 @property (nonatomic, strong) NSString *navTitleText;
 @property (nonatomic, strong) NSString *introText;
+@property (nonatomic, strong) NSString *heartNum;
 @property (nonatomic, assign) int imageIndex;
 @end

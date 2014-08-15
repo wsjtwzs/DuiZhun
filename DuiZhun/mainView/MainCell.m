@@ -20,7 +20,7 @@ static CGFloat scrollContentY;
 - (void) setValueForCell:(BaseModel *)model
 {
     MainModel *m = (MainModel *)model;
-    self.backImageView.image = [UIImage imageNamed:m.smallImage];
+    self.backImageView.image = [UIImage imageNamed:m.image];
     self.titleLable.text = m.title;
     self.heartNumber.text = m.heart;
 }

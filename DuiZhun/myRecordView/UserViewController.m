@@ -94,8 +94,7 @@ static NSMutableArray *heartArr;
                                                 @"「圣诞节麋鹿已经迷路，需求帮助」",
                                                 @"「我能告诉你这段视频其实没有歌声吗」"]];
     
-    heartArr = [NSMutableArray arrayWithArray:@[]];
-    
+    heartArr = [NSMutableArray arrayWithArray:@[@"1003",@"758",@"342",@"995",@"116",@"96",@"345",@"542",@"111",@"366",@"489",@"337",@"280",@"144"]];
     //设置tableview
     self.baseTableView.frame = CGRectMake(0, 125, 320, 444);
     self.baseTableView.hidden = YES;
@@ -202,6 +201,7 @@ static NSMutableArray *heartArr;
     cell.userImageView.image = [UIImage imageNamed:self.dataArray[indexPath.row]];
     cell.title.text = titleArr[indexPath.row];
     cell.intro.text = introArr[indexPath.row];
+    cell.heartNum.text = heartArr[indexPath.row];
     return cell;
 }
 
