@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import "GestureViewController.h"
 
 @interface MainDetailViewController : BaseViewController
 {

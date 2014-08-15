@@ -614,6 +614,8 @@
 		6604BD55199DC0E100F09204 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604BD54199DC0E100F09204 /* SystemConfiguration.framework */; };
 		6604BD5B199DC7A900F09204 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604BD57199DC34900F09204 /* libsqlite3.dylib */; };
 		6604BD5E199DC8A900F09204 /* ShareMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 6604BD5D199DC8A900F09204 /* ShareMethod.m */; };
+		6604BD61199E098900F09204 /* GestureNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6604BD60199E098900F09204 /* GestureNavigationController.m */; };
+		6604BD63199E0FA300F09204 /* leftside_shadow_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6604BD62199E0FA300F09204 /* leftside_shadow_bg@2x.png */; };
 		6608E994199CE9A50039B132 /* GuideCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6608E992199CE9A50039B132 /* GuideCell.m */; };
 		6608E995199CE9A50039B132 /* GuideCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6608E993199CE9A50039B132 /* GuideCell.xib */; };
 		6656A91819939C9900E0C930 /* GestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6656A91719939C9900E0C930 /* GestureViewController.m */; };
@@ -1369,6 +1371,9 @@
 		6604BD59199DC35800F09204 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		6604BD5C199DC8A900F09204 /* ShareMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareMethod.h; sourceTree = "<group>"; };
 		6604BD5D199DC8A900F09204 /* ShareMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareMethod.m; sourceTree = "<group>"; };
+		6604BD5F199E098900F09204 /* GestureNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureNavigationController.h; sourceTree = "<group>"; };
+		6604BD60199E098900F09204 /* GestureNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureNavigationController.m; sourceTree = "<group>"; };
+		6604BD62199E0FA300F09204 /* leftside_shadow_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leftside_shadow_bg@2x.png"; sourceTree = "<group>"; };
 		6608E991199CE9A50039B132 /* GuideCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideCell.h; sourceTree = "<group>"; };
 		6608E992199CE9A50039B132 /* GuideCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideCell.m; sourceTree = "<group>"; };
 		6608E993199CE9A50039B132 /* GuideCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GuideCell.xib; sourceTree = "<group>"; };
@@ -2274,6 +2279,8 @@
 				107C1D17198BD0C500E1198E /* BaseTableViewController.m */,
 				107C1D18198BD0C500E1198E /* BaseViewController.h */,
 				107C1D19198BD0C500E1198E /* BaseViewController.m */,
+				6604BD5F199E098900F09204 /* GestureNavigationController.h */,
+				6604BD60199E098900F09204 /* GestureNavigationController.m */,
 			);
 			path = baseController;
 			sourceTree = "<group>";
@@ -2542,6 +2549,7 @@
 		6656A91D1993A36500E0C930 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				6604BD62199E0FA300F09204 /* leftside_shadow_bg@2x.png */,
 				102086AA19993BFE00E151B3 /* 7.jpg */,
 				102086AB19993BFE00E151B3 /* 5.jpg */,
 				102086AC19993BFF00E151B3 /* 6.jpg */,
@@ -2709,6 +2717,7 @@
 				1020860919991DA700E151B3 /* ios7-upload-outline.png in Resources */,
 				1020869419991DA700E151B3 /* thumbsup.png in Resources */,
 				1020865219991DA700E151B3 /* refresh.png in Resources */,
+				6604BD63199E0FA300F09204 /* leftside_shadow_bg@2x.png in Resources */,
 				1020869919991DA700E151B3 /* upload.png in Resources */,
 				1020869519991DA700E151B3 /* trash-a.png in Resources */,
 				107C1D65198BD4A900E1198E /* ThirdLoginViewController.xib in Resources */,
@@ -3210,6 +3219,7 @@
 				107C1D04198BD0A800E1198E /* SBJsonStreamWriter.m in Sources */,
 				107C1D23198BD0C500E1198E /* BaseTableViewController.m in Sources */,
 				107C1D46198BD0D000E1198E /* WSDatePickerView.m in Sources */,
+				6604BD61199E098900F09204 /* GestureNavigationController.m in Sources */,
 				107C1D45198BD0D000E1198E /* URLDefine.m in Sources */,
 				107C1D47198BD0D000E1198E /* WSPickerView.m in Sources */,
 				107C1CFC198BD0A800E1198E /* NSString+Hashing.m in Sources */,

@@ -33,12 +33,16 @@
     self.cellHeight = 200;
     [self.view addSubview:self.baseTableView];
     self.baseTableView.frame = CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT);
+    
     [self.baseTableView registerNib:[UINib nibWithNibName:NSStringFromClass([MainCell class]) bundle:nil] forCellReuseIdentifier:@"mainCell"];
     
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+//    CGSize size = tableView.contentSize;
+//    tableView.contentSize = CGSizeMake(size.width + 0.1, size.height);
+//    
     MainCell *cell = [tableView dequeueReusableCellWithIdentifier:@"mainCell"];
     cell.backImageView.image = [UIImage imageNamed:self.dataArray[indexPath.row]];
     return cell;

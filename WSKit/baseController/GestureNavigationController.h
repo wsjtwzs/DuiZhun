@@ -18,7 +18,7 @@
 // 背景视图起始frame.x
 #define startX -200;
 
-@interface BaseNavigationController : UINavigationController<UIGestureRecognizerDelegate,UINavigationControllerDelegate>
+@interface GestureNavigationController : UINavigationController<UIGestureRecognizerDelegate,UINavigationControllerDelegate>
 {
     CGFloat startBackViewX;
 }

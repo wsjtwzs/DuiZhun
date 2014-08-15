@@ -18,6 +18,7 @@
 #import "WSTabBarController.h"
 #import "GuideViewController.h"
 #import "WindowRootViewController.h"
+#import "GestureNavigationController.h"
 
 @implementation Controllers
 
@@ -44,10 +45,9 @@
     NSMutableArray *controllerArr = [NSMutableArray new];
     
     for (UIViewController *ctl in array) {
-        BaseNavigationController *navCtl = [[BaseNavigationController alloc] initWithRootViewController:ctl];
+        GestureNavigationController *navCtl = [[GestureNavigationController alloc] initWithRootViewController:ctl];
         [navCtl setNavigationBarHidden:YES];
         [controllerArr addObject:navCtl];
-        
     }
 
     

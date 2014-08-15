@@ -58,10 +58,9 @@
 
 - (void) pan:(UIPanGestureRecognizer *)rec
 {
-   
     [NOTIFICATIONCENTER  postNotificationName:NOTI_GESTURE_LEFT object:rec];
-
 }
+
 
 - (void)didReceiveMemoryWarning
 {

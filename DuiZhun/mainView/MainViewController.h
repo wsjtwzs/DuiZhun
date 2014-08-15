@@ -8,6 +8,6 @@
 
 #import "GestureViewController.h"
 
-@interface MainViewController : GestureViewController
+@interface MainViewController : BaseTableViewController
 
 @end
