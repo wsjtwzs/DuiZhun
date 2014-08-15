@@ -15,9 +15,8 @@
 
 #import <AssetsLibrary/ALAssetRepresentation.h>
 
-//#import "ALAssetsLibrary+CustomPhotoAlbum.h"
+#import "ALAssetsLibrary+CustomPhotoAlbum.h"
 
-#import <MediaPlayer/MPMoviePlayerController.h>
 
 @interface ShareViewController : BaseViewController
 @property (nonatomic, strong) ALAssetsLibrary *lib;
@@ -39,5 +38,4 @@
 - (IBAction)share:(id)sender;
 
 @property (nonatomic, strong) UIImage *image;
-@property (nonatomic, strong) MPMoviePlayerController *mpvc;
 @end

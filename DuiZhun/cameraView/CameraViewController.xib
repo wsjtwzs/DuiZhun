@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="backBtn" destination="8nF-bG-Gvy" id="asc-Wl-sBE"/>
                 <outlet property="bg" destination="fjp-51-RAS" id="bgS-wj-VYv"/>
+                <outlet property="captureView" destination="ewZ-iC-ysT" id="DQw-mI-QAe"/>
                 <outlet property="frot" destination="uL9-Ho-BGE" id="25S-vm-N4k"/>
                 <outlet property="heart" destination="JJv-Sz-1tC" id="KUf-1F-C0j"/>
                 <outlet property="light" destination="dT6-49-mgX" id="RoG-bU-8ab"/>
@@ -24,6 +25,11 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ewZ-iC-ysT">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="1136"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fjp-51-RAS">
                     <rect key="frame" x="0.0" y="508" width="320" height="60"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -145,6 +151,9 @@
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="back:" destination="-1" eventType="touchUpInside" id="hla-up-mtE"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dT6-49-mgX">
                     <rect key="frame" x="278" y="23" width="30" height="30"/>

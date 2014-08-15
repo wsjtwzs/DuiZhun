@@ -7,8 +7,7 @@
 //
 
 #import "ShareViewController.h"
-//#import "MediaPlayerViewController.h"
-
+#import <AssetsLibrary/ALAssetsLibrary.h>
 
 @interface ShareViewController ()
 
@@ -37,21 +36,34 @@ static BOOL actWX;
     actSina = NO;
     actTencent = NO;
     actWX = NO;
+    self.video = NO;
     [self.playMark setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
-    self.imageView.image = [UIImage imageNamed:@"2.jpg"];
+    if (self.video) {
+        self.playMark.hidden = NO;
+    } else {
+        self.playMark.hidden = YES;
+    }
+
     self.paperClip.image = [IonIcons imageWithIcon:icon_paperclip iconColor:YELLOWCOLOR
                                           iconSize:20.0f
                                          imageSize:CGSizeMake(20.0f, 20.0f)];
-    
+
     self.lib = [[ALAssetsLibrary alloc] init];
-    
     
     if (self.video) {
         //取视频
         
     } else {
         //取图片
-//        self.image 
+        if (!self.image) {
+            
+            self.imageView.image = [UIImage imageNamed:@"2.jpg"];
+            
+        } else {
+            self.imageView.image = self.image;
+        }
+
+        
     }
     
 }
@@ -87,6 +99,27 @@ static BOOL actWX;
 }
 
 - (IBAction)share:(id)sender {
+    
+    //保存图片
+    //创建一个相册到相册资源中，并通过block返回创建成功的相册ALAssetsGroup
+    ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+    [library addAssetsGroupAlbumWithName:@"DuiZhun"
+                             resultBlock:^(ALAssetsGroup *group)
+     {
+         
+         
+     }
+                            failureBlock:nil];
+    //保存
+    [library saveImage:self.image toAlbum:@"DuiZhun" withCompletionBlock:^(NSError *error) {
+        
+        UIAlertView *a = [[UIAlertView alloc] initWithTitle:@"" message:@"分享成功" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [a show];
+        
+        if (error!=nil) {
+            NSLog(@"Big error: %@", [error description]);
+        }
+    }];
 }
 
 -(void) setSinaType {
@@ -120,6 +153,10 @@ static BOOL actWX;
         actWX = YES;
     }
     
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

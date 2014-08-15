@@ -10,7 +10,9 @@
 
 @interface GuideViewController :TransitionViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *camButton;
 
 - (IBAction)search:(id)sender;
+- (IBAction)openCam:(id)sender;
 
 @end

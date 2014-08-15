@@ -591,6 +591,7 @@
 		50473BD6199DD1F20034C7FE /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50473BD4199DD1F20034C7FE /* ShareViewController.m */; };
 		50473BD7199DD1F20034C7FE /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50473BD5199DD1F20034C7FE /* ShareViewController.xib */; };
 		50473BD9199DD5E90034C7FE /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50473BD8199DD5E90034C7FE /* play@2x.png */; };
+		50473BDD199E23AA0034C7FE /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 50473BDC199E23AA0034C7FE /* ALAssetsLibrary+CustomPhotoAlbum.m */; };
 		50A5EC4D199CA92D005EF757 /* dark_bg@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 50A5EC4C199CA92D005EF757 /* dark_bg@2X.png */; };
 		50A5EC55199CB563005EF757 /* IonIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A5EC51199CB563005EF757 /* IonIcons.m */; };
 		50A5EC56199CB563005EF757 /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50A5EC52199CB563005EF757 /* ionicons.ttf */; };
@@ -1326,6 +1327,8 @@
 		50473BD4199DD1F20034C7FE /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
 		50473BD5199DD1F20034C7FE /* ShareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareViewController.xib; sourceTree = "<group>"; };
 		50473BD8199DD5E90034C7FE /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@2x.png"; sourceTree = "<group>"; };
+		50473BDB199E23AA0034C7FE /* ALAssetsLibrary+CustomPhotoAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetsLibrary+CustomPhotoAlbum.h"; sourceTree = "<group>"; };
+		50473BDC199E23AA0034C7FE /* ALAssetsLibrary+CustomPhotoAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetsLibrary+CustomPhotoAlbum.m"; sourceTree = "<group>"; };
 		50A5EC4C199CA92D005EF757 /* dark_bg@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dark_bg@2X.png"; sourceTree = "<group>"; };
 		50A5EC4F199CB563005EF757 /* ionicons-codes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ionicons-codes.h"; sourceTree = "<group>"; };
 		50A5EC50199CB563005EF757 /* IonIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IonIcons.h; sourceTree = "<group>"; };
@@ -2013,6 +2016,7 @@
 		107C1C78198BD0A800E1198E /* resouce */ = {
 			isa = PBXGroup;
 			children = (
+				50473BDA199E23AA0034C7FE /* ALAssetsLibrary+CustomPhotoAlbum */,
 				6604BD22199DBA9F00F09204 /* QQ */,
 				6604BD2F199DBA9F00F09204 /* WB */,
 				6604BD32199DBA9F00F09204 /* WX */,
@@ -2466,6 +2470,15 @@
 				50473BD5199DD1F20034C7FE /* ShareViewController.xib */,
 			);
 			path = shareView;
+			sourceTree = "<group>";
+		};
+		50473BDA199E23AA0034C7FE /* ALAssetsLibrary+CustomPhotoAlbum */ = {
+			isa = PBXGroup;
+			children = (
+				50473BDB199E23AA0034C7FE /* ALAssetsLibrary+CustomPhotoAlbum.h */,
+				50473BDC199E23AA0034C7FE /* ALAssetsLibrary+CustomPhotoAlbum.m */,
+			);
+			path = "ALAssetsLibrary+CustomPhotoAlbum";
 			sourceTree = "<group>";
 		};
 		50A5EC4E199CB563005EF757 /* ionicons */ = {
@@ -3216,6 +3229,7 @@
 				102082E4199899F200E151B3 /* KeyBoardViewController.m in Sources */,
 				50A5EC63199CD025005EF757 /* HMSegmentedControl.m in Sources */,
 				107C1D26198BD0C500E1198E /* WSScrollViewController.m in Sources */,
+				50473BDD199E23AA0034C7FE /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */,
 				107C1D04198BD0A800E1198E /* SBJsonStreamWriter.m in Sources */,
 				107C1D23198BD0C500E1198E /* BaseTableViewController.m in Sources */,
 				107C1D46198BD0D000E1198E /* WSDatePickerView.m in Sources */,
