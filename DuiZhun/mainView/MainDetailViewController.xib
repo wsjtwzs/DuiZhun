@@ -8,12 +8,10 @@
             <connections>
                 <outlet property="contentLabel" destination="Ntk-js-iU2" id="Cu0-82-S4E"/>
                 <outlet property="heartButton" destination="J8M-4a-9nK" id="w97-M9-Tpv"/>
-                <outlet property="heartButtonImae" destination="26N-vA-xU4" id="uDe-Cf-X5c"/>
                 <outlet property="heartImage" destination="ywH-tL-NG4" id="dv2-SX-cYN"/>
                 <outlet property="heartNumber" destination="CjU-BI-ufy" id="8IT-np-L3b"/>
                 <outlet property="imageView" destination="Cna-jI-kMv" id="pyx-jL-One"/>
                 <outlet property="shareButton" destination="QDB-Sa-zaS" id="D2M-Fr-e9g"/>
-                <outlet property="shareImage" destination="IVh-Pg-9KD" id="yu4-cf-1MD"/>
                 <outlet property="shareView" destination="UPW-Uy-tbS" id="c3G-aL-GR9"/>
                 <outlet property="titleLabel" destination="B7o-Q1-tSA" id="Ssr-X5-m69"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -64,10 +62,10 @@
                             </attributedString>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" tag="401" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8M-4a-9nK">
+                        <button opaque="NO" tag="401" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8M-4a-9nK">
                             <rect key="frame" x="0.0" y="184" width="161" height="60"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <state key="normal">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -75,11 +73,7 @@
                                 <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="0FO-Jh-yYU"/>
                             </connections>
                         </button>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ios7-heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="26N-vA-xU4">
-                            <rect key="frame" x="70" y="199" width="20" height="20"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
-                        <button opaque="NO" tag="402" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDB-Sa-zaS">
+                        <button opaque="NO" tag="402" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDB-Sa-zaS">
                             <rect key="frame" x="159" y="184" width="161" height="60"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -90,11 +84,7 @@
                                 <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="Y3B-zj-6J1"/>
                             </connections>
                         </button>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="share.png" translatesAutoresizingMaskIntoConstraints="NO" id="IVh-Pg-9KD">
-                            <rect key="frame" x="206" y="194" width="29" height="29"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="分享" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HS1-Y6-osF">
+                        <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="分享" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HS1-Y6-osF">
                             <rect key="frame" x="240" y="198" width="42" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -208,6 +198,5 @@
         <image name="icon_tengxun.png" width="44" height="44"/>
         <image name="icon_wechat.png" width="44" height="44"/>
         <image name="ios7-heart.png" width="512" height="512"/>
-        <image name="share.png" width="512" height="512"/>
     </resources>
 </document>

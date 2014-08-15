@@ -626,6 +626,8 @@
 		66059FCF199E60930022725C /* bg_.png in Resources */ = {isa = PBXBuildFile; fileRef = 66059FCE199E60930022725C /* bg_.png */; };
 		6608E994199CE9A50039B132 /* GuideCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6608E992199CE9A50039B132 /* GuideCell.m */; };
 		6608E995199CE9A50039B132 /* GuideCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6608E993199CE9A50039B132 /* GuideCell.xib */; };
+		664A72AB199E7752006FB3DB /* icon_app.png in Resources */ = {isa = PBXBuildFile; fileRef = 664A72AA199E7752006FB3DB /* icon_app.png */; };
+		664A72AD199E7962006FB3DB /* yello@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 664A72AC199E7961006FB3DB /* yello@2x.png */; };
 		6656A91819939C9900E0C930 /* GestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6656A91719939C9900E0C930 /* GestureViewController.m */; };
 		6656A91C1993A01800E0C930 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6656A91B1993A01800E0C930 /* FXBlurView.m */; };
 		6656A9211993A51E00E0C930 /* 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6656A9201993A51E00E0C930 /* 1@2x.png */; };
@@ -1394,6 +1396,8 @@
 		6608E991199CE9A50039B132 /* GuideCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideCell.h; sourceTree = "<group>"; };
 		6608E992199CE9A50039B132 /* GuideCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideCell.m; sourceTree = "<group>"; };
 		6608E993199CE9A50039B132 /* GuideCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GuideCell.xib; sourceTree = "<group>"; };
+		664A72AA199E7752006FB3DB /* icon_app.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_app.png; sourceTree = "<group>"; };
+		664A72AC199E7961006FB3DB /* yello@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yello@2x.png"; sourceTree = "<group>"; };
 		6656A91619939C9900E0C930 /* GestureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureViewController.h; sourceTree = "<group>"; };
 		6656A91719939C9900E0C930 /* GestureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureViewController.m; sourceTree = "<group>"; };
 		6656A91A1993A01800E0C930 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
@@ -2575,6 +2579,8 @@
 		6656A91D1993A36500E0C930 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				664A72AA199E7752006FB3DB /* icon_app.png */,
+				664A72AC199E7961006FB3DB /* yello@2x.png */,
 				66059FCA199E58D80022725C /* bg@2X.png */,
 				66059FCC199E5B2B0022725C /* bg.png */,
 				66059FCE199E60930022725C /* bg_.png */,
@@ -2777,6 +2783,7 @@
 				1020860019991DA700E151B3 /* ios7-time.png in Resources */,
 				1020867E19991DA700E151B3 /* social-tux.png in Resources */,
 				102085B719991DA700E151B3 /* ios7-mic-off.png in Resources */,
+				664A72AD199E7962006FB3DB /* yello@2x.png in Resources */,
 				1020863819991DA700E151B3 /* navigate.png in Resources */,
 				1020851E19991DA700E151B3 /* contrast.png in Resources */,
 				102085D819991DA700E151B3 /* ios7-play.png in Resources */,
@@ -3142,6 +3149,7 @@
 				1020853419991DA700E151B3 /* forward.png in Resources */,
 				102085E219991DA700E151B3 /* ios7-recording-outline.png in Resources */,
 				1020864C19991DA700E151B3 /* power.png in Resources */,
+				664A72AB199E7752006FB3DB /* icon_app.png in Resources */,
 				1020858B19991DA700E151B3 /* ios7-copy-outline.png in Resources */,
 				102085A019991DA700E151B3 /* ios7-glasses-outline.png in Resources */,
 				1020854819991DA700E151B3 /* ionic.png in Resources */,

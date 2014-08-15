@@ -13,6 +13,7 @@
     
     __weak IBOutlet UIImageView *infoImage;
     __weak IBOutlet UIButton *leftImage;
+    __weak IBOutlet UIImageView *icon;
 }
 
 - (IBAction)close:(id)sender;

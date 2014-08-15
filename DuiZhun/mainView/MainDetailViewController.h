@@ -13,8 +13,6 @@
 {
     
     IBOutlet UIView *shareView;
-    __weak IBOutlet UIImageView *shareImage;
-    __weak IBOutlet UIImageView *heartButtonImae;
     __weak IBOutlet UIImageView *heartImage;
 }
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;

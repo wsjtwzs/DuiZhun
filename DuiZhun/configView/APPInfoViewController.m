@@ -7,7 +7,7 @@
 //
 
 #import "APPInfoViewController.h"
-
+#import <QuartzCore/QuartzCore.h>
 @interface APPInfoViewController ()
 
 @end
@@ -29,6 +29,10 @@
     // Do any additional setup after loading the view from its nib.
     [self changeImageColor];
         self.view.backgroundColor = CLEARCOLOR;
+    
+    icon.layer.cornerRadius = 10.0f;
+    icon.layer.masksToBounds = YES;
+    
 }
 
 - (void)didReceiveMemoryWarning

@@ -42,10 +42,14 @@ typedef enum{
 
     [self changeImageColor];
     [self.heartButton setBackgroundImage:[self createImageWithColor:CLEARCOLOR] forState:UIControlStateNormal];
-    [self.heartButton setBackgroundImage:[self createImageWithColor:YELLOWCOLOR] forState:UIControlStateHighlighted];
     
-    [self.shareButton setBackgroundImage:[self createImageWithColor:CLEARCOLOR] forState:UIControlStateNormal];
-    [self.shareButton setBackgroundImage:[self createImageWithColor:YELLOWCOLOR] forState:UIControlStateHighlighted];
+    [self.heartButton setImage:[IonIcons imageWithIcon:icon_ios7_heart iconColor:WHITECOLOR iconSize:25 imageSize:CGSizeMake(160, 60)] forState:UIControlStateNormal];
+    [self.heartButton setImage:[IonIcons imageWithIcon:icon_ios7_heart iconColor:BLACKCOLOR iconSize:25 imageSize:CGSizeMake(160, 60)] forState:UIControlStateHighlighted];
+    [self.heartButton setBackgroundImage:[UIImage imageNamed:@"yello"] forState:UIControlStateHighlighted];
+
+    [self.shareButton setImage:[IonIcons imageWithIcon:icon_share iconColor:WHITECOLOR iconSize:29 imageSize:CGSizeMake(160, 60)] forState:UIControlStateNormal];
+    [self.shareButton setImage:[IonIcons imageWithIcon:icon_share iconColor:BLACKCOLOR iconSize:29 imageSize:CGSizeMake(160, 60)] forState:UIControlStateHighlighted];
+    [self.shareButton setBackgroundImage:[UIImage imageNamed:@"yello"] forState:UIControlStateHighlighted];
     shareView.frame = rect_hidden;
     [self.view addSubview:shareView];
     
@@ -66,9 +70,7 @@ typedef enum{
 
 - (void) changeImageColor
 {
-    heartButtonImae.image = [IonIcons imageWithIcon:icon_ios7_heart size:20 color:WHITECOLOR];
     heartImage.image = [IonIcons imageWithIcon:icon_ios7_heart size:20 color:WHITECOLOR];
-    shareImage.image = [IonIcons imageWithIcon:icon_share size:29 color:WHITECOLOR];
 
 }
 
@@ -81,10 +83,9 @@ typedef enum{
 - (IBAction)buttonPressed:(UIButton *)sender {
     switch (sender.tag) {
         case buttonPressed_heart:
-//            self.heartButton.backgroundColor = [UIColor yellowColor];
-//            self.shareButton.backgroundColor = BLACKCOLOR;
             _selectHeart = !_selectHeart;
-            heartButtonImae.image = [IonIcons imageWithIcon:icon_ios7_heart size:20 color:_selectHeart?YELLOWCOLOR:WHITECOLOR];
+            [self.heartButton setImage:[IonIcons imageWithIcon:icon_ios7_heart iconColor:_selectHeart?YELLOWCOLOR:WHITECOLOR iconSize:25 imageSize:CGSizeMake(160, 60)] forState:UIControlStateNormal];
+            
             if (_selectHeart) {
                 self.heartNumber.text = [NSString stringWithFormat:@"%d",[self.heartNumber.text integerValue] + 1];
             }
@@ -93,8 +94,6 @@ typedef enum{
             }
             break;
         case buttonPressed_share:
-//            self.shareButton.backgroundColor = [UIColor yellowColor];
-//            self.heartButton.backgroundColor = BLACKCOLOR;
             [self share];
             [self shareViewHidden:NO];
             break;
