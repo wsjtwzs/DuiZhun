@@ -41,11 +41,11 @@ typedef enum{
     [super viewDidLoad];
 
     [self changeImageColor];
-//    [self.heartButton setBackgroundImage:[self createImageWithColor:CLEARCOLOR] forState:UIControlStateNormal];
-//    [self.heartButton setBackgroundImage:[self createImageWithColor:YELLOWCOLOR] forState:UIControlStateHighlighted];
-//    
-//    [self.shareButton setBackgroundImage:[self createImageWithColor:CLEARCOLOR] forState:UIControlStateNormal];
-//    [self.shareButton setBackgroundImage:[self createImageWithColor:YELLOWCOLOR] forState:UIControlStateHighlighted];
+    [self.heartButton setBackgroundImage:[self createImageWithColor:CLEARCOLOR] forState:UIControlStateNormal];
+    [self.heartButton setBackgroundImage:[self createImageWithColor:YELLOWCOLOR] forState:UIControlStateHighlighted];
+    
+    [self.shareButton setBackgroundImage:[self createImageWithColor:CLEARCOLOR] forState:UIControlStateNormal];
+    [self.shareButton setBackgroundImage:[self createImageWithColor:YELLOWCOLOR] forState:UIControlStateHighlighted];
     shareView.frame = rect_hidden;
     [self.view addSubview:shareView];
     
@@ -95,7 +95,7 @@ typedef enum{
         case buttonPressed_share:
 //            self.shareButton.backgroundColor = [UIColor yellowColor];
 //            self.heartButton.backgroundColor = BLACKCOLOR;
-//            [self share];
+            [self share];
             [self shareViewHidden:NO];
             break;
         default:

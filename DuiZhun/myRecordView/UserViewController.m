@@ -155,7 +155,7 @@
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.navigationController pushViewController:[Controllers viewControllerWithName:@"UserDetailViewController"] animated:YES];
-    [self.tabBarController hidesBottomBarWhenPushed];
+//    [self.tabBarController hidesBottomBarWhenPushed];
 }
 
 //collectionview
@@ -195,7 +195,7 @@
     
 //    vc.image = [UIImage imageNamed:self.dataArray[indexPath.row]];
     [self.navigationController pushViewController:[Controllers viewControllerWithName:@"ShareViewController"] animated:YES];
-    [self.tabBarController hidesBottomBarWhenPushed];
+//    [self.tabBarController hidesBottomBarWhenPushed];
     
 //    UICollectionViewCell * cell = (UICollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
 //    cell.backgroundColor = [UIColor whiteColor];

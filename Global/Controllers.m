@@ -35,7 +35,7 @@
     }
 }
 
-+ (UITabBarController *)mainTabbarController
++ (UIViewController *)mainTabbarController
 {
     NSArray *array = @[[MainViewController new],
                        [TargetListViewController new],

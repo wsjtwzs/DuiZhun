@@ -9,7 +9,7 @@
 #import "GestureViewController.h"
 #import "HMSegmentedControl.h"
 
-@interface UserViewController : GestureViewController
+@interface UserViewController : BaseTableViewController
 @property (nonatomic,strong) HMSegmentedControl *segmentedControl;
 @property (weak, nonatomic) IBOutlet UIButton *arcButton;
 @property (weak, nonatomic) IBOutlet UIButton *favButton;

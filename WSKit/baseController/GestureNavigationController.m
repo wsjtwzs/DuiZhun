@@ -55,13 +55,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [self.navigationBar setBackgroundImage:[UIImage imageNamed:NAVIMAGE] forBarMetrics:UIBarMetricsDefault];
-    //    self.interactivePopGestureRecognizer.enabled = YES;
-    
-    self.view.backgroundColor = CLEARCOLOR;
-    //标题字体变成白色
-    if ([GlobalConfig versionIsIOS7]) {
-        [self.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,nil]];
         
         UIImageView *shadowImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"leftside_shadow_bg"]];
         shadowImageView.frame = CGRectMake(-10, 0, 10, self.view.frame.size.height);
@@ -71,7 +64,6 @@
                                                                                     action:@selector(paningGestureReceive:)];
         [recognizer delaysTouchesBegan];
         [self.view addGestureRecognizer:recognizer];
-    }
     
 }
 

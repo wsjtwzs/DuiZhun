@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "FXBlurView.h"
 
-@interface WSTabBarController : UITabBarController
+@interface WSTabBarController : UIViewController
+
+- (void) setViewControllers:(NSArray *)array;
 
 @end
