@@ -194,11 +194,11 @@
 //    UserDetailViewController *vc = (UserDetailViewController *)[Controllers viewControllerWithName:@"UserDetailViewController"];
     
 //    vc.image = [UIImage imageNamed:self.dataArray[indexPath.row]];
-    if (indexPath.row == 0) {
-        [self.navigationController pushViewController:[Controllers viewControllerWithName:@"CameraViewController"] animated:YES];
-    } else {
+//    if (indexPath.row == 0) {
+//        [self.navigationController pushViewController:[Controllers viewControllerWithName:@"CameraViewController"] animated:YES];
+//    } else {
         [self.navigationController pushViewController:[Controllers viewControllerWithName:@"ShareViewController"] animated:YES];
-    }
+//    }
     [self.tabBarController hidesBottomBarWhenPushed];
     
 //    UICollectionViewCell * cell = (UICollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];

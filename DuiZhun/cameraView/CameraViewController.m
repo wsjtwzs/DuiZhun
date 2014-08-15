@@ -179,7 +179,7 @@
             //取得的静态影像
             UIImage *myImage = [[UIImage alloc] initWithData:imageData];
             ShareViewController *vc = (ShareViewController *)[Controllers viewControllerWithName:@"ShareViewController"];
-            vc.imageView.image = myImage;
+            vc.image = myImage;
             [self.navigationController pushViewController:vc animated:YES];
 //            [self setImage:myImage];
             
