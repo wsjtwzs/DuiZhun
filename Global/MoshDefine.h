@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+
+//百度appid
+#define APPKEY_BAIDU        @"bAKHghmenagZl0mamcEUxNcD"
+#define APPSECRET_BAIDU     @"2qVZKfjb3l3xp3BqXPPh6ZMmudHntNeH"
+
+//微信
+#define APPID_WEIXIN        @"wx8f059b5aaa2473ce"
+
 //基点
 #define POINT_X     0
 #define POINT_Y     0

@@ -8,6 +8,8 @@
 
 #import "SuggessViewController.h"
 
+static NSString *placeHolder = @"描述问题、吐槽或对产品的建议";
+
 @interface SuggessViewController ()
 
 @end
@@ -44,6 +46,14 @@
     
     [leftImage setBackgroundImage:[IonIcons imageWithIcon:icon_ios7_arrow_left size:27 color:WHITECOLOR] forState:UIControlStateNormal];
     [leftImage setBackgroundImage:[IonIcons imageWithIcon:icon_ios7_arrow_left size:27 color:YELLOWCOLOR] forState:UIControlStateHighlighted];
+}
+
+- (void) textViewDidBeginEditing:(UITextView *)textView
+{
+    if ([textView.text isEqualToString:placeHolder]) {
+        textView.text = @"";
+        [self textViewDidChange:textView];
+    }
 }
 
 

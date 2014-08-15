@@ -7,6 +7,9 @@
 //
 
 #import "MainDetailViewController.h"
+#import <Frontia/Frontia.h>
+#import "ShareMethod.h"
+
 typedef enum{
     buttonPressed_heart     = 401,
     buttonPressed_share     = 402,
@@ -47,9 +50,22 @@ typedef enum{
         case buttonPressed_share:
             self.shareButton.backgroundColor = [UIColor yellowColor];
             self.heartButton.backgroundColor = BLACKCOLOR;
+            [self share];
             break;
         default:
             break;
     }
+}
+
+
+- (void) share
+{
+    FrontiaShareContent *content=[[FrontiaShareContent alloc] init];
+    content.url = @"baidu.com";
+    content.title = @"baidu";
+    content.description = @"share";
+    content.imageObj = self.imageView.image;
+    
+    [ShareMethod shareWithContent:content];
 }
 @end

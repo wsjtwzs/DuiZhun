@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "GlobalConfig.h"
 #import "Controllers.h"
+#import <Frontia/Frontia.h>
 
 static NSString *firstLaunch = @"firstLaunch";
 
@@ -18,6 +19,8 @@ static NSString *firstLaunch = @"firstLaunch";
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
+    //初始化百度Frontia
+    [Frontia initWithApiKey:APPKEY_BAIDU];
     
     //第一次登陆设置初始值
     if (![USERDEFAULT objectForKey:firstLaunch]) {
