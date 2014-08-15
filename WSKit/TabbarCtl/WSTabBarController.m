@@ -37,15 +37,15 @@
     
 }
 
-- (void) setViewControllers:(NSArray *)array
-{
-    _CtlArray = array;
-//    for (UIViewController *ctl in array) {
-//        [self addChildViewController:ctl];
-//        [self.view addSubview:ctl.view];
-//    }
-    [self selectIndex:0];
-}
+//- (void) setViewControllers:(NSArray *)array
+//{
+//    _CtlArray = array;
+////    for (UIViewController *ctl in array) {
+////        [self addChildViewController:ctl];
+////        [self.view addSubview:ctl.view];
+////    }
+//    [self selectIndex:0];
+//}
 
 - (void)didReceiveMemoryWarning
 {
@@ -73,20 +73,20 @@
 {
     
     if ([noti.name isEqualToString:NOTI_MAIN]) {
-//        self.selectedIndex = 0;
-        [self selectIndex:0];
+        self.selectedIndex = 0;
+//        [self selectIndex:0];
     }
     else if ([noti.name isEqualToString:NOTI_TARGER]) {
-//        self.selectedIndex = 1;
-                [self selectIndex:1];
+        self.selectedIndex = 1;
+//                [self selectIndex:1];
     }
     else if ([noti.name isEqualToString:NOTI_USER]) {
-//        self.selectedIndex = 2;
-                [self selectIndex:2];
+        self.selectedIndex = 2;
+//                [self selectIndex:2];
     }
     else if ([noti.name isEqualToString:NOTI_CONFIG]) {
-//        self.selectedIndex = 3;
-                [self selectIndex:3];
+        self.selectedIndex = 3;
+//                [self selectIndex:3];
     }
 }
 

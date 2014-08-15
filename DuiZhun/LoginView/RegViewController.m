@@ -27,6 +27,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.scrollView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_"]];
     [self changeImageColor];
     
     self.scrollView.frame = CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT);

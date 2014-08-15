@@ -32,6 +32,7 @@ static BOOL actWX;
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_"]];
     //初始化
     actSina = NO;
     actTencent = NO;

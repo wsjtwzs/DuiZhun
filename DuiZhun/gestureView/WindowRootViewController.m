@@ -49,7 +49,7 @@
     [self addChildViewController:self.tabCtl];
     [self.view addSubview:self.tabCtl.view];
     self.tabCtl.view.backgroundColor = CLEARCOLOR;
-//    self.tabCtl.tabBar.hidden = YES;
+    self.tabCtl.tabBar.hidden = YES;
     
     self.blurView = [[FXBlurView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT)];
 //    self.blurView.frame = FRAME_RIGHT;

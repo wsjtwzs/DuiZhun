@@ -43,6 +43,7 @@
     self.user_field.textColor = [UIColor whiteColor];
     self.pass_field.textColor = [UIColor whiteColor];
 //    self.user_field.
+    self.scrollView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_"]];
     
 }
 

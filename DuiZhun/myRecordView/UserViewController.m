@@ -33,7 +33,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    // Segmented control
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_"]];
+    
     self.showType = YES;
     self.favType = YES;
     [self setSegImage];

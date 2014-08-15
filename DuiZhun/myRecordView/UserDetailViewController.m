@@ -28,7 +28,7 @@ static BOOL hasFav = NO;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_"]];
     // Do any additional setup after loading the view from its nib.
     if (!self.image) {
         self.image = [UIImage imageNamed:@"6.jpg"];

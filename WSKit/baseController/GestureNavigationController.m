@@ -68,9 +68,20 @@
         
         UIPanGestureRecognizer *recognizer = [[UIPanGestureRecognizer alloc]initWithTarget:self
                                                                                     action:@selector(paningGestureReceive:)];
-        [recognizer delaysTouchesBegan];
+//        [recognizer delaysTouchesBegan];
         [self.view addGestureRecognizer:recognizer];
     
+    [NOTIFICATIONCENTER addObserver:self selector:@selector(navBUttonPressed) name:NOTI_MAIN object:nil];
+    [NOTIFICATIONCENTER addObserver:self selector:@selector(navBUttonPressed) name:NOTI_TARGER object:nil];
+    [NOTIFICATIONCENTER addObserver:self selector:@selector(navBUttonPressed) name:NOTI_USER object:nil];
+    [NOTIFICATIONCENTER addObserver:self selector:@selector(navBUttonPressed) name:NOTI_CONFIG object:nil];
+    
+    
+}
+
+- (void) navBUttonPressed
+{
+    self.backgroundView = nil;
 }
 
 - (void)didReceiveMemoryWarning
@@ -89,7 +100,7 @@
 - (UIViewController *)popViewControllerAnimated:(BOOL)animated
 {
     [self.screenShotsList removeLastObject];
-    
+    self.backgroundView = nil;
     return [super popViewControllerAnimated:animated];
 }
 
