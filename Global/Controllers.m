@@ -37,8 +37,8 @@
 
 + (UIViewController *)mainTabbarController
 {
-    NSArray *array = @[[MainViewController new],
-                       [TargetListViewController new],
+    NSArray *array = @[[TargetListViewController new],
+                       [MainViewController new],
                        [UserViewController new],
                        [ConfigViewController new]];
     

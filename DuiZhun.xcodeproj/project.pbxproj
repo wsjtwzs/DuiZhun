@@ -597,6 +597,8 @@
 		50473BE7199E3C2E0034C7FE /* scan_video@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50473BE1199E3C2E0034C7FE /* scan_video@2x.png */; };
 		50473BE8199E3C2E0034C7FE /* scan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50473BE2199E3C2E0034C7FE /* scan@2x.png */; };
 		50473BE9199E3C2E0034C7FE /* share_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50473BE3199E3C2E0034C7FE /* share_line@2x.png */; };
+		505B8607199E7CFA00D4D934 /* TargetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 505B8605199E7CFA00D4D934 /* TargetCell.m */; };
+		505B8608199E7CFA00D4D934 /* TargetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 505B8606199E7CFA00D4D934 /* TargetCell.xib */; };
 		50A5EC55199CB563005EF757 /* IonIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A5EC51199CB563005EF757 /* IonIcons.m */; };
 		50A5EC56199CB563005EF757 /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50A5EC52199CB563005EF757 /* ionicons.ttf */; };
 		50A5EC63199CD025005EF757 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A5EC62199CD025005EF757 /* HMSegmentedControl.m */; };
@@ -1343,6 +1345,9 @@
 		50473BE1199E3C2E0034C7FE /* scan_video@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scan_video@2x.png"; sourceTree = "<group>"; };
 		50473BE2199E3C2E0034C7FE /* scan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scan@2x.png"; sourceTree = "<group>"; };
 		50473BE3199E3C2E0034C7FE /* share_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share_line@2x.png"; sourceTree = "<group>"; };
+		505B8604199E7CFA00D4D934 /* TargetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetCell.h; sourceTree = "<group>"; };
+		505B8605199E7CFA00D4D934 /* TargetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetCell.m; sourceTree = "<group>"; };
+		505B8606199E7CFA00D4D934 /* TargetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TargetCell.xib; sourceTree = "<group>"; };
 		50A5EC4F199CB563005EF757 /* ionicons-codes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ionicons-codes.h"; sourceTree = "<group>"; };
 		50A5EC50199CB563005EF757 /* IonIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IonIcons.h; sourceTree = "<group>"; };
 		50A5EC51199CB563005EF757 /* IonIcons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IonIcons.m; sourceTree = "<group>"; };
@@ -2386,6 +2391,9 @@
 				107C1D5B198BD43500E1198E /* TargetListViewController.h */,
 				107C1D5C198BD43500E1198E /* TargetListViewController.m */,
 				107C1D5D198BD43500E1198E /* TargetListViewController.xib */,
+				505B8604199E7CFA00D4D934 /* TargetCell.h */,
+				505B8605199E7CFA00D4D934 /* TargetCell.m */,
+				505B8606199E7CFA00D4D934 /* TargetCell.xib */,
 			);
 			path = targetListVIew;
 			sourceTree = "<group>";
@@ -2817,6 +2825,7 @@
 				1020851A19991DA700E151B3 /* coffee.png in Resources */,
 				1020852519991DA700E151B3 /* egg.png in Resources */,
 				102085DB19991DA700E151B3 /* ios7-plus.png in Resources */,
+				505B8608199E7CFA00D4D934 /* TargetCell.xib in Resources */,
 				1020860519991DA700E151B3 /* ios7-undo-outline.png in Resources */,
 				1020855219991DA700E151B3 /* ios7-arrow-thin-down.png in Resources */,
 				1020867A19991DA700E151B3 /* social-skype-outline.png in Resources */,
@@ -3307,6 +3316,7 @@
 				50470741199D0D1B00F04F08 /* UserColletionCell.m in Sources */,
 				107C1D22198BD0C500E1198E /* BaseNavigationController.m in Sources */,
 				107C1D76198BD64F00E1198E /* WSTabBarController.m in Sources */,
+				505B8607199E7CFA00D4D934 /* TargetCell.m in Sources */,
 				107C1D09198BD0A800E1198E /* SBJsonWriter.m in Sources */,
 				6608E994199CE9A50039B132 /* GuideCell.m in Sources */,
 				107C1D24198BD0C500E1198E /* BaseViewController.m in Sources */,

@@ -11,11 +11,7 @@
 static CGFloat scrollContentY;
 @implementation MainCell
 
-- (void)awakeFromNib
-{
-    // Initialization code
-    [self.heart setImage:[IonIcons imageWithIcon:icon_ios7_heart size:20 color:WHITECOLOR]];
-}
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {

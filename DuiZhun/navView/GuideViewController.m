@@ -116,7 +116,7 @@ typedef enum {
             //列表
 //            [NOTIFICATIONCENTER postNotificationName:NOTI_TARGER object:nil];
 //             [NOTIFICATIONCENTER postNotificationName:NOTI_NAVBUTTON_PRESS object:nil];
-            [NOTIFICATIONCENTER postNotificationName:NOTI_MAIN object:nil];
+            [NOTIFICATIONCENTER postNotificationName:NOTI_TARGER object:nil];
             [NOTIFICATIONCENTER postNotificationName:NOTI_NAVBUTTON_PRESS object:nil];
             break;
         case buttonPressed_userRecord:
