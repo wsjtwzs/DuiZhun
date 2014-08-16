@@ -102,7 +102,7 @@ static NSMutableArray *heartArr;
         
         [self.dataArray addObject:dic];
     }
-    NSLog(@"%@", self.dataArray);
+
     //设置tableview
     self.baseTableView.frame = CGRectMake(0, 125, 320, SCREENHEIGHT - 125);
     self.baseTableView.hidden = YES;
