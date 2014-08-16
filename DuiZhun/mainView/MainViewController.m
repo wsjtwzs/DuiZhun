@@ -77,7 +77,13 @@
     [self.baseTableView registerNib:[UINib nibWithNibName:NSStringFromClass([MainCell class]) bundle:nil] forCellReuseIdentifier:@"mainCell"];
     self.view.alpha = 0;
     
-    
+    UILabel *l = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
+    l.backgroundColor = CLEARCOLOR;
+    l.text = @"「没有更多了」";
+    l.textAlignment = NSTextAlignmentCenter;
+    l.textColor = WHITECOLOR;
+    l.font = [UIFont systemFontOfSize:13];
+    self.baseTableView.tableFooterView = l;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

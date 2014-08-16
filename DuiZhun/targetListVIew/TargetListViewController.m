@@ -84,6 +84,15 @@
     
     self.menuButton.frame = CGRectOffset(self.menuButton.frame, 250, 20);
     [self.baseTableView addSubview:self.menuButton];
+    
+    
+    UILabel *l = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
+    l.backgroundColor = CLEARCOLOR;
+    l.text = @"「没有更多了」";
+    l.textAlignment = NSTextAlignmentCenter;
+    l.textColor = WHITECOLOR;
+    l.font = [UIFont systemFontOfSize:13];
+    self.baseTableView.tableFooterView = l;
 }
 
 - (void)didReceiveMemoryWarning
