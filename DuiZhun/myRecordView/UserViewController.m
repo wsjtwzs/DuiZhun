@@ -18,6 +18,7 @@ static NSMutableArray *titleArr;
 static NSMutableArray *imgArr;
 static NSMutableArray *introArr;
 static NSMutableArray *heartArr;
+static int _oldPointY = 0;
 
 @interface UserViewController ()
 
@@ -301,18 +302,22 @@ static NSMutableArray *heartArr;
     if (self.baseTableView.contentOffset.y >= (self.baseTableView.contentSize.height - self.baseTableView.frame.size.height)) {
         return;
     }
-//    
-//    if (self.baseTableView.contentOffset.y > _oldPointY) {
-////        [[BaseNavigationController shareBaseNavigationController:nil] setNavigationViewHidden:YES animation:YES];
-//    }
-//    else {
-////        [[BaseNavigationController shareBaseNavigationController:nil] setNavigationViewHidden:NO animation:YES];
-//    }
-//    _oldPointY = self.baseTableView.contentOffset.y;
+    
+    if (self.baseTableView.contentOffset.y > _oldPointY) {
+        [UIView animateWithDuration:0.5 animations:^(){
+            self.topView.frame = CGRectMake(0, 0, 320, -72);
+            self.baseTableView.frame = CGRectMake(0, 63, SCREENWIDTH, SCREENHEIGHT-63);
+        }];
+    }
+    
+    if (self.baseTableView.contentOffset.y ==POINT_Y) {
+        [UIView animateWithDuration:0.5 animations:^(){
+            self.topView.frame = CGRectMake(0, 0, 320, 0);
+            self.baseTableView.frame = CGRectMake(0, 125, SCREENWIDTH, SCREENHEIGHT-125);
+        }];
+    }
+    _oldPointY = self.baseTableView.contentOffset.y;
 }
 
--(void) scrollViewDidScrollToTop:(UIScrollView *)scrollView {
-    
-}
 
 @end
