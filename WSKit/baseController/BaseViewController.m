@@ -34,7 +34,7 @@
 //    self.view.backgroundColor = BACKGROUND;
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"dark_bg"]];
     self.view.frame = CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT);
-    self.view.clipsToBounds = YES;
+//    self.view.clipsToBounds = YES;
     if (!self.dataArray) {
         self.dataArray = [NSMutableArray array];
     }

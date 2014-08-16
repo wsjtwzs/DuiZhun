@@ -17,7 +17,11 @@
     __weak IBOutlet UIButton *leftImage;
     __weak IBOutlet UIImageView *bindingImage;
     __weak IBOutlet UILabel *_usernameLabel;
+    IBOutlet UIView *sheetView;
 }
+- (IBAction)changePassword:(id)sender;
+- (IBAction)changePasswordCancle:(id)sender;
+- (IBAction)changePasswordCommit:(id)sender;
 
 - (IBAction)close:(id)sender;
 @end

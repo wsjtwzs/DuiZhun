@@ -8,6 +8,9 @@
 
 #import "BIndingViewController.h"
 
+#define sheetView_rect_hidden CGRectMake(0, SCREENHEIGHT, 320, 90);
+#define sheetView_rect_show CGRectMake(0, SCREENHEIGHT - 90, 320, 90);
+
 @interface BIndingViewController ()
 
 @end
@@ -30,6 +33,9 @@
     [self changeImageColor];
         self.view.backgroundColor = CLEARCOLOR;
         _usernameLabel.text = [GlobalConfig getObjectWithKey:USER_USERNAME];
+    
+    sheetView.frame = sheetView_rect_hidden;
+    [self.view addSubview:sheetView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,7 +55,30 @@
     [leftImage setBackgroundImage:[IonIcons imageWithIcon:icon_ios7_arrow_left size:27 color:YELLOWCOLOR] forState:UIControlStateHighlighted];
 }
 
+- (IBAction)changePassword:(id)sender {
+    [self sheetViewHidden:NO];
+}
+
+- (IBAction)changePasswordCancle:(id)sender {
+    [self sheetViewHidden:YES];
+}
+
+- (IBAction)changePasswordCommit:(id)sender {
+}
+
 - (IBAction)close:(id)sender {
     [super close:sender];
+}
+
+- (void) sheetViewHidden:(BOOL)hidden
+{
+    [UIView animateWithDuration:0.2 animations:^{
+        if (hidden) {
+            sheetView.frame = sheetView_rect_hidden;
+        }
+        else {
+            sheetView.frame = sheetView_rect_show;
+        }
+    }];
 }
 @end
