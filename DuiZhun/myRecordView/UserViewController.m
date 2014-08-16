@@ -15,6 +15,7 @@
 #import "ShareViewController.h"
 
 static NSMutableArray *titleArr;
+static NSMutableArray *imgArr;
 static NSMutableArray *introArr;
 static NSMutableArray *heartArr;
 
@@ -52,7 +53,7 @@ static NSMutableArray *heartArr;
                                            imageSize:CGSizeMake(160.0f, 53.0f)] forState:UIControlStateHighlighted];
     
     //数据源
-    self.dataArray = [NSMutableArray arrayWithArray:@[@"user_small_01.jpg",
+    imgArr = [NSMutableArray arrayWithArray:@[@"user_small_01.jpg",
                                                       @"user_small_02.jpg",
                                                       @"user_small_03.jpg",
                                                       @"user_small_04.jpg",
@@ -95,6 +96,13 @@ static NSMutableArray *heartArr;
                                                 @"「我能告诉你这段视频其实没有歌声吗」"]];
     
     heartArr = [NSMutableArray arrayWithArray:@[@"1003",@"758",@"342",@"995",@"116",@"96",@"345",@"542",@"111",@"366",@"489",@"337",@"280",@"144"]];
+
+    for (int i=0; i<imgArr.count; i++) {
+        NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:imgArr[i],@"img",titleArr[i],@"title",introArr[i],@"intro",heartArr[i],@"heart", nil];
+        
+        [self.dataArray addObject:dic];
+    }
+    NSLog(@"%@", self.dataArray);
     //设置tableview
     self.baseTableView.frame = CGRectMake(0, 125, 320, SCREENHEIGHT - 125);
     self.baseTableView.hidden = YES;
@@ -206,19 +214,22 @@ static NSMutableArray *heartArr;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UserCell *cell = [tableView dequeueReusableCellWithIdentifier:@"userCell"];
-    cell.userImageView.image = [UIImage imageNamed:self.dataArray[indexPath.row]];
-    cell.title.text = titleArr[indexPath.row];
-    cell.intro.text = introArr[indexPath.row];
-    cell.heartNum.text = heartArr[indexPath.row];
+    NSDictionary *tmpDic = self.dataArray[indexPath.row];
+    cell.userImageView.image = [UIImage imageNamed:tmpDic[@"img"]];
+    
+    cell.title.text = tmpDic[@"title"];
+    cell.intro.text = tmpDic[@"intro"];
+    cell.heartNum.text = tmpDic[@"heart"];
     return cell;
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UserDetailViewController *vc = (UserDetailViewController *)[Controllers viewControllerWithName:@"UserDetailViewController"];
-    vc.image = [UIImage imageNamed:self.dataArray[indexPath.row]];
-    vc.navTitleText = titleArr[indexPath.row];
-    vc.introText = introArr[indexPath.row];
+    NSDictionary *tmpDic = self.dataArray[indexPath.row];
+    vc.image = [UIImage imageNamed:tmpDic[@"img"]];
+    vc.navTitleText = tmpDic[@"title"];
+    vc.introText = tmpDic[@"intro"];
     vc.imageIndex = indexPath.row;
     [self.navigationController pushViewController:vc animated:YES];
 }
@@ -238,7 +249,8 @@ static NSMutableArray *heartArr;
 {
     static NSString * CellIdentifier = @"GradientCell";
     UserColletionCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-    cell.collectionImage.image = [UIImage imageNamed:self.dataArray[indexPath.row]];
+    NSDictionary *tmpDic = self.dataArray[indexPath.row];
+    cell.collectionImage.image = [UIImage imageNamed:tmpDic[@"img"]];
     cell.collectionImage.layer.masksToBounds = YES;
     cell.collectionImage.layer.cornerRadius = 3;
     return cell;
@@ -252,9 +264,10 @@ static NSMutableArray *heartArr;
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
         UserDetailViewController *vc = (UserDetailViewController *)[Controllers viewControllerWithName:@"UserDetailViewController"];
-        vc.image = [UIImage imageNamed:self.dataArray[indexPath.row]];
-        vc.navTitleText = titleArr[indexPath.row];
-        vc.introText = introArr[indexPath.row];
+        NSDictionary *tmpDic = self.dataArray[indexPath.row];
+        vc.image = [UIImage imageNamed:tmpDic[@"img"]];
+        vc.navTitleText = tmpDic[@"title"];
+        vc.introText = tmpDic[@"intro"];
         vc.imageIndex = indexPath.row;
         [self.navigationController pushViewController:vc animated:YES];
 
