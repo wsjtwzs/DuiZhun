@@ -100,6 +100,7 @@
 - (UIViewController *)popViewControllerAnimated:(BOOL)animated
 {
     [self.screenShotsList removeLastObject];
+    [self.backgroundView removeFromSuperview];
     self.backgroundView = nil;
     return [super popViewControllerAnimated:animated];
 }
@@ -164,6 +165,29 @@
 - (void)paningGestureReceive:(UIPanGestureRecognizer *)recoginzer
 {
     [NOTIFICATIONCENTER  postNotificationName:NOTI_GESTURE_LEFT object:recoginzer];
+    
+    if (self.viewControllers.count == 1) {
+        UIPanGestureRecognizer *rec = recoginzer;
+        static CGPoint coordinate_start;
+        CGPoint coordinate_change = [rec translationInView:self.view];
+        if (rec.state == UIGestureRecognizerStateBegan) {
+            coordinate_start = [rec translationInView:self.view];
+        }
+        else if (rec.state == UIGestureRecognizerStateChanged) {
+            if (coordinate_change.x > 0) {
+                self.view.frame = CGRectOffset(self.view.frame, coordinate_change.x - coordinate_start.x, 0);
+            }
+            coordinate_start = coordinate_change;
+        }
+        else if (rec.state == UIGestureRecognizerStateEnded) {
+            [UIView animateWithDuration:0.4 animations:^{
+                self.view.frame = CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT);
+            }];
+        }
+        return;
+    }
+
+    
     if (self.viewControllers.count <= 1 || !self.canDragBack) return;
     
     CGPoint touchPoint = [recoginzer locationInView:KEY_WINDOW];
