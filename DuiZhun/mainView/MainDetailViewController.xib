@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainDetailViewController">
             <connections>
+                <outlet property="black" destination="Z6C-wz-wJj" id="RuX-P9-Ri0"/>
                 <outlet property="contentLabel" destination="Ntk-js-iU2" id="Cu0-82-S4E"/>
                 <outlet property="heartButton" destination="J8M-4a-9nK" id="w97-M9-Tpv"/>
                 <outlet property="heartImage" destination="ywH-tL-NG4" id="dv2-SX-cYN"/>
@@ -129,13 +130,13 @@
                                 <action selector="openCam:" destination="-1" eventType="touchUpInside" id="Gdr-bA-ihO"/>
                             </connections>
                         </button>
-                        <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z6C-wz-wJj">
-                            <rect key="frame" x="4" y="164" width="160" height="60"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z6C-wz-wJj">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>

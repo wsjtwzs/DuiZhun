@@ -10,8 +10,10 @@
 #import "Ionicons.h"
 #import "ShareViewController.h"
 
-@interface UserDetailViewController ()
+#define rect_hidden CGRectMake(0, SCREENHEIGHT, 320, 190);
+#define rect_show CGRectMake(0, SCREENHEIGHT - 190, 320, 190);
 
+@interface UserDetailViewController ()
 @end
 static BOOL hasFav = NO;
 
@@ -50,6 +52,9 @@ static BOOL hasFav = NO;
                                         iconSize:25.0f
                                        imageSize:CGSizeMake(100.0f, 45.0f)] forState:UIControlStateNormal];
     
+    shareView.frame = rect_hidden;
+    [self.view addSubview:shareView];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,11 +78,13 @@ static BOOL hasFav = NO;
 }
 
 - (IBAction)sharePress:(id)sender {
-    ShareViewController *vc = (ShareViewController *)[Controllers viewControllerWithName:@"ShareViewController"];
-    vc.imageIndex = self.imageIndex;
-    vc.shareText = self.introText;
-    vc.imageIndex = self.imageIndex;
-    [self.navigationController pushViewController:vc animated:YES];
+//    ShareViewController *vc = (ShareViewController *)[Controllers viewControllerWithName:@"ShareViewController"];
+//    vc.imageIndex = self.imageIndex;
+//    vc.shareText = self.introText;
+//    vc.imageIndex = self.imageIndex;
+//    [self.navigationController pushViewController:vc animated:YES];
+    [self shareViewHidden:YES];
+    
 }
 
 - (IBAction)removePress:(id)sender {
@@ -90,6 +97,20 @@ static BOOL hasFav = NO;
     if (buttonIndex == 1) {
         [self.navigationController popToRootViewControllerAnimated:YES];
     }
+}
+
+- (void) shareViewHidden:(BOOL)hidden
+{
+    [UIView animateWithDuration:0.2 animations:^{
+        if (hidden) {
+            shareView.frame = rect_hidden;
+            self.black.alpha = 0;
+        }
+        else {
+            shareView.frame = rect_show;
+            self.black.alpha = 0.7;
+        }
+    }];
 }
 
 @end

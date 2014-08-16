@@ -106,6 +106,8 @@ static NSMutableArray *heartArr;
     //设置collectionview
     [self.userCollection registerNib:[UINib nibWithNibName:NSStringFromClass([UserColletionCell class]) bundle:nil] forCellWithReuseIdentifier:@"GradientCell"];
 //    [self.userCollection registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"GradientCell"];
+    
+
 
 }
 
@@ -276,4 +278,5 @@ static NSMutableArray *heartArr;
     return results;
     
 }
+
 @end

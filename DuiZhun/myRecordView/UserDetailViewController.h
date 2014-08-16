@@ -8,7 +8,11 @@
 
 #import "BaseViewController.h"
 
-@interface UserDetailViewController : BaseViewController
+@interface UserDetailViewController : BaseViewController{
+    
+    IBOutlet UIView *shareView;
+    
+}
 @property (weak, nonatomic) IBOutlet UILabel *navTitle;
 @property (weak, nonatomic) IBOutlet UIImageView *detailImage;
 @property (weak, nonatomic) IBOutlet UILabel *intro;
@@ -16,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *heart;
 @property (weak, nonatomic) IBOutlet UIButton *share;
 @property (weak, nonatomic) IBOutlet UIButton *remove;
+
+@property (weak, nonatomic) IBOutlet UIView *black;
 
 @property (strong, nonatomic) UIImage *image;
 - (IBAction)heartPress:(id)sender;

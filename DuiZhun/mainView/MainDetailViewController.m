@@ -148,17 +148,16 @@ typedef enum{
         [self.navigationController pushViewController:[Controllers viewControllerWithName:@"CameraViewController"] animated:YES];
 }
 
-- (IBAction)IBActionopenCamidsenderselfnavigationControllerpushViewControllerControllersviewControllerWithNameCameraViewControlleranimatedYESopenCam:(id)sender {
-}
-
 - (void) shareViewHidden:(BOOL)hidden
 {
     [UIView animateWithDuration:0.2 animations:^{
         if (hidden) {
             shareView.frame = rect_hidden;
+            self.black.alpha = 0;
         }
         else {
             shareView.frame = rect_show;
+            self.black.alpha = 0.7;
         }
     }];
 }

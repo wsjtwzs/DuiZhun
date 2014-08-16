@@ -26,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *leftLabel;
 @property (weak, nonatomic) IBOutlet UILabel *rightLabel;
 
+@property (weak, nonatomic) IBOutlet UIView *black;
 
 - (IBAction)changeColor:(id)sender;
 
