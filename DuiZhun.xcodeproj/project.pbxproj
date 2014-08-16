@@ -670,6 +670,7 @@
 		505B8697199E99CD00D4D934 /* TargetDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505B8695199E99CD00D4D934 /* TargetDetailViewController.m */; };
 		505B8698199E99CD00D4D934 /* TargetDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 505B8696199E99CD00D4D934 /* TargetDetailViewController.xib */; };
 		507D4DB9199FBDFF00915E4B /* DKCircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 507D4DB8199FBDFF00915E4B /* DKCircleButton.m */; };
+		50916CED199FDA49001B4B98 /* loading@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = 50916CEC199FDA49001B4B98 /* loading@2x.gif */; };
 		50A5EC55199CB563005EF757 /* IonIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A5EC51199CB563005EF757 /* IonIcons.m */; };
 		50A5EC56199CB563005EF757 /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50A5EC52199CB563005EF757 /* ionicons.ttf */; };
 		50A5EC63199CD025005EF757 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A5EC62199CD025005EF757 /* HMSegmentedControl.m */; };
@@ -1496,6 +1497,7 @@
 		505B8696199E99CD00D4D934 /* TargetDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TargetDetailViewController.xib; sourceTree = "<group>"; };
 		507D4DB7199FBDFF00915E4B /* DKCircleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKCircleButton.h; sourceTree = "<group>"; };
 		507D4DB8199FBDFF00915E4B /* DKCircleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKCircleButton.m; sourceTree = "<group>"; };
+		50916CEC199FDA49001B4B98 /* loading@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "loading@2x.gif"; sourceTree = "<group>"; };
 		50A5EC4F199CB563005EF757 /* ionicons-codes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ionicons-codes.h"; sourceTree = "<group>"; };
 		50A5EC50199CB563005EF757 /* IonIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IonIcons.h; sourceTree = "<group>"; };
 		50A5EC51199CB563005EF757 /* IonIcons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IonIcons.m; sourceTree = "<group>"; };
@@ -2872,6 +2874,7 @@
 		6656A91D1993A36500E0C930 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				50916CEC199FDA49001B4B98 /* loading@2x.gif */,
 				50ED304F199FAD3E00776ED7 /* cam_big@2x.png */,
 				505B865B199E85B800D4D934 /* target */,
 				505B8609199E84C500D4D934 /* user_work */,
@@ -3452,6 +3455,7 @@
 				1020853219991DA700E151B3 /* fork-repo.png in Resources */,
 				6604BD37199DBA9F00F09204 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				1020861119991DA700E151B3 /* ios7-world-outline.png in Resources */,
+				50916CED199FDA49001B4B98 /* loading@2x.gif in Resources */,
 				505B8691199E85B900D4D934 /* target_small_12.jpg in Resources */,
 				1020856B19991DA700E151B3 /* ios7-cart-outline.png in Resources */,
 				102085C519991DA700E151B3 /* ios7-navigate-outline.png in Resources */,

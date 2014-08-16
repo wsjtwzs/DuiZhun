@@ -301,14 +301,14 @@ static NSMutableArray *heartArr;
     if (self.baseTableView.contentOffset.y >= (self.baseTableView.contentSize.height - self.baseTableView.frame.size.height)) {
         return;
     }
-    
-    if (self.baseTableView.contentOffset.y > _oldPointY) {
-        [[BaseNavigationController shareBaseNavigationController:nil] setNavigationViewHidden:YES animation:YES];
-    }
-    else {
-        [[BaseNavigationController shareBaseNavigationController:nil] setNavigationViewHidden:NO animation:YES];
-    }
-    _oldPointY = self.baseScrollView.contentOffset.y;
+//    
+//    if (self.baseTableView.contentOffset.y > _oldPointY) {
+////        [[BaseNavigationController shareBaseNavigationController:nil] setNavigationViewHidden:YES animation:YES];
+//    }
+//    else {
+////        [[BaseNavigationController shareBaseNavigationController:nil] setNavigationViewHidden:NO animation:YES];
+//    }
+//    _oldPointY = self.baseTableView.contentOffset.y;
 }
 
 -(void) scrollViewDidScrollToTop:(UIScrollView *)scrollView {
