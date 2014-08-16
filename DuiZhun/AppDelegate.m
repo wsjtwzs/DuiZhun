@@ -62,7 +62,13 @@ static NSString *firstLaunch = @"firstLaunch";
     [self.window addSubview:bgView];
     [self.window bringSubviewToFront:bgView];
     
-    [bgView performSelector:@selector(removeFromSuperview) withObject:nil afterDelay:2.5];
+    [UIView animateWithDuration:2 delay:2.5 options:0 animations:^{
+    
+        bgView.alpha = 0;
+    } completion:^(BOOL finish) {
+        [bgView removeFromSuperview];
+    }];
+//    [bgView performSelector:@selector(removeFromSuperview) withObject:nil afterDelay:2.5];
 
 }
 
