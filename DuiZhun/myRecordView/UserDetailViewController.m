@@ -78,12 +78,12 @@ static BOOL hasFav = NO;
 }
 
 - (IBAction)sharePress:(id)sender {
-//    ShareViewController *vc = (ShareViewController *)[Controllers viewControllerWithName:@"ShareViewController"];
-//    vc.imageIndex = self.imageIndex;
-//    vc.shareText = self.introText;
-//    vc.imageIndex = self.imageIndex;
-//    [self.navigationController pushViewController:vc animated:YES];
-    [self shareViewHidden:YES];
+    ShareViewController *vc = (ShareViewController *)[Controllers viewControllerWithName:@"ShareViewController"];
+    vc.imageIndex = self.imageIndex;
+    vc.shareText = self.introText;
+    vc.imageIndex = self.imageIndex;
+    [self.navigationController pushViewController:vc animated:YES];
+//    [self shareViewHidden:YES];
     
 }
 
