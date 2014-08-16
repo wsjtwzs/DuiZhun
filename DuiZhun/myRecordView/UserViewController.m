@@ -96,7 +96,7 @@ static NSMutableArray *heartArr;
     
     heartArr = [NSMutableArray arrayWithArray:@[@"1003",@"758",@"342",@"995",@"116",@"96",@"345",@"542",@"111",@"366",@"489",@"337",@"280",@"144"]];
     //设置tableview
-    self.baseTableView.frame = CGRectMake(0, 125, 320, 444);
+    self.baseTableView.frame = CGRectMake(0, 125, 320, SCREENHEIGHT - 125);
     self.baseTableView.hidden = YES;
     self.baseTableView.alpha = 0;
     [self.view addSubview:self.baseTableView];

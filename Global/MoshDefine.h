@@ -37,7 +37,7 @@
 //宏定义屏幕的宽和高
 
 #define SCREENWIDTH     [UIScreen mainScreen].bounds.size.width
-#define SCREENHEIGHT    [UIScreen mainScreen].bounds.size.height
+#define SCREENHEIGHT    ([UIScreen mainScreen].bounds.size.height - 20)
 #define NAVHEIGHT       ([GlobalConfig versionIsIOS7]? 64 : 44)
 #define NAVIMAGE       ([GlobalConfig versionIsIOS7]? @"navBg_ios7" : @"navBg")
 #define STATEHEIGHT     ([GlobalConfig versionIsIOS7]? 0 : 20)

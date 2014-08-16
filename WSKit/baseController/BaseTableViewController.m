@@ -74,7 +74,7 @@
 //改变tableview的frame
 - (CGRect) returnBaseTableViewFrame
 {
-    return CGRectMake(POINT_X, POINT_Y, SCREENWIDTH, SCREENHEIGHT - STATEHEIGHT - NAVHEIGHT - TABBARHEIGHT);
+    return CGRectMake(POINT_X, POINT_Y, SCREENWIDTH, SCREENHEIGHT);
 }
 //改变tableView的类型
 - (UITableViewStyle) returnBaseTableViewStyle

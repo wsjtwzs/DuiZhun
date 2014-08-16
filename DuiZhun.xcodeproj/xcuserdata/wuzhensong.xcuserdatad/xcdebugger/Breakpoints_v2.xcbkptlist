@@ -169,7 +169,7 @@
                   symbolName = "__29-[ConfigViewController exit:]_block_invoke"
                   moduleName = "DuiZhun"
                   urlString = "file:///Users/wuzhensong/Desktop/DuiZhun2/DuiZhun/configView/ConfigViewController.m"
-                  timestampString = "429878970.410546"
+                  timestampString = "429879852.102534"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "67"
@@ -183,7 +183,7 @@
                   symbolName = "__29-[ConfigViewController exit:]_block_invoke82"
                   moduleName = "DuiZhun"
                   urlString = "file:///Users/wuzhensong/Desktop/DuiZhun2/DuiZhun/configView/ConfigViewController.m"
-                  timestampString = "429878970.411008"
+                  timestampString = "429879852.102896"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "67"
@@ -191,22 +191,6 @@
                   offsetFromSymbolStart = "38">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DuiZhun/mainView/MainViewController.m"
-            timestampString = "429878948.789668"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "-viewDidAppear:"
-            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

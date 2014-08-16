@@ -48,7 +48,7 @@
 - (void) createTabbarViewController
 {
     self.tabCtl = (WSTabBarController *)[Controllers mainTabbarController];
-    self.tabCtl.view.frame = CGRectMake(0, 20, SCREENWIDTH, SCREENHEIGHT - 20);
+    self.tabCtl.view.frame = CGRectMake(0, 20, SCREENWIDTH, SCREENHEIGHT);
     [self addChildViewController:self.tabCtl];
     [self.view addSubview:self.tabCtl.view];
     self.tabCtl.view.backgroundColor = CLEARCOLOR;
