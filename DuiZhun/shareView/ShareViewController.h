@@ -17,14 +17,16 @@
 
 #import "ALAssetsLibrary+CustomPhotoAlbum.h"
 
+#import "KeyBoardViewController.h"
 
-@interface ShareViewController : BaseViewController
+@interface ShareViewController : KeyBoardViewController<UIScrollViewDelegate>
 @property (nonatomic, strong) ALAssetsLibrary *lib;
 @property (nonatomic, assign) BOOL video;
 @property (weak, nonatomic) IBOutlet UIImageView *paperClip;
 @property (retain, nonatomic) IBOutlet UIView *shareView;
 @property (retain, nonatomic) IBOutlet UIImageView *imageView;
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (retain, nonatomic) IBOutlet UIButton *playMark;
 //三个分享
 @property (retain, nonatomic) IBOutlet UIButton *sinaButton;

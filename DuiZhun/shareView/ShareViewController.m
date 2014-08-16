@@ -29,10 +29,17 @@ static NSArray *imageArr;
     return self;
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.scrollView.frame = CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT);
+    self.scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.scrollView.frame), CGRectGetHeight(self.scrollView.frame)+1);
+    _keyboardScrollView = self.scrollView;
+
+    
     //数据源
     self.dataArray = [NSMutableArray arrayWithArray:@[@"user_big_01.jpg",
                                                       @"user_big_02.jpg",
@@ -177,6 +184,11 @@ static NSArray *imageArr;
         actWX = YES;
     }
     
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    [self.shareTextView resignFirstResponder];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
