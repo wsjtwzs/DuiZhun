@@ -30,7 +30,7 @@
     [self changeImageColor];
         self.view.backgroundColor = CLEARCOLOR;
     
-    icon.layer.cornerRadius = 10.0f;
+    icon.layer.cornerRadius = 5.0f;
     icon.layer.masksToBounds = YES;
     
 }

@@ -292,4 +292,27 @@ static NSMutableArray *heartArr;
     
 }
 
+- (void) scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    if (self.baseTableView.contentOffset.y  <= POINT_Y) {
+        return;
+    }
+    
+    if (self.baseTableView.contentOffset.y >= (self.baseTableView.contentSize.height - self.baseTableView.frame.size.height)) {
+        return;
+    }
+    
+    if (self.baseTableView.contentOffset.y > _oldPointY) {
+        [[BaseNavigationController shareBaseNavigationController:nil] setNavigationViewHidden:YES animation:YES];
+    }
+    else {
+        [[BaseNavigationController shareBaseNavigationController:nil] setNavigationViewHidden:NO animation:YES];
+    }
+    _oldPointY = self.baseScrollView.contentOffset.y;
+}
+
+-(void) scrollViewDidScrollToTop:(UIScrollView *)scrollView {
+    
+}
+
 @end
