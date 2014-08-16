@@ -36,8 +36,9 @@ static BOOL hasFav = NO;
     if (!self.image) {
         self.image = [UIImage imageNamed:@"6.jpg"];
     }
-    self.detailImage.image = self.image;
-
+//    self.detailImage.image = self.image;
+    self.detailImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"user_big_%d.jpg",self.imageIndex]];
+    
     self.navTitle.text = self.navTitleText;
     self.intro.text = self.introText;
     
