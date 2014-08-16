@@ -8,7 +8,7 @@
 
 #import "GestureViewController.h"
 
-@interface TargetListViewController : GestureViewController
+@interface TargetListViewController : GestureViewController<UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *menuButton;
 @property (strong, nonatomic) IBOutlet UIButton *cameraButton;
 - (IBAction)showMenu:(id)sender;

@@ -192,9 +192,9 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9x-mI-BaR">
-                    <rect key="frame" x="133" y="470" width="50" height="50"/>
+                    <rect key="frame" x="118" y="461" width="80" height="80"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" image="scan.png">
+                    <state key="normal" image="cam_big.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -206,13 +206,13 @@
         </view>
     </objects>
     <resources>
+        <image name="cam_big.png" width="95" height="95"/>
         <image name="close.png" width="512" height="512"/>
         <image name="home.png" width="512" height="512"/>
         <image name="icon_duizhun.png" width="161" height="68"/>
         <image name="ios7-search.png" width="512" height="512"/>
         <image name="person.png" width="512" height="512"/>
         <image name="pricetag.png" width="512" height="512"/>
-        <image name="scan.png" width="50" height="50"/>
         <image name="settings.png" width="512" height="512"/>
     </resources>
 </document>

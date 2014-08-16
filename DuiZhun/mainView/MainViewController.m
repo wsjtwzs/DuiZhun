@@ -72,19 +72,23 @@
     
     
     self.cellHeight = 200;
-    [self.view addSubview:self.baseTableView];
-//    self.baseTableView.frame = CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT - 20);
-//    [self.baseTableView addSubview:self.menu];
-    [self.baseTableView registerNib:[UINib nibWithNibName:NSStringFromClass([MainCell class]) bundle:nil] forCellReuseIdentifier:@"mainCell"];
-    self.view.alpha = 0;
     
-    UILabel *l = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
+    
+    UILabel *l = [[UILabel alloc] initWithFrame:CGRectMake(0, SCREENHEIGHT-50, 320, 50)];
+    
     l.backgroundColor = CLEARCOLOR;
     l.text = @"「没有更多了」";
     l.textAlignment = NSTextAlignmentCenter;
     l.textColor = WHITECOLOR;
     l.font = [UIFont systemFontOfSize:13];
-    self.baseTableView.tableFooterView = l;
+    [self.view addSubview:l];
+    
+    
+    [self.view addSubview:self.baseTableView];
+//    self.baseTableView.frame = CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT - 20);
+//    [self.baseTableView addSubview:self.menu];
+    [self.baseTableView registerNib:[UINib nibWithNibName:NSStringFromClass([MainCell class]) bundle:nil] forCellReuseIdentifier:@"mainCell"];
+    self.view.alpha = 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

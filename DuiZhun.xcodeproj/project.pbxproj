@@ -674,6 +674,7 @@
 		50A5EC63199CD025005EF757 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A5EC62199CD025005EF757 /* HMSegmentedControl.m */; };
 		50A5EC67199CDFC4005EF757 /* UserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A5EC65199CDFC4005EF757 /* UserCell.m */; };
 		50A5EC68199CDFC4005EF757 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50A5EC66199CDFC4005EF757 /* UserCell.xib */; };
+		50ED3050199FAD3E00776ED7 /* cam_big@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50ED304F199FAD3E00776ED7 /* cam_big@2x.png */; };
 		6604BD36199DBA9F00F09204 /* TencentOpenAPI in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604BD2B199DBA9F00F09204 /* TencentOpenAPI */; };
 		6604BD37199DBA9F00F09204 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6604BD2C199DBA9F00F09204 /* TencentOpenApi_IOS_Bundle.bundle */; };
 		6604BD38199DBA9F00F09204 /* libWeiboSDK in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604BD30199DBA9F00F09204 /* libWeiboSDK */; };
@@ -1501,6 +1502,7 @@
 		50A5EC64199CDFC4005EF757 /* UserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCell.h; sourceTree = "<group>"; };
 		50A5EC65199CDFC4005EF757 /* UserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCell.m; sourceTree = "<group>"; };
 		50A5EC66199CDFC4005EF757 /* UserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		50ED304F199FAD3E00776ED7 /* cam_big@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cam_big@2x.png"; sourceTree = "<group>"; };
 		6604BD23199DBA9F00F09204 /* QQApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQApi.h; sourceTree = "<group>"; };
 		6604BD24199DBA9F00F09204 /* QQApiInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQApiInterface.h; sourceTree = "<group>"; };
 		6604BD25199DBA9F00F09204 /* QQApiInterfaceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQApiInterfaceObject.h; sourceTree = "<group>"; };
@@ -2857,6 +2859,7 @@
 		6656A91D1993A36500E0C930 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				50ED304F199FAD3E00776ED7 /* cam_big@2x.png */,
 				505B865B199E85B800D4D934 /* target */,
 				505B8609199E84C500D4D934 /* user_work */,
 				664A72AA199E7752006FB3DB /* icon_app.png */,
@@ -3060,6 +3063,7 @@
 				505B863F199E84C500D4D934 /* user_big_12.jpg in Resources */,
 				102084DF19991DA700E151B3 /* arrow-expand.png in Resources */,
 				1020868219991DA700E151B3 /* social-vimeo.png in Resources */,
+				50ED3050199FAD3E00776ED7 /* cam_big@2x.png in Resources */,
 				505B864A199E84C500D4D934 /* user_list_10.jpg in Resources */,
 				102085A719991DA700E151B3 /* ios7-infinite-outline.png in Resources */,
 				1020858119991DA700E151B3 /* ios7-cloudy-night-outline.png in Resources */,
