@@ -237,6 +237,8 @@ static NSMutableArray *heartArr;
     static NSString * CellIdentifier = @"GradientCell";
     UserColletionCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     cell.collectionImage.image = [UIImage imageNamed:self.dataArray[indexPath.row]];
+    cell.collectionImage.layer.masksToBounds = YES;
+    cell.collectionImage.layer.cornerRadius = 3;
     return cell;
 }
 //定义每个UICollectionView 的大小
