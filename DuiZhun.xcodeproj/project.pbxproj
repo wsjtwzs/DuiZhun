@@ -581,6 +581,7 @@
 		107C1D77198BD64F00E1198E /* WSTabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107C1D75198BD64F00E1198E /* WSTabBarController.xib */; };
 		108786C8199785F900530202 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 108786C6199785F900530202 /* GuideViewController.m */; };
 		108786C9199785F900530202 /* GuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108786C7199785F900530202 /* GuideViewController.xib */; };
+		50045EAB199F70CE00368689 /* CustomUILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 50045EAA199F70CE00368689 /* CustomUILabel.m */; };
 		50470741199D0D1B00F04F08 /* UserColletionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50470740199D0D1B00F04F08 /* UserColletionCell.m */; };
 		50470743199D10A900F04F08 /* UserColletionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50470742199D10A900F04F08 /* UserColletionCell.xib */; };
 		50470747199D35A900F04F08 /* UserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50470745199D35A900F04F08 /* UserDetailViewController.m */; };
@@ -1395,6 +1396,8 @@
 		108786C5199785F900530202 /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
 		108786C6199785F900530202 /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
 		108786C7199785F900530202 /* GuideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GuideViewController.xib; sourceTree = "<group>"; };
+		50045EA9199F70CE00368689 /* CustomUILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomUILabel.h; sourceTree = "<group>"; };
+		50045EAA199F70CE00368689 /* CustomUILabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomUILabel.m; sourceTree = "<group>"; };
 		5047073F199D0D1B00F04F08 /* UserColletionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserColletionCell.h; sourceTree = "<group>"; };
 		50470740199D0D1B00F04F08 /* UserColletionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserColletionCell.m; sourceTree = "<group>"; };
 		50470742199D10A900F04F08 /* UserColletionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserColletionCell.xib; sourceTree = "<group>"; };
@@ -2183,6 +2186,7 @@
 		107C1C78198BD0A800E1198E /* resouce */ = {
 			isa = PBXGroup;
 			children = (
+				50045EA8199F705000368689 /* CustomUILabel */,
 				50473BDA199E23AA0034C7FE /* ALAssetsLibrary+CustomPhotoAlbum */,
 				6604BD22199DBA9F00F09204 /* QQ */,
 				6604BD2F199DBA9F00F09204 /* WB */,
@@ -2627,6 +2631,15 @@
 				6608E993199CE9A50039B132 /* GuideCell.xib */,
 			);
 			path = navView;
+			sourceTree = "<group>";
+		};
+		50045EA8199F705000368689 /* CustomUILabel */ = {
+			isa = PBXGroup;
+			children = (
+				50045EA9199F70CE00368689 /* CustomUILabel.h */,
+				50045EAA199F70CE00368689 /* CustomUILabel.m */,
+			);
+			path = CustomUILabel;
 			sourceTree = "<group>";
 		};
 		50473BCB199DB8BD0034C7FE /* cameraView */ = {
@@ -3595,6 +3608,7 @@
 				107C1D64198BD4A900E1198E /* ThirdLoginViewController.m in Sources */,
 				107C1D6A198BD4C500E1198E /* LoginViewController.m in Sources */,
 				107C1CF2198BD0A800E1198E /* AFPropertyListRequestOperation.m in Sources */,
+				50045EAB199F70CE00368689 /* CustomUILabel.m in Sources */,
 				107C1D1F198BD0C500E1198E /* HTTPClient.m in Sources */,
 				102082E1199888FB00E151B3 /* TransitionViewController.m in Sources */,
 				107C1CF0198BD0A800E1198E /* AFJSONRequestOperation.m in Sources */,

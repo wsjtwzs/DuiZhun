@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "BaseCell.h"
 #import "MainModel.h"
+#import "CustomUILabel.h"
 
 @interface MainCell : BaseCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *backImageView;
-@property (weak, nonatomic) IBOutlet UILabel *titleLable;
+@property (weak, nonatomic) IBOutlet CustomUILabel *titleLable;
+//@property (weak, nonatomic) IBOutlet UILabel *titleLable;
 @property (weak, nonatomic) IBOutlet UIImageView *heart;
 @property (weak, nonatomic) IBOutlet UILabel *heartNumber;
 
