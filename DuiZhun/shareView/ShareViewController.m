@@ -191,6 +191,19 @@ static NSArray *imageArr;
     [self.shareTextView resignFirstResponder];
 }
 
+- (void) keyBoardWillShow:(NSNotification *)noti
+{
+    [GlobalConfig keyBoardDidShow:noti scrollView:_keyboardScrollView];
+
+    CGPoint point = self.scrollView.contentOffset;
+    [self.scrollView setContentOffset:CGPointMake(point.x, point.y + 180) animated:YES];
+}
+
+- (void) keyBoardWillHidden:(NSNotification *)noti
+{
+    [GlobalConfig keyBoardDidDisapper:noti scrollView:_keyboardScrollView];
+}
+
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     [self.navigationController popViewControllerAnimated:YES];
 }
