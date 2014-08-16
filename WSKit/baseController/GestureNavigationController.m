@@ -174,7 +174,7 @@
             coordinate_start = [rec translationInView:self.view];
         }
         else if (rec.state == UIGestureRecognizerStateChanged) {
-            if (coordinate_change.x > 0) {
+            if (coordinate_change.x > 0 && coordinate_change.x < 100) {
                 self.view.frame = CGRectOffset(self.view.frame, coordinate_change.x - coordinate_start.x, 0);
             }
             coordinate_start = coordinate_change;
