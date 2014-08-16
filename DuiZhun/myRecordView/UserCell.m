@@ -18,7 +18,8 @@
                                        imageSize:CGSizeMake(18.0f, 18.0f)]];
 //    self.userImageView.contentMode = UIViewContentModeScaleAspectFill;
     self.selectionStyle = UITableViewCellSelectionStyleNone;
-    
+    self.userImageView.layer.masksToBounds = YES;
+    self.userImageView.layer.cornerRadius = 4;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

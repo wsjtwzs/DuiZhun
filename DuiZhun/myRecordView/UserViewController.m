@@ -178,11 +178,17 @@ static NSMutableArray *heartArr;
 
     self.favType = NO;
     [self setSegImage];
+    self.dataArray = [self randomizedArrayWithArray:self.dataArray];
+    [self.baseTableView reloadData];
+    [self.userCollection reloadData];
 }
 
 - (IBAction)arcPress:(id)sender {
     self.favType = YES;
     [self setSegImage];
+    self.dataArray = [self randomizedArrayWithArray:self.dataArray];
+    [self.baseTableView reloadData];
+    [self.userCollection reloadData];
 }
 
 - (IBAction)showPress:(id)sender {
@@ -248,5 +254,24 @@ static NSMutableArray *heartArr;
         vc.imageIndex = indexPath.row;
         [self.navigationController pushViewController:vc animated:YES];
 
+}
+
+//数组随机排序
+- (NSMutableArray *) randomizedArrayWithArray:(NSArray *)array {
+    
+    NSMutableArray *results = [[NSMutableArray alloc]initWithArray:array];
+    
+    int i = [results count];
+    
+    while(--i > 0) {
+        
+        int j = rand() % (i+1);
+        
+        [results exchangeObjectAtIndex:i withObjectAtIndex:j];
+        
+    }
+    
+    return results;
+    
 }
 @end
