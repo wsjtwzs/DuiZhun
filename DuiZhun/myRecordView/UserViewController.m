@@ -105,7 +105,7 @@ static int _oldPointY = 0;
     }
 
     //设置tableview
-    self.baseTableView.frame = CGRectMake(0, 125, 320, SCREENHEIGHT - 125);
+    self.baseTableView.frame = CGRectMake(0, 105, 320, SCREENHEIGHT - 105);
     self.baseTableView.hidden = YES;
     self.baseTableView.alpha = 0;
     [self.view addSubview:self.baseTableView];
@@ -295,59 +295,71 @@ static int _oldPointY = 0;
 
 - (void) scrollViewDidScroll:(UIScrollView *)scrollView {
 
-//    if(self.showType){
-//
-//        if (self.userCollection.contentOffset.y  <= POINT_Y) {
-//            return;
-//        }
-//        
-//        if (self.userCollection.contentOffset.y >= (self.userCollection.contentSize.height - self.userCollection.frame.size.height)) {
-//            return;
-//        }
-//        
-//        if (self.userCollection.contentOffset.y > _oldPointY) {
-//            [UIView animateWithDuration:0.5 animations:^(){
-//                self.topView.frame = CGRectMake(0, 0, 320, -72);
-//                self.userCollection.frame = CGRectMake(0, 63, SCREENWIDTH, SCREENHEIGHT-63);
-//            }];
-//        }else {
-//            if(self.userCollection.contentOffset.y<10){
-//                [UIView animateWithDuration:0.5 animations:^(){
-//                    self.topView.frame = CGRectMake(0, 0, 320, 0);
-//                    self.userCollection.frame = CGRectMake(0, 125, SCREENWIDTH, SCREENHEIGHT-125);
-//                }];
+    if(self.showType){
+
+        if (self.userCollection.contentOffset.y  <= POINT_Y) {
+            return;
+        }
+        
+        if (self.userCollection.contentOffset.y >= (self.userCollection.contentSize.height - self.userCollection.frame.size.height)) {
+            return;
+        }
+        
+        if (self.userCollection.contentOffset.y > _oldPointY) {
+            
+            if (self.topView.frame.origin.y == 0) {
+                [UIView animateWithDuration:0.5 animations:^(){
+                    self.topView.frame = CGRectMake(0, -52, 320, 105);
+                    self.cView.frame = CGRectMake(0, 62, SCREENWIDTH, SCREENHEIGHT-62);
+                }];
+            }
+            
+        }else {
+            if (self.topView.frame.origin.y == -52) {
+                [UIView animateWithDuration:0.5 animations:^(){
+                    self.topView.frame = CGRectMake(0, 0, 320, 105);
+                    self.cView.frame = CGRectMake(0, 105, SCREENWIDTH, SCREENHEIGHT-105);
+                }];
+            }
+        }
+        _oldPointY = self.userCollection.contentOffset.y;
+
+    } else {
+
+        if (self.baseTableView.contentOffset.y  <= POINT_Y) {
+            return;
+        }
+        
+        if (self.baseTableView.contentOffset.y >= (self.baseTableView.contentSize.height - self.baseTableView.frame.size.height)) {
+            return;
+        }
+        
+        if (self.baseTableView.contentOffset.y > _oldPointY) {
+
+//            if (self.topView.frame.origin.y == 0 ) {
+            
+                [UIView animateWithDuration:0.5 animations:^(){
+                    self.topView.frame = CGRectMake(0, -52, 320, 105);
+                    self.baseTableView.frame = CGRectMake(0, 62, SCREENWIDTH, SCREENHEIGHT-62);
+                }];
 //            }
-//        }
-//        _oldPointY = self.baseTableView.contentOffset.y;
-//
-//    } else {
-//
-//        if (self.baseTableView.contentOffset.y  <= POINT_Y) {
-//            return;
-//        }
-//        
-//        if (self.baseTableView.contentOffset.y >= (self.baseTableView.contentSize.height - self.baseTableView.frame.size.height)) {
-//            return;
-//        }
-//        
-//        if (self.baseTableView.contentOffset.y > _oldPointY) {
-//            [UIView animateWithDuration:0.5 animations:^(){
-//                self.topView.frame = CGRectMake(0, 0, 320, -72);
-//                self.baseTableView.frame = CGRectMake(0, 63, SCREENWIDTH, SCREENHEIGHT-63);
-//            }];
-//        }else {
-//            if(self.baseTableView.contentOffset.y<10){
-//                [UIView animateWithDuration:0.5 animations:^(){
-//                    self.topView.frame = CGRectMake(0, 0, 320, 0);
-//                    self.baseTableView.frame = CGRectMake(0, 125, SCREENWIDTH, SCREENHEIGHT-125);
-//                }];
+
+        }else {
+//            if (self.topView.frame.origin.y == -52) {
+                [UIView animateWithDuration:0.5 animations:^(){
+                    self.topView.frame = CGRectMake(0, 0, 320, 105);
+                    self.baseTableView.frame = CGRectMake(0, 105, SCREENWIDTH, SCREENHEIGHT-105);
+                }];
 //            }
-//        }
-//        _oldPointY = self.baseTableView.contentOffset.y;
-//
-//    }
+        }
+        _oldPointY = self.baseTableView.contentOffset.y;
+
+    }
     
 }
 
-
+- (void) scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    _oldPointY = 0;
+}
 @end

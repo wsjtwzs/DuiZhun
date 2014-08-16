@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *favButton;
 @property (weak, nonatomic) IBOutlet UIButton *showButton;
 
+@property (weak, nonatomic) IBOutlet UIView *cView;
 @property (weak, nonatomic) IBOutlet UICollectionView *userCollection;
 
 - (IBAction)favPress:(id)sender;

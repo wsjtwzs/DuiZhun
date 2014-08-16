@@ -101,16 +101,18 @@ static BOOL hasFav = NO;
     if (showBigImg) {
         
         showBigImg = NO;
-        [UIView animateWithDuration:0.8 animations:^(){
+        [UIView animateWithDuration:0.6 animations:^(){
             self.topView.frame = CGRectMake(0, 0, 320, 85);
             self.buttomView.frame = CGRectMake(0, 406, 320, 162);
+            self.intro.frame = CGRectMake(10, 25, 300, 21);
         }];
 
     } else {
         showBigImg = YES;
-        [UIView animateWithDuration:0.8 animations:^(){
+        [UIView animateWithDuration:0.6 animations:^(){
             self.topView.frame = CGRectMake(0, -85, 320, 85);
-            self.buttomView.frame = CGRectMake(0, 568, 320, 162);
+            self.buttomView.frame = CGRectMake(0, 508, 320, 162);
+            self.intro.frame = CGRectMake(10, 10, 300, 21);
         }];
     }
     
