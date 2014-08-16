@@ -10,6 +10,8 @@
 
 @interface TargetListViewController : GestureViewController
 @property (weak, nonatomic) IBOutlet UIButton *menuButton;
+@property (strong, nonatomic) IBOutlet UIButton *cameraButton;
 - (IBAction)showMenu:(id)sender;
+- (IBAction)openCam:(id)sender;
 
 @end

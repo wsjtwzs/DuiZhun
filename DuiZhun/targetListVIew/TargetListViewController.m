@@ -83,7 +83,12 @@
     [self.baseTableView registerNib:[UINib nibWithNibName:NSStringFromClass([TargetCell class]) bundle:nil] forCellReuseIdentifier:@"targetCell"];
     
     self.menuButton.frame = CGRectOffset(self.menuButton.frame, 250, 20);
-    [self.baseTableView addSubview:self.menuButton];
+    [self.view addSubview:self.menuButton];
+    [self.view bringSubviewToFront:self.menuButton];
+    self.cameraButton.frame = CGRectOffset(self.cameraButton.frame, 135, 400);
+    [self.view addSubview:self.cameraButton];
+    [self.view bringSubviewToFront:self.cameraButton];
+    
     
     
     UILabel *l = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
@@ -131,11 +136,29 @@
     TargetDetailViewController *ctl = (TargetDetailViewController *)[Controllers viewControllerWithName:@"TargetDetailViewController"];
     ctl.targetModel = self.dataArray[indexPath.row];
     [self.navigationController pushViewController:ctl animated:YES];
-    
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    //读取开始拖拽时的位置
+    [self.headerView egoRefreshScrollViewDidScroll:scrollView];
+}
+
+- (void)scrollViewDidScrollToTop:(UIScrollView *)scrollView {
+
+    self.menuButton.hidden = NO;
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+    self.cameraButton.hidden = NO;
+    self.menuButton.hidden = NO;
 }
 
 
 - (IBAction)showMenu:(id)sender {
     [NOTIFICATIONCENTER postNotificationName:NOTI_GESTURE_LEFT object:nil];
+}
+
+- (IBAction)openCam:(id)sender {
 }
 @end

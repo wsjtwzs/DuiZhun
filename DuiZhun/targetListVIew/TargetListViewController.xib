@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TargetListViewController">
             <connections>
+                <outlet property="cameraButton" destination="hVw-vE-Yr3" id="l1r-L2-Hog"/>
                 <outlet property="menuButton" destination="xO6-dw-sqi" id="Gh4-Nd-KuO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -28,8 +29,19 @@
                 <action selector="showMenu:" destination="-1" eventType="touchUpInside" id="jBf-FG-7XL"/>
             </connections>
         </button>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hVw-vE-Yr3">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <state key="normal" image="scan.png">
+                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+            </state>
+            <connections>
+                <action selector="openCam:" destination="-1" eventType="touchUpInside" id="3XU-R5-qgv"/>
+            </connections>
+        </button>
     </objects>
     <resources>
         <image name="menu.png" width="45" height="45"/>
+        <image name="scan.png" width="50" height="50"/>
     </resources>
 </document>
