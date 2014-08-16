@@ -669,6 +669,7 @@
 		505B8693199E85B900D4D934 /* target_small_14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 505B8677199E85B900D4D934 /* target_small_14.jpg */; };
 		505B8697199E99CD00D4D934 /* TargetDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505B8695199E99CD00D4D934 /* TargetDetailViewController.m */; };
 		505B8698199E99CD00D4D934 /* TargetDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 505B8696199E99CD00D4D934 /* TargetDetailViewController.xib */; };
+		507D4DB9199FBDFF00915E4B /* DKCircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 507D4DB8199FBDFF00915E4B /* DKCircleButton.m */; };
 		50A5EC55199CB563005EF757 /* IonIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A5EC51199CB563005EF757 /* IonIcons.m */; };
 		50A5EC56199CB563005EF757 /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50A5EC52199CB563005EF757 /* ionicons.ttf */; };
 		50A5EC63199CD025005EF757 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A5EC62199CD025005EF757 /* HMSegmentedControl.m */; };
@@ -1493,6 +1494,8 @@
 		505B8694199E99CD00D4D934 /* TargetDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetDetailViewController.h; sourceTree = "<group>"; };
 		505B8695199E99CD00D4D934 /* TargetDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetDetailViewController.m; sourceTree = "<group>"; };
 		505B8696199E99CD00D4D934 /* TargetDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TargetDetailViewController.xib; sourceTree = "<group>"; };
+		507D4DB7199FBDFF00915E4B /* DKCircleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKCircleButton.h; sourceTree = "<group>"; };
+		507D4DB8199FBDFF00915E4B /* DKCircleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKCircleButton.m; sourceTree = "<group>"; };
 		50A5EC4F199CB563005EF757 /* ionicons-codes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ionicons-codes.h"; sourceTree = "<group>"; };
 		50A5EC50199CB563005EF757 /* IonIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IonIcons.h; sourceTree = "<group>"; };
 		50A5EC51199CB563005EF757 /* IonIcons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IonIcons.m; sourceTree = "<group>"; };
@@ -2188,6 +2191,7 @@
 		107C1C78198BD0A800E1198E /* resouce */ = {
 			isa = PBXGroup;
 			children = (
+				507D4DB6199FBDFF00915E4B /* DKCircleButton */,
 				50045EA8199F705000368689 /* CustomUILabel */,
 				50473BDA199E23AA0034C7FE /* ALAssetsLibrary+CustomPhotoAlbum */,
 				6604BD22199DBA9F00F09204 /* QQ */,
@@ -2776,6 +2780,15 @@
 				505B8677199E85B900D4D934 /* target_small_14.jpg */,
 			);
 			path = target;
+			sourceTree = "<group>";
+		};
+		507D4DB6199FBDFF00915E4B /* DKCircleButton */ = {
+			isa = PBXGroup;
+			children = (
+				507D4DB7199FBDFF00915E4B /* DKCircleButton.h */,
+				507D4DB8199FBDFF00915E4B /* DKCircleButton.m */,
+			);
+			path = DKCircleButton;
 			sourceTree = "<group>";
 		};
 		50A5EC4E199CB563005EF757 /* ionicons */ = {
@@ -3606,6 +3619,7 @@
 				107C1D07198BD0A800E1198E /* SBJsonTokeniser.m in Sources */,
 				102082DD199887A100E151B3 /* SearchViewController.m in Sources */,
 				107C1D42198BD0D000E1198E /* MapTest.mm in Sources */,
+				507D4DB9199FBDFF00915E4B /* DKCircleButton.m in Sources */,
 				107C1CEE198BD0A800E1198E /* AFHTTPRequestOperation.m in Sources */,
 				107C1CEF198BD0A800E1198E /* AFImageRequestOperation.m in Sources */,
 				107C1D54198BD3F900E1198E /* MainViewController.m in Sources */,

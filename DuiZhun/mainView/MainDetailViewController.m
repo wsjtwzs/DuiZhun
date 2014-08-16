@@ -41,8 +41,8 @@ typedef enum{
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_"]];
     
-    [self.leftLabel setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"yello"]]];
-    [self.rightLabel setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"yello"]]];
+//    [self.leftLabel setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"yello"]]];
+//    [self.rightLabel setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"yello"]]];
     
     
     [self changeImageColor];
@@ -50,11 +50,13 @@ typedef enum{
     
     [self.heartButton setImage:[IonIcons imageWithIcon:icon_ios7_heart iconColor:WHITECOLOR iconSize:25 imageSize:CGSizeMake(120, 60)] forState:UIControlStateNormal];
     [self.heartButton setImage:[IonIcons imageWithIcon:icon_ios7_heart iconColor:BLACKCOLOR iconSize:25 imageSize:CGSizeMake(120, 60)] forState:UIControlStateHighlighted];
+    [self.heartButton setShowsTouchWhenHighlighted:YES];
 //    [self.heartButton setBackgroundImage:[UIImage imageNamed:@"yello"] forState:UIControlStateHighlighted];
 
     [self.shareButton setImage:[IonIcons imageWithIcon:icon_share iconColor:WHITECOLOR iconSize:27 imageSize:CGSizeMake(120, 60)] forState:UIControlStateNormal];
     [self.shareButton setImage:[IonIcons imageWithIcon:icon_share iconColor:BLACKCOLOR iconSize:27 imageSize:CGSizeMake(120, 60)] forState:UIControlStateHighlighted];
-//    [self.shareButton setBackgroundImage:[UIImage imageNamed:@"yello"] forState:UIControlStateHighlighted];
+    [self.shareButton setShowsTouchWhenHighlighted:YES];
+    //    [self.shareButton setBackgroundImage:[UIImage imageNamed:@"yello"] forState:UIControlStateHighlighted];
     shareView.frame = rect_hidden;
     [self.view addSubview:shareView];
     
