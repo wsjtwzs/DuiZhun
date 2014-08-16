@@ -73,7 +73,7 @@
     
     self.cellHeight = 200;
     [self.view addSubview:self.baseTableView];
-    self.baseTableView.frame = CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT);
+//    self.baseTableView.frame = CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT);
 //    [self.baseTableView addSubview:self.menu];
     [self.baseTableView registerNib:[UINib nibWithNibName:NSStringFromClass([MainCell class]) bundle:nil] forCellReuseIdentifier:@"mainCell"];
     self.view.alpha = 0;
