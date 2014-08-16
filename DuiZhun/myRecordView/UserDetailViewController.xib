@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserDetailViewController">
             <connections>
                 <outlet property="black" destination="mp7-Rb-9AY" id="n1I-G5-96d"/>
+                <outlet property="buttomView" destination="i5M-Pr-FkT" id="AZv-l2-JtI"/>
                 <outlet property="date" destination="WxT-pT-bF2" id="ynd-Vb-7oM"/>
                 <outlet property="detailImage" destination="W2X-ue-hyO" id="MwK-hR-Rty"/>
                 <outlet property="heart" destination="3nb-sO-nc8" id="Vug-Cv-rUs"/>
@@ -15,6 +16,7 @@
                 <outlet property="remove" destination="eJ2-Ga-ghz" id="ogf-8R-lYH"/>
                 <outlet property="share" destination="Mbx-P4-Mpe" id="2mo-TF-dlr"/>
                 <outlet property="shareView" destination="EPz-hK-vfT" id="61W-f6-RSx"/>
+                <outlet property="topView" destination="awx-vF-hkA" id="7N9-hI-BoD"/>
                 <outlet property="view" destination="C6O-F5-rdx" id="H86-0s-0hc"/>
             </connections>
         </placeholder>
@@ -103,11 +105,15 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W2X-ue-hyO">
+                    <rect key="frame" x="0.0" y="32" width="320" height="503"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                </imageView>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="awx-vF-hkA">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TaD-nR-djs">
+                        <view alpha="0.85000000000000031" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TaD-nR-djs">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -122,22 +128,21 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W2X-ue-hyO">
-                    <rect key="frame" x="0.0" y="32" width="320" height="503"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Q7-FP-6F4">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="showBig:" destination="-1" eventType="touchUpInside" id="OUD-qB-Hn0"/>
+                    </connections>
                 </button>
                 <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i5M-Pr-FkT">
                     <rect key="frame" x="0.0" y="406" width="320" height="162"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
-                        <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cKy-vq-ole">
+                        <view alpha="0.84999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cKy-vq-ole">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="162"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>

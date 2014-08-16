@@ -13,6 +13,8 @@
 #define rect_hidden CGRectMake(0, SCREENHEIGHT, 320, 190);
 #define rect_show CGRectMake(0, SCREENHEIGHT - 190, 320, 190);
 
+static BOOL showBigImg = NO;
+
 @interface UserDetailViewController ()
 @end
 static BOOL hasFav = NO;
@@ -37,7 +39,7 @@ static BOOL hasFav = NO;
         self.image = [UIImage imageNamed:@"6.jpg"];
     }
 //    self.detailImage.image = self.image;
-    self.detailImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"user_big_%d.jpg",self.imageIndex]];
+    self.detailImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"user_big_%d.jpg",self.imageIndex+1]];
     
     self.navTitle.text = self.navTitleText;
     self.intro.text = self.introText;
@@ -91,6 +93,26 @@ static BOOL hasFav = NO;
 - (IBAction)removePress:(id)sender {
     UIAlertView *a = [[UIAlertView alloc] initWithTitle:nil message:@"确认删除吗" delegate:self cancelButtonTitle:@"否" otherButtonTitles:@"是", nil];
     [a show];
+    
+}
+
+- (IBAction)showBig:(id)sender {
+    
+    if (showBigImg) {
+        
+        showBigImg = NO;
+        [UIView animateWithDuration:0.8 animations:^(){
+            self.topView.frame = CGRectMake(0, 0, 320, 85);
+            self.buttomView.frame = CGRectMake(0, 406, 320, 162);
+        }];
+
+    } else {
+        showBigImg = YES;
+        [UIView animateWithDuration:0.8 animations:^(){
+            self.topView.frame = CGRectMake(0, -85, 320, 85);
+            self.buttomView.frame = CGRectMake(0, 568, 320, 162);
+        }];
+    }
     
 }
 

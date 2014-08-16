@@ -27,6 +27,9 @@
 - (IBAction)heartPress:(id)sender;
 - (IBAction)sharePress:(id)sender;
 - (IBAction)removePress:(id)sender;
+- (IBAction)showBig:(id)sender;
+@property (weak, nonatomic) IBOutlet UIView *topView;
+@property (weak, nonatomic) IBOutlet UIView *buttomView;
 
 @property (nonatomic, strong) NSString *navTitleText;
 @property (nonatomic, strong) NSString *introText;
