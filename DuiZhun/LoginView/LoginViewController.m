@@ -65,8 +65,7 @@
 }
 
 - (IBAction)letsgo:(id)sender {
-    [GlobalConfig saveUserDefaultWithDictionary:@{USER_USERID:@YES}];
-    [self.navigationController presentViewController:[Controllers viewControllerWithName:@"WindowRootViewController"] animated:YES completion:^{}];
+    [self letsgoWithUsername:self.user_field.text password:self.pass_field.text];
 }
 
 - (IBAction)navBack:(id)sender {

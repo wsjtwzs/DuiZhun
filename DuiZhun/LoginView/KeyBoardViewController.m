@@ -52,6 +52,18 @@
     [textField resignFirstResponder];
     return YES;
 }
+
+- (void)letsgoWithUsername:(NSString *)username password:(NSString *)password {
+    
+    if ((![GlobalConfig isKindOfNSStringClassAndLenthGreaterThanZero:username Alert:@"请输入用户名"])) {
+        return;
+    }
+    if ( (![GlobalConfig isKindOfNSStringClassAndLenthGreaterThanZero:password Alert:@"请输入密码"])) {
+        return;
+    }
+    [GlobalConfig saveUserDefaultWithDictionary:@{USER_USERID:@YES,USER_USERNAME:username,USER_PASSWORD:password}];
+    [self.navigationController presentViewController:[Controllers viewControllerWithName:@"WindowRootViewController"] animated:YES completion:^{}];
+}
 /*
 #pragma mark - Navigation
 

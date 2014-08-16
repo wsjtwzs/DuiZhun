@@ -29,12 +29,14 @@
     // Do any additional setup after loading the view from its nib.
     [self changeImageColor];
         self.view.backgroundColor = CLEARCOLOR;
+        _usernameLabel.text = [GlobalConfig getObjectWithKey:USER_USERNAME];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+
 }
 
 - (void) changeImageColor

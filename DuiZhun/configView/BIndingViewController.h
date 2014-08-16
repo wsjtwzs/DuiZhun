@@ -11,9 +11,12 @@
 @interface BIndingViewController : TransitionViewController
 {
 
+    __weak IBOutlet UILabel *_tencentUserLabel;
+    __weak IBOutlet UILabel *_sinaUserLabel;
     __weak IBOutlet UIImageView *emailImage;
     __weak IBOutlet UIButton *leftImage;
     __weak IBOutlet UIImageView *bindingImage;
+    __weak IBOutlet UILabel *_usernameLabel;
 }
 
 - (IBAction)close:(id)sender;

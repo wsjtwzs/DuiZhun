@@ -13,4 +13,6 @@
     UIScrollView *_keyboardScrollView;
 }
 
+- (void)letsgoWithUsername:(NSString *)username password:(NSString *)password;
+
 @end
