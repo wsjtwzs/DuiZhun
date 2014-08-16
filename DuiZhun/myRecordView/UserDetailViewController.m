@@ -41,7 +41,8 @@ static BOOL hasFav = NO;
 //    self.detailImage.image = self.image;
     self.detailImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"user_big_%d.jpg",self.imageIndex+1]];
     
-    self.navTitle.text = self.navTitleText;
+//    self.navTitle.text = self.navTitleText;
+    self.navTitle.text = [GlobalConfig getObjectWithKey:USER_USERNAME];
     self.intro.text = self.introText;
     
     //设置按钮图片
@@ -101,7 +102,7 @@ static BOOL hasFav = NO;
     if (showBigImg) {
         
         showBigImg = NO;
-        [UIView animateWithDuration:0.6 animations:^(){
+        [UIView animateWithDuration:0.4 animations:^(){
             self.topView.frame = CGRectMake(0, 0, 320, 85);
             self.buttomView.frame = CGRectMake(0, 406, 320, 162);
             self.intro.frame = CGRectMake(10, 25, 300, 21);
@@ -109,7 +110,7 @@ static BOOL hasFav = NO;
 
     } else {
         showBigImg = YES;
-        [UIView animateWithDuration:0.6 animations:^(){
+        [UIView animateWithDuration:0.3 animations:^(){
             self.topView.frame = CGRectMake(0, -85, 320, 85);
             self.buttomView.frame = CGRectMake(0, 508, 320, 162);
             self.intro.frame = CGRectMake(10, 10, 300, 21);
