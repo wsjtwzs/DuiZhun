@@ -62,7 +62,7 @@ static NSString *firstLaunch = @"firstLaunch";
     [self.window addSubview:bgView];
     [self.window bringSubviewToFront:bgView];
     
-    [UIView animateWithDuration:2 delay:2.5 options:0 animations:^{
+    [UIView animateWithDuration:0.4 delay:2.3 options:0 animations:^{
     
         bgView.alpha = 0;
     } completion:^(BOOL finish) {

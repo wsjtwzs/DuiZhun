@@ -514,7 +514,6 @@
 		107C1C54198BCFDD00E1198E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 107C1C52198BCFDD00E1198E /* InfoPlist.strings */; };
 		107C1C56198BCFDD00E1198E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 107C1C55198BCFDD00E1198E /* main.m */; };
 		107C1C5A198BCFDD00E1198E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 107C1C59198BCFDD00E1198E /* AppDelegate.m */; };
-		107C1C5C198BCFDD00E1198E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 107C1C5B198BCFDD00E1198E /* Images.xcassets */; };
 		107C1C63198BCFDD00E1198E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 107C1C62198BCFDD00E1198E /* XCTest.framework */; };
 		107C1C64198BCFDD00E1198E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 107C1C49198BCFDD00E1198E /* Foundation.framework */; };
 		107C1C65198BCFDD00E1198E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 107C1C4D198BCFDD00E1198E /* UIKit.framework */; };
@@ -671,6 +670,7 @@
 		505B8698199E99CD00D4D934 /* TargetDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 505B8696199E99CD00D4D934 /* TargetDetailViewController.xib */; };
 		507D4DB9199FBDFF00915E4B /* DKCircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 507D4DB8199FBDFF00915E4B /* DKCircleButton.m */; };
 		50916CED199FDA49001B4B98 /* loading@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = 50916CEC199FDA49001B4B98 /* loading@2x.gif */; };
+		50916CEF199FE4A8001B4B98 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50916CEE199FE4A8001B4B98 /* Images.xcassets */; };
 		50A5EC55199CB563005EF757 /* IonIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A5EC51199CB563005EF757 /* IonIcons.m */; };
 		50A5EC56199CB563005EF757 /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50A5EC52199CB563005EF757 /* ionicons.ttf */; };
 		50A5EC63199CD025005EF757 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A5EC62199CD025005EF757 /* HMSegmentedControl.m */; };
@@ -1243,7 +1243,6 @@
 		107C1C57198BCFDD00E1198E /* DuiZhun-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DuiZhun-Prefix.pch"; sourceTree = "<group>"; };
 		107C1C58198BCFDD00E1198E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		107C1C59198BCFDD00E1198E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		107C1C5B198BCFDD00E1198E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		107C1C61198BCFDD00E1198E /* DuiZhunTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DuiZhunTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		107C1C62198BCFDD00E1198E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		107C1C6A198BCFDD00E1198E /* DuiZhunTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DuiZhunTests-Info.plist"; sourceTree = "<group>"; };
@@ -1498,6 +1497,7 @@
 		507D4DB7199FBDFF00915E4B /* DKCircleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKCircleButton.h; sourceTree = "<group>"; };
 		507D4DB8199FBDFF00915E4B /* DKCircleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKCircleButton.m; sourceTree = "<group>"; };
 		50916CEC199FDA49001B4B98 /* loading@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "loading@2x.gif"; sourceTree = "<group>"; };
+		50916CEE199FE4A8001B4B98 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = DuiZhun/Images.xcassets; sourceTree = "<group>"; };
 		50A5EC4F199CB563005EF757 /* ionicons-codes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ionicons-codes.h"; sourceTree = "<group>"; };
 		50A5EC50199CB563005EF757 /* IonIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IonIcons.h; sourceTree = "<group>"; };
 		50A5EC51199CB563005EF757 /* IonIcons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IonIcons.m; sourceTree = "<group>"; };
@@ -2092,6 +2092,7 @@
 		107C1C3D198BCFDD00E1198E = {
 			isa = PBXGroup;
 			children = (
+				50916CEE199FE4A8001B4B98 /* Images.xcassets */,
 				6656A91D1993A36500E0C930 /* Image */,
 				107C1D27198BD0D000E1198E /* Global */,
 				107C1D0A198BD0C400E1198E /* URLConnect */,
@@ -2155,7 +2156,6 @@
 				107C1D4A198BD37D00E1198E /* targetListVIew */,
 				107C1C58198BCFDD00E1198E /* AppDelegate.h */,
 				107C1C59198BCFDD00E1198E /* AppDelegate.m */,
-				107C1C5B198BCFDD00E1198E /* Images.xcassets */,
 				107C1C50198BCFDD00E1198E /* Supporting Files */,
 			);
 			path = DuiZhun;
@@ -3198,6 +3198,7 @@
 				102084FD19991DA700E151B3 /* bookmark.png in Resources */,
 				1020851D19991DA700E151B3 /* connection-bars.png in Resources */,
 				505B8638199E84C500D4D934 /* user_big_05.jpg in Resources */,
+				50916CEF199FE4A8001B4B98 /* Images.xcassets in Resources */,
 				102082F119991BEC00E151B3 /* icon_tengxun_h@2x.png in Resources */,
 				1020851419991DA700E151B3 /* close-round.png in Resources */,
 				102086B319993BFF00E151B3 /* 2.jpg in Resources */,
@@ -3544,7 +3545,6 @@
 				1020864319991DA700E151B3 /* pinpoint.png in Resources */,
 				102086B219993BFF00E151B3 /* 6.jpg in Resources */,
 				102082F219991BEC00E151B3 /* icon_tengxun@2x.png in Resources */,
-				107C1C5C198BCFDD00E1198E /* Images.xcassets in Resources */,
 				1020859A19991DA700E151B3 /* ios7-flag-outline.png in Resources */,
 				505B8688199E85B900D4D934 /* target_small_3.jpg in Resources */,
 				1020851119991DA700E151B3 /* clipboard.png in Resources */,
