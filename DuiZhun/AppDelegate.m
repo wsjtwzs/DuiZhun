@@ -11,6 +11,8 @@
 #import "Controllers.h"
 #import <Frontia/Frontia.h>
 
+static CGFloat loadingViewWidth = 136;
+
 static NSString *firstLaunch = @"firstLaunch";
 
 @implementation AppDelegate
@@ -30,23 +32,39 @@ static NSString *firstLaunch = @"firstLaunch";
     }
     
     self.window.rootViewController = [Controllers firstViewController];
-    //创建导航页
-//    [self createNavView];
-//    [self createBlurViewController];
     
     self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"dark_bg"]];
     [self.window makeKeyAndVisible];
+    
+    [self addLoadingView];
     return YES;
 }
 
-//- (void) createNavView
-//{
-//    self.navView = [NavView shareNavView];
-//    self.navView.hidden = YES;
-//    self.navView.frame = FRAME_RIGHT;
-//    [self.window addSubview:self.navView];
-//    
-//}
+- (void) addLoadingView
+{
+    UIView *bgView = [[UIView alloc] initWithFrame:self.window.frame];
+//    bgView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"dark_bg"]];
+    bgView.backgroundColor = BLACKCOLOR;
+    
+    NSData *gifFile = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"loading@2x" ofType:@"gif"]];
+    //设置webview透明
+    UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake((SCREENWIDTH - loadingViewWidth)/2, (SCREENHEIGHT - loadingViewWidth)/2, loadingViewWidth, loadingViewWidth)];
+    webView.backgroundColor = [UIColor clearColor];
+    webView.opaque = NO;
+    //取消webView的上下滑动
+    webView.scrollView.bounces = NO;
+    webView.scrollView.scrollEnabled = NO;
+    webView.userInteractionEnabled = NO;
+
+    [webView loadData:gifFile MIMEType:@"image/gif" textEncodingName:nil baseURL:nil];
+    
+    [bgView addSubview:webView];
+    [self.window addSubview:bgView];
+    [self.window bringSubviewToFront:bgView];
+    
+    [bgView performSelector:@selector(removeFromSuperview) withObject:nil afterDelay:2.5];
+
+}
 
 
 - (void)applicationWillResignActive:(UIApplication *)application
