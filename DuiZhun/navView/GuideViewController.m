@@ -44,17 +44,17 @@ typedef enum {
     self.view.backgroundColor = CLEARCOLOR;
     UIPanGestureRecognizer *ges = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
     [self.view addGestureRecognizer:ges];
-    self.cellHeight = 65;
+    self.cellHeight = 60;
     [self.view addSubview:self.baseTableView];
     [self.baseTableView registerNib:[UINib nibWithNibName:NSStringFromClass([GuideCell class]) bundle:nil] forCellReuseIdentifier:@"GuideCell"];
-    self.baseTableView.frame = CGRectOffset(self.baseTableView.frame, 0, 100);
-    _iconArray = @[icon_home,icon_pricetag,icon_person,icon_settings];
+    self.baseTableView.frame = CGRectOffset(self.baseTableView.frame, 0, 170);
+    self.baseTableView.scrollEnabled = NO;
+    _iconArray = @[icon_home,icon_bookmark,icon_person,icon_settings];
     _titleArray = @[@"首页",@"目标列表",@"我的记录",@"设置"];
-    
-    
+
     //相机按钮
     [self.view addSubview:self.camButton];
-    
+    [self.view addSubview:self.logo];
 
 }
 
@@ -78,7 +78,7 @@ typedef enum {
 {
     GuideCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GuideCell"];
 
-    cell.iconImage.image = [IonIcons imageWithIcon:_iconArray[indexPath.row] size:30 color:(indexPath.row == 0 ? BLACKCOLOR :WHITECOLOR)];
+    cell.iconImage.image = [IonIcons imageWithIcon:_iconArray[indexPath.row] size:24 color:(indexPath.row == 0 ? BLACKCOLOR :WHITECOLOR)];
     cell.titleLabel.text = _titleArray[indexPath.row];
     cell.titleLabel.textColor = (indexPath.row == 0 ? BLACKCOLOR :WHITECOLOR);
     if (indexPath.row == 0) {
@@ -144,7 +144,7 @@ typedef enum {
 }
 
 - (IBAction)openCam:(id)sender {
-            [self.navigationController pushViewController:[Controllers viewControllerWithName:@"CameraViewController"] animated:YES];
+    [self.navigationController pushViewController:[Controllers viewControllerWithName:@"CameraViewController"] animated:YES];
     
 }
 

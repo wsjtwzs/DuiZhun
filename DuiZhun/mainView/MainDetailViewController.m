@@ -39,17 +39,22 @@ typedef enum{
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_"]];
+    
+    [self.leftLabel setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"yello"]]];
+    [self.rightLabel setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"yello"]]];
+    
+    
     [self changeImageColor];
     [self.heartButton setBackgroundImage:[self createImageWithColor:CLEARCOLOR] forState:UIControlStateNormal];
     
-    [self.heartButton setImage:[IonIcons imageWithIcon:icon_ios7_heart iconColor:WHITECOLOR iconSize:25 imageSize:CGSizeMake(160, 60)] forState:UIControlStateNormal];
-    [self.heartButton setImage:[IonIcons imageWithIcon:icon_ios7_heart iconColor:BLACKCOLOR iconSize:25 imageSize:CGSizeMake(160, 60)] forState:UIControlStateHighlighted];
-    [self.heartButton setBackgroundImage:[UIImage imageNamed:@"yello"] forState:UIControlStateHighlighted];
+    [self.heartButton setImage:[IonIcons imageWithIcon:icon_ios7_heart iconColor:WHITECOLOR iconSize:25 imageSize:CGSizeMake(120, 60)] forState:UIControlStateNormal];
+    [self.heartButton setImage:[IonIcons imageWithIcon:icon_ios7_heart iconColor:BLACKCOLOR iconSize:25 imageSize:CGSizeMake(120, 60)] forState:UIControlStateHighlighted];
+//    [self.heartButton setBackgroundImage:[UIImage imageNamed:@"yello"] forState:UIControlStateHighlighted];
 
-    [self.shareButton setImage:[IonIcons imageWithIcon:icon_share iconColor:WHITECOLOR iconSize:29 imageSize:CGSizeMake(160, 60)] forState:UIControlStateNormal];
-    [self.shareButton setImage:[IonIcons imageWithIcon:icon_share iconColor:BLACKCOLOR iconSize:29 imageSize:CGSizeMake(160, 60)] forState:UIControlStateHighlighted];
-    [self.shareButton setBackgroundImage:[UIImage imageNamed:@"yello"] forState:UIControlStateHighlighted];
+    [self.shareButton setImage:[IonIcons imageWithIcon:icon_share iconColor:WHITECOLOR iconSize:27 imageSize:CGSizeMake(120, 60)] forState:UIControlStateNormal];
+    [self.shareButton setImage:[IonIcons imageWithIcon:icon_share iconColor:BLACKCOLOR iconSize:27 imageSize:CGSizeMake(120, 60)] forState:UIControlStateHighlighted];
+//    [self.shareButton setBackgroundImage:[UIImage imageNamed:@"yello"] forState:UIControlStateHighlighted];
     shareView.frame = rect_hidden;
     [self.view addSubview:shareView];
     
@@ -90,11 +95,20 @@ typedef enum{
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)changeColor:(id)sender {
+    [UIView animateWithDuration:0.1 animations:^(void){
+        self.leftLabel.alpha = 0;
+        self.rightLabel.alpha = 0;
+    }];
+}
+
 - (IBAction)buttonPressed:(UIButton *)sender {
     switch (sender.tag) {
         case buttonPressed_heart:
             _selectHeart = !_selectHeart;
-            [self.heartButton setImage:[IonIcons imageWithIcon:icon_ios7_heart iconColor:_selectHeart?YELLOWCOLOR:WHITECOLOR iconSize:25 imageSize:CGSizeMake(160, 60)] forState:UIControlStateNormal];
+            self.leftLabel.alpha = 0.6;
+            [self.heartButton setImage:[IonIcons imageWithIcon:icon_ios7_heart iconColor:_selectHeart?YELLOWCOLOR:WHITECOLOR iconSize:25 imageSize:CGSizeMake(120, 60)] forState:UIControlStateNormal];
+
             
             if (_selectHeart) {
                 self.heartNumber.text = [NSString stringWithFormat:@"%d",[self.heartNumber.text integerValue] + 1];
@@ -105,11 +119,14 @@ typedef enum{
             break;
         case buttonPressed_share:
 //            [self share];
+            self.rightLabel.alpha = 0.6;
             [self shareViewHidden:NO];
+
             break;
         default:
             break;
     }
+    [self changeColor:nil];
 }
 
 - (IBAction)shareCancle:(id)sender {
@@ -123,6 +140,13 @@ typedef enum{
 }
 
 - (IBAction)shareToSina:(id)sender {
+}
+
+- (IBAction)openCam:(id)sender {
+        [self.navigationController pushViewController:[Controllers viewControllerWithName:@"CameraViewController"] animated:YES];
+}
+
+- (IBAction)IBActionopenCamidsenderselfnavigationControllerpushViewControllerControllersviewControllerWithNameCameraViewControlleranimatedYESopenCam:(id)sender {
 }
 
 - (void) shareViewHidden:(BOOL)hidden

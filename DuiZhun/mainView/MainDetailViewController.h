@@ -23,6 +23,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 @property (weak, nonatomic) IBOutlet UIButton *heartButton;
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
+@property (weak, nonatomic) IBOutlet UILabel *leftLabel;
+@property (weak, nonatomic) IBOutlet UILabel *rightLabel;
+
+
+- (IBAction)changeColor:(id)sender;
+
 - (IBAction)buttonPressed:(id)sender;
 
 - (IBAction)shareCancle:(id)sender;
@@ -31,5 +37,7 @@
 - (IBAction)shareTowechat:(id)sender;
 
 - (IBAction)shareToSina:(id)sender;
+
+- (IBAction)openCam:(id)sender;
 
 @end
