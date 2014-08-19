@@ -156,5 +156,6 @@
 }
 
 - (IBAction)openCam:(id)sender {
+    [self.navigationController pushViewController:[Controllers viewControllerWithName:@"CameraViewController"] animated:YES];
 }
 @end
