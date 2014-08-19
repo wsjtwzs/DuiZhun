@@ -105,10 +105,10 @@ static int _oldPointY = 0;
     }
 
     //设置tableview
-    self.baseTableView.frame = CGRectMake(0, 105, 320, SCREENHEIGHT - 105);
+    self.baseTableView.frame = CGRectMake(0, 0, 320, SCREENHEIGHT - 62);
     self.baseTableView.hidden = YES;
     self.baseTableView.alpha = 0;
-    [self.view addSubview:self.baseTableView];
+    [self.cView addSubview:self.baseTableView];
     [self.baseTableView registerNib:[UINib nibWithNibName:NSStringFromClass([UserCell class]) bundle:nil] forCellReuseIdentifier:@"userCell"];
     self.cellHeight = 383;
 
@@ -336,21 +336,21 @@ static int _oldPointY = 0;
         
         if (self.baseTableView.contentOffset.y > _oldPointY) {
 
-//            if (self.topView.frame.origin.y == 0 ) {
+            if (self.topView.frame.origin.y == 0 ) {
             
                 [UIView animateWithDuration:0.5 animations:^(){
                     self.topView.frame = CGRectMake(0, -52, 320, 105);
-                    self.baseTableView.frame = CGRectMake(0, 62, SCREENWIDTH, SCREENHEIGHT-62);
+                    self.cView.frame = CGRectMake(0, 62, SCREENWIDTH, SCREENHEIGHT-62);
                 }];
-//            }
+            }
 
         }else {
-//            if (self.topView.frame.origin.y == -52) {
+            if (self.topView.frame.origin.y == -52) {
                 [UIView animateWithDuration:0.5 animations:^(){
                     self.topView.frame = CGRectMake(0, 0, 320, 105);
-                    self.baseTableView.frame = CGRectMake(0, 105, SCREENWIDTH, SCREENHEIGHT-105);
+                    self.cView.frame = CGRectMake(0, 105, SCREENWIDTH, SCREENHEIGHT-105);
                 }];
-//            }
+            }
         }
         _oldPointY = self.baseTableView.contentOffset.y;
 
